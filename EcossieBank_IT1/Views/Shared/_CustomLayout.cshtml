@@ -1,0 +1,156 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <title>EcossieBank &mdash; Website Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    @Styles.Render("~/template/css")
+    <link rel="stylesheet" href="~/fonts/flaticon/font/flaticon.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    <div class="site-wrap" id="home-section">
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+
+        <header class="site-navbar site-navbar-target" role="banner">
+            <div class="container mb-3">
+                <div class="d-flex align-items-center">
+                    <div class="col-md-6 ml-auto align-self-end">
+                        <img src="~/images/logo4.png" alt="Image" class="img-fluid">
+                    </div>
+                    <div class="site-quick-contact d-none d-lg-flex ml-auto ">
+                        <div class="d-flex site-info align-items-center mr-5">
+                            <span class="block-icon mr-3"><i class="fa fa-map-marker-alt"></i></span>
+                            <span>Wellington Rd, Clayton VIC 3800 <br> Melbourne</span>
+                        </div>
+                        <div class="d-flex site-info align-items-center">
+                            <span class="block-icon mr-3"><i class="far fa-clock"></i></span>
+                            <span>Monday - Friday 8:00AM - 7:00PM <br> Saturday, Sunday CLOSED</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="menu-wrap d-flex align-items-center">
+                    <span class="d-inline-block d-lg-none"><a href="#" class="text-black site-menu-toggle js-menu-toggle py-5"><span class="icon-menu h3 text-black"></span></a></span>
+
+                    <nav class="site-navigation text-left mr-auto d-none d-lg-block" role="navigation">
+                        <ul class="site-menu main-menu js-clone-nav mr-auto ">
+                            <li class="active">@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("About us", "About", "Home")</li>
+                            <li>@Html.ActionLink("Tips", "Tips", "Home")</li>
+                            <li>@Html.ActionLink("Contact us", "Send_Email", "Home")</li>
+                        </ul>
+                    </nav>
+                    <div class="top-social ml-auto">
+                        <a href="#"><span><i class="fab fa-facebook-f text-teal"></i></span></a>
+                        <a href="#"><span><i class="fab fa-twitter text-success"></i></span></a>
+                
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        @RenderBody()
+
+
+        <div class="site-section py-5 bg-warning">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 d-flex">
+                        <h2 class="text-white m-0">Lets Educate the Childrens with Fun</h2>
+                        <a href="@Url.Action("Tips", "Home")" class="btn btn-primary btn-custom-1 py-3 px-5 ml-auto">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h2 class="footer-heading mb-3">About Us</h2>
+                        <p class="mb-5">Our vision as a brand is “A greener community” by encouraging more Victorians to save electricity at home and having an impact on a global level. </p>
+                        <h2 class="footer-heading mb-4">Newsletter</h2>
+                        <form action="#" class="d-flex" class="subscribe">
+                            <input type="text" class="form-control mr-3" placeholder="Email">
+                            <input type="submit" value="Send" class="btn btn-primary">
+                        </form>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12">
+                        <div class="footer_section">
+                            <h3>Quick links</h3>
+                            <ul>
+                                <li><a href="/Home/Index"><span class="ion-ios-arrow-forward mr-3"></span>Home</a></li>
+                                <li><a href="/Home/About"><span class="ion-ios-arrow-forward mr-3"></span>About Us</a></li>
+                                <li><a href="/Home/Tips"><span class="ion-ios-arrow-forward mr-3"></span>Learn about Electricity</a></li>
+                                <li><a href="/Home/Send_Email"><span class="ion-ios-arrow-forward mr-3"></span>Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-5 mt-5 text-center">
+                    <div class="col-md-12">
+                        <div class="border-top pt-5">
+                            <p>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    @Scripts.Render("~/template/js")
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+    <script src="~/Scripts/jquery.steps.js"></script>
+    <script src="~/Scripts/main_step.js"></script>
+    <script type="text/javascript">
+        jQuery(function ($) {
+            var pop = $('.map-popup');
+            pop.click(function (e) {
+                e.stopPropagation();
+            });
+
+            $('a.marker').click(function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                $(this).next('.map-popup').toggleClass('open');
+                $(this).parent().siblings().children('.map-popup').removeClass('open');
+            });
+
+            $(document).click(function () {
+                pop.removeClass('open');
+            });
+
+            pop.each(function () {
+                var w = $(window).outerWidth(),
+                    edge = Math.round(($(this).offset().left) + ($(this).outerWidth()));
+                if (w < edge) {
+                    $(this).addClass('edge');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

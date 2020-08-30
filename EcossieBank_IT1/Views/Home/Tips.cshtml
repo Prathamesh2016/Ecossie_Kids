@@ -1,0 +1,976 @@
+﻿
+@{
+    ViewBag.Title = "Tips";
+    Layout = "~/Views/Shared/_CustomLayout.cshtml";
+}
+
+<head>
+    <meta charset="utf-8">
+    <title>Wizard-v6</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .flip-card-back {
+            background-color: #2980b9;
+            color: white;
+            transform: rotateY(180deg);
+            padding:15px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        @* Sticky note css *@ ;
+        body {
+            font-family: arial,sans-serif;
+            font-size: 100%;
+            margin: 1em;
+            background: #666;
+            color: #fff;
+        }
+
+        head_sticky, para {
+            font-size: 100%;
+            font-weight: normal;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+
+        ul {
+            overflow: hidden;
+            padding: 1em;
+        }
+
+            ul li alpha {
+                text-decoration: none;
+                color: #000;
+                background: #ffc;
+                display: block;
+                height: 20em;
+                width: 20em;
+                padding: 1em;
+                -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);
+                -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+                box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+                -moz-transition: -moz-transform .15s linear;
+                -o-transition: -o-transform .15s linear;
+                -webkit-transition: -webkit-transform .15s linear;
+            }
+
+            ul li {
+                margin: 1em;
+                float: left;
+            }
+
+                ul li head_sticky {
+                    font-size: 140%;
+                    font-weight: bold;
+                    padding-bottom: 10px;
+                }
+
+                ul li p {
+                    font-family: "Reenie Beanie",arial,sans-serif;
+                    font-size: 180%;
+                }
+
+                ul li alpha {
+                    -webkit-transform: rotate(-6deg);
+                    -o-transform: rotate(-6deg);
+                    -moz-transform: rotate(-6deg);
+                }
+
+                ul li:nth-child(even) alpha {
+                    -o-transform: rotate(4deg);
+                    -webkit-transform: rotate(4deg);
+                    -moz-transform: rotate(4deg);
+                    position: relative;
+                    top: 5px;
+                    background: #cfc;
+                }
+
+                ul li:nth-child(3n) alpha {
+                    -o-transform: rotate(-3deg);
+                    -webkit-transform: rotate(-3deg);
+                    -moz-transform: rotate(-3deg);
+                    position: relative;
+                    top: -5px;
+                    background: #ccf;
+                }
+
+                ul li:nth-child(5n) alpha {
+                    -o-transform: rotate(5deg);
+                    -webkit-transform: rotate(5deg);
+                    -moz-transform: rotate(5deg);
+                    position: relative;
+                    top: -10px;
+                }
+
+                ul li alpha:hover, ul li alpha:focus {
+                    box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+                    -moz-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+                    -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+                    -webkit-transform: scale(1.25);
+                    -moz-transform: scale(1.25);
+                    -o-transform: scale(1.25);
+                    position: relative;
+                    z-index: 5;
+                }
+
+        ol {
+            text-align: center;
+        }
+
+            ol li {
+                display: inline;
+                padding-right: 18px;
+            }
+
+                ol li alpha {
+                    color: #fff;
+                    text-align:justify;
+                }
+
+        
+
+    
+    </style>
+
+</head>
+
+
+
+
+<div class="ftco-blocks-cover-1">
+    
+    <div class="site-section-cover overlay contact-banner" data-stellar-background-ratio="0.5">
+       
+        <div class="container">
+            <div class="row align-items-center ">
+                <div class="col-md-5 mt-5 pt-5">
+                    <span class="text-cursive h5 text-red">Tips</span>
+                    <h1 class="mb-3 font-weight-bold text-teal">Lets Learn</h1>
+                    <p><a href="@Url.Action("Index", "Home")" class="text-white">Home</a> <span class="mx-3">/</span> <strong>Tips</strong></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <div class=" container-fluid page-content">
+        <div class="container wizard-v6-content">
+            <div class="wizard-form">
+                <form class="form-register" id="form-register" action="#" method="post">
+                    <div id="form-total">
+                        <!-- SECTION 1 -->
+                        @*For 1 section*@
+                        <h2>
+                            <p class="step-icon"><span><i class="fa fa-shower p-15" aria-hidden="true"></i></span></p>
+                            <span class="step-text">Bathroom facts</span>
+                        </h2>
+                        <section>
+                            <div class="inner">
+                                <h3>Things to consider in your bathroom</h3>
+
+                                <div class="form-heading">
+
+                                    <div class="container">
+                                        <div class="row">
+
+                                            <div class="col-lg-4 col-sm-1">
+                                                <div class="flip-card">
+                                                    <div class="flip-card-inner">
+                                                        <div class="flip-card-front">
+                                                            <img src="~/images/shower.jpg" alt="Avatar" style="width:100%;height:100%">
+                                                        </div>
+                                                        <div class="flip-card-back">
+                                                            <h6>Shower tips</h6>
+                                                            <p>Hot water is expensive, If 2 people in your house reduce there shower time to 1 minute you can save 30$ over year</p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4 col-sm-1">
+                                                <div class="flip-card">
+                                                    <div class="flip-card-inner">
+                                                        <div class="flip-card-front">
+                                                            <img src="~/images/handwash.jpg" alt="Avatar" style="width:100%;height:100%">
+                                                        </div>
+                                                        <div class="flip-card-back">
+                                                            <h6>Washing Hands tips</h6>
+                                                            <p>Turn off the water tap when brushing, shaving, washing hands and save upto 5% of bill.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-lg-4 col-sm-1">
+                                                <div class="flip-card">
+                                                    <div class="flip-card-inner">
+                                                        <div class="flip-card-front">
+                                                            <img src="~/images/tap.jpg" alt="Avatar" style="width:100%;height:100%">
+                                                        </div>
+                                                        <div class="flip-card-back">
+                                                            <h6>Fix Taps</h6>
+                                                            <p>Saw a leaking water tap ask your parent to fix it and save upto 9$ per year</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="margin:auto; padding-top:20px;">
+                                    <ul>
+                                        <li style="width:50%;">
+                                            <alpha href="#">
+                                                <h6>Electricity Fact</h6>
+                                                <para>1. A water heater when run continously for 3 hrs will cost you 36$ per month </para>
+                                                <para>2. Ask your parents to switch to solar water heater, less bill and no global warming effect.  </para>
+                                            </alpha>
+                                        </li>
+
+                                        <li>
+                                            <alpha href="#">
+                                                <a href="~/images/Checklist/SummerChecklist.pdf">
+                                                    <h6>Tip #2</h6>
+                                                    <para>
+                                                        Most of people took most number of shower in summer.
+                                                        Here is a checklist that will help you to reduce some electricity consumption in summer.
+                                                    </para>
+                                                    <p style="color:#0094ff; font-size:13px;">Click here</p>
+                                                    
+                                                </a>
+                                            </alpha>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- SECTION 2 -->
+                        @*For 2 section*@
+                        <h2>
+                            <p class="step-icon"><span><i class="fa fa-bed"></i></span></p>
+                            <span class="step-text">Bedroom facts</span>
+                        </h2>
+                        <section>
+                            <div class="inner">
+                                <h3>Things to do in your Bedroom</h3>
+                                <div class="form-heading">
+
+                                    <span>2/7</span>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+
+                                        <div class="col-lg-4 col-sm-1">
+                                            <div class="flip-card">
+                                                <div class="flip-card-inner">
+                                                    <div class="flip-card-front">
+                                                        <img src="~/images/Tips_Images/usefan.jpg" alt="Avatar" style="width:100%;height:100%;">
+
+                                                    </div>
+                                                    <div class="flip-card-back">
+                                                        <h3>Fan</h3>
+                                                        <p>Instead of using an AC use a Table Fan or ceiling fan in house, it consumes only than 2% electricity</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-sm-1">
+                                            <div class="flip-card">
+                                                <div class="flip-card-inner">
+                                                    <div class="flip-card-front">
+                                                        <img src="~/images/Tips_Images/useheater.jpg" alt="Avatar" style="width:100%;height:100%">
+                                                    </div>
+                                                    <div class="flip-card-back">
+                                                        <h3>Avoid using coil heater</h3>
+                                                        <p>Typically a coil heater cost adds 200$ to your bill for single person, Instead ask parents to use a oil heater</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-sm-1">
+                                            <div class="flip-card">
+                                                <div class="flip-card-inner">
+                                                    <div class="flip-card-front">
+                                                        <img src="~/images/Tips_Images/uselamps.jpg" alt="Avatar" style="width:100%;height:100%;">
+                                                    </div>
+                                                    <div class="flip-card-back">
+                                                        <h3>Switch to LED bulb</h3>
+                                                        <p>An LED bulb provides 2x brighter light than a conventional bulb.</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row pt-5">
+                                        <div class="col-lg-4 col-sm-1">
+                                            <div class="flip-card">
+                                                <div class="flip-card-inner">
+                                                    <div class="flip-card-front">
+                                                        <img src="~/images/Tips_Images/uselaptop.jpg" alt="Avatar" style="width:100%;height:100%;">
+
+                                                    </div>
+                                                    <div class="flip-card-back">
+                                                        <h3>Ditch desktop computer</h3>
+                                                        <p>Using you old desktop, Its time to use a laptop , using a laptop for 2hrs per day allow you to save 4$ over year.</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <ul>
+                                    <li style="width:30.33%">
+                                        <alpha href="#">
+                                            <h6>Tip #1</h6>
+                                            <para>In the summer you can open your windows during the evening to cool your bedroom. </para>
+                                        </alpha>
+                                    </li>
+
+                                    <li style="width:30.33%">
+                                        <alpha href="#">
+                                            <h6>Tip #2</h6>
+                                            <para>During the winter, you can turn down your thermostat. Simple, right? Plus, you can go for hemp sheets that are a natural thermo-controller.</para>
+                                        </alpha>
+                                    </li>
+
+                                    <li style="width:30.33%">
+                                        <alpha href="#">
+                                            <h6>Tip #2</h6>
+                                            <para>
+                                                Promote airflow through your home and block the afternoon sun. You could save you up to $10 (2 fans) or $45 (1 window unit AC) during the summer.
+                                            </para>
+                                        </alpha>
+                                    </li>
+
+
+
+                                </ul>
+
+                            </div>
+</section>
+                        <!-- SECTION 3 -->
+                        @*For 3 section*@
+                        <h2>
+                            <p class="step-icon"><span><i class="fa fa-utensils"></i></span></p>
+                            <span class="step-text">Kitchen facts</span>
+                        </h2>
+                        <section>
+                            <div class="inner">
+                                <h3>Tips on things in your kitchen</h3>
+                                <div class="form-heading">
+
+                                   
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-sm-1">
+                                            <div class="flip-card">
+                                                <div class="flip-card-inner">
+                                                    <div class="flip-card-front">
+                                                        <img src="~/images/Tips_Images/fridge.jpg" alt="Avatar" style="width:100%;height:300px;">
+
+                                                    </div>
+                                                    <div class="flip-card-back">
+                                                        <h1>Fridge</h1>
+                                                        <p>While buying a fridge look for the energy rating on it, The more the stars the better the electronic device</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-sm-1">
+                                            <div class="flip-card">
+                                                <div class="flip-card-inner">
+                                                    <div class="flip-card-front">
+                                                        <img src="~/images/Tips_Images/oven.jpg" alt="Avatar" style="width:100%;height:300px;">
+
+                                                    </div>
+                                                    <div class="flip-card-back">
+                                                        <h1>Oven</h1>
+                                                        <p>A microwave takes 15 minutes to do the same job as 1 hour in an oven. Use a microwave instead of your oven 4 times a week and save $13 per year</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-lg-4 col-sm-1">
+                                            <div class="flip-card">
+                                                <div class="flip-card-inner">
+                                                    <div class="flip-card-front">
+                                                        <img src="~/images/Tips_Images/dishwasher.jpg" alt="Avatar" style="width:100%;height:300px;">
+
+                                                    </div>
+                                                    <div class="flip-card-back">
+                                                        <h1>Dishwasher</h1>
+                                                        <p>That heat-dry setting is expensive. De-select it and, based on one load of dishes a day, save up to $27 for the year.</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row pt-5">
+                                        <div class="col-lg-4 col-sm-1">
+                                            <div class="flip-card">
+                                                <div class="flip-card-inner">
+                                                    <div class="flip-card-front">
+                                                        <img src="~/images/Tips_Images/washingMachine.jpg" alt="Avatar" style="width:100%;height:300px;">
+
+                                                    </div>
+                                                    <div class="flip-card-back">
+                                                        <h1>washing Machine</h1>
+                                                        <p>Cut one load of wash per week, even if you're already using cold water only, and you could save $18 a year on your laundry costs.</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <ul>
+                                    <li style="width:30.33%">
+                                        <alpha href="#">
+                                            <h6>Tip #1</h6>
+                                            <para>By switching from hot to cold water for an average of three loads per week, you could save up to $22 per year on your energy bill.</para>
+
+                                        </alpha>
+                                    </li>
+
+                                    <li style="width:30.33%">
+                                        <alpha href="#">
+                                            <h6>Tip #2</h6>
+                                            <para>A dry towel added to your dryer load can significantly reduce drying times. If you're doing seven loads a week this could save you $27 a year.</para>
+                                        </alpha>
+                                    </li>
+
+                                    <li style="width:30.33%">
+                                        <alpha href="#">
+                                            <h6>Tip #3</h6>
+                                            <para>Appliances tend to use less energy than the stove, so put the kettle on and let’s have a cup of tea.</para>
+                                        </alpha>
+                                    </li>
+
+                                    <li style="width:30.33%">
+                                        <alpha href="#">
+                                            <h6>Tip #4</h6>
+                                            <para>Avoid using the oven in summer – try salads, smoothies or barbecue. You'll reduce the heat in your home and save on your home cooling costs.</para>
+                                        </alpha>
+                                    </li>
+
+                                    <li style="width:30.33%">
+                                        <alpha href="#">
+                                            <h6>Tip #5</h6>
+                                            <para>
+                                                Use lids when boiling pans on the hob and make sure that you’re using the right saucepan on the right ring. This can make a huge difference, speeding up cooking times and using far less energy. Another great tip is to use the whole oven when you’re cooking so that the energy being used to heat the oven isn’t wasted.
+                                            </para>
+                                        </alpha>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+</section>
+                        @*For 4 section*@
+                        <h2>
+                            <p class="step-icon"><span><i class="fa fa-television"></i></span></p>
+                            <span class="step-text">Living Room facts</span>
+                        </h2>
+                        <section>
+                            <div class="inner">
+                                <h3>Things to consider in your living room</h3>
+                                <div class="form-heading">
+
+                                    <span>4/7</span>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-sm-1">
+                                            <div class="flip-card">
+                                                <div class="flip-card-inner">
+                                                    <div class="flip-card-front">
+                                                        <img src="~/images/led.jpg" alt="Avatar" style="width:100%;height:100%;">
+
+                                                    </div>
+                                                    <div class="flip-card-back">
+                                                        <h1>Switch to Led Bulbs</h1>
+                                                        <p> They're far more efficient than incandescent lightbulbs, last longer and can provide a cleaner, more natural looking light. </p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-sm-1">
+                                            <div class="flip-card">
+                                                <div class="flip-card-inner">
+                                                    <div class="flip-card-front">
+                                                        <img src="~/images/ac.jpg" alt="Avatar" style="width:100%;height:100%;">
+
+                                                    </div>
+                                                    <div class="flip-card-back">
+                                                        <h1>AC</h1>
+                                                        <p>
+                                                            Turn off that old window unit air conditioner for five hours a day while you're away.
+                                                            Do that for 60 days over a summer and you'll save $16.
+                                                        </p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-sm-1">
+                                            <div class="flip-card">
+                                                <div class="flip-card-inner">
+                                                    <div class="flip-card-front">
+                                                        <img src="~/images/thermostat.jpg" alt="Avatar" style="width:100%;height:100%;">
+
+                                                    </div>
+                                                    <div class="flip-card-back">
+                                                        <h1>TV</h1>
+                                                        <p>
+                                                            If you have electric heat, lower your thermostat by two degrees to save 5% on your heating bill.
+                                                            Lowering it five degrees could save 10%
+
+                                                        </p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row pt-5">
+                                        <div class="col-lg-4 col-sm-1">
+                                            <div class="flip-card">
+                                                <div class="flip-card-inner">
+                                                    <div class="flip-card-front">
+                                                        <img src="~/images/tv.jpg" alt="Avatar" style="width:100%;height:100%;">
+
+                                                    </div>
+                                                    <div class="flip-card-back">
+                                                        <h1>TV</h1>
+                                                        <p> Use LED TV in your hous they consume less electricity and consume less space.</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <alpha href="#">
+                                            <head_sticky>Renewable Energy Fact</head_sticky>
+                                            <para>
+                                                <br />If you’re really serious about saving electricity in your house, then investing in solar panels or other renewable technology is a great way of doing this. It will take a few years to break even on this investment, but you’ll start saving money on your electricity bills straight away as you can use the electricity you generate rather than taking it from the grid.
+                                            </para>
+                                        </alpha>
+                                    </li>
+
+                                    <li>
+                                        <alpha href="#">
+                                            <head_sticky>Tip #2</head_sticky>
+                                            <para><br />There's loads available, from simple timed switches to ones that can be controlled remotely from your smartphone. This makes it much easier to make sure that your electronics aren't left on standby. </para>
+                                        </alpha>
+                                    </li>
+
+                                    <li>
+                                        <alpha href="#">
+                                            <head_sticky>Tip #3</head_sticky>
+                                            <para>
+                                                <br />An insulated ceiling can make a big difference to your energy bills.
+                                                Effective ceiling insulation can save you up to 20 per cent on your cooling and heating costs.
+                                            </para>
+                                        </alpha>
+                                    </li>
+
+                                    <li>
+                                        <alpha href="#">
+                                            <head_sticky>Solar Fact</head_sticky>
+                                            <para>
+                                                <br />The sun is an excellent form of energy, just look at the renewable electricity we generate from it.
+                                                Keeping your curtains open during the day can help bring warmth and light into your home,
+                                                reducing your need for energy required to heat or light your house.
+                                            </para>
+                                        </alpha>
+                                    </li>
+
+                                    <li>
+                                        <alpha href="#">
+                                                <a href="~/images/Checklist/WinterChecklist.pdf" target="_blank">
+                                                <h6>Tip #2</h6>
+                                                <para>
+                                                    Great Job Kid!! you have Learned a lot heres another checklist for the Winter season.
+                                                </para>
+                                                <p style="color:#0094ff; font-size:13px;">Click here</p>
+
+                                            </a>
+                                        </alpha>
+                                    </li>
+
+
+                                </ul>
+
+
+                            </div>
+                        </section>
+                        @*For 5 section*@
+                        <h2>
+                            <p class="step-icon"><span><i class="fa fa-gamepad" aria-hidden="true"></i></span></p>
+                            <span class="step-text">Test your Knowledge</span>
+                        </h2>
+                        <section>
+                            <div class="inner">
+                                <div class="form-heading">
+                                 
+                                </div>
+                                <div class="map">
+                                    <div class="map-item map-item1">
+                                        <a class="marker marker1" href="#marker1">1</a>
+
+                                        <aside id="marker1" class="map-popup">
+
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Turn off the electric appliances when not in use, </p>
+                
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Even when your appliances are not in use but the switch is on, they still consume electricity and will cost you 3% of your energy bill</p>
+                                        </aside>
+                                    </div>
+
+                                    <div class="map-item map-item2">
+                                        <a class="marker marker2" href="#marker2">2</a>
+
+                                        <aside id="marker2" class="map-popup">
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Close the Fridge when you are not using it.</p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br /> If the door is opened for too long it cause the compressor (the one which does cooling) to overheat and shut off.</p>
+
+                                        </aside>
+                                    </div>
+
+                                    <div class="map-item map-item3">
+                                        <a class="marker marker3" href="#marker3">3</a>
+
+                                        <aside id="marker3" class="map-popup">
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Turn off the fan when not in use, </p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Continously running your electric fan can actually heat your room up, So the next time you walk into room with fan on continously wont be that cooler instead it will be hotter than outside.</p>
+
+
+                                        </aside>
+                                    </div>
+
+                                    <div class="map-item map-item4">
+                                        <a class="marker marker4" href="#marker4">4</a>
+
+                                        <aside id="marker4" class="map-popup">
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Natural Light is Free, so use wenever there is plenty of light, Avoid using artifical light in day time </p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Natural light is directly related to room color the darker the room the less amount of natural light in house, so ask your parents to use light shade colors.</p>
+
+                                        </aside>
+                                    </div>
+
+                                    <div class="map-item map-item5">
+                                        <a class="marker marker5" href="#marker5">5</a>
+
+                                        <aside id="marker5" class="map-popup">
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Switch off Light in daytime, Use Natural Lights </p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Have more mirrors so that the light will be much reflected in the whole kitchen</p>
+
+                                        </aside>
+                                    </div>
+
+                                    <img src="~/images/Kitchen.jpg" />
+                                </div>
+                                <ul>
+                                    
+
+                                    <li>
+                                        <alpha href="#">
+                                            <head_sticky>Renewable Energy Fact</head_sticky>
+                                            <para><br />
+                                             1. Have a recycling container in kitchen for your plastic waste<br />
+                                             2. Reduce your use of Plastic in Kitchen<br />
+                                             3. Ask mom and dad to buy kitchen cabinets and cupboard made of recycled material<br />
+                                             4. Use CFL bulbs in house,It reduces bill also it is more enviornmental friendly<br />
+
+                                          
+                                         </para>
+                                        </alpha>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </section>
+
+                        @*For 6 section*@
+                        <h2>
+                            <p class="step-icon"><span><i class="fa fa-gamepad" aria-hidden="true"></i></span></p>
+                            <span class="step-text">Test your knowledge</span>
+                        </h2>
+                        <section>
+                            <div class="inner">
+                                <div class="form-heading">
+                                   
+                                </div>
+                                <div class="map">
+
+                                    <div class="map-item img-item1">
+                                        <a class="marker marker_i1" href="#marker_i1">1</a>
+
+                                        <aside id="marker_i1" class="map-popup">
+
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Close the door when AC is ON</p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Keeping the Door closed will make temperature cooler inside, and will have less stress on AC</p>
+
+                                        </aside>
+                                    </div>
+
+                                    <div class="map-item img-item2">
+                                        <a class="marker marker_i2" href="#marker_i2">2</a>
+
+                                        <aside id="marker_i2" class="map-popup">
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Natural Light is Free, so use wenever there is plenty of light, Avoid using artifical light in day time </p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Natural light is directly related to room color the darker the room the less amount of natural light in house, so ask your parents to use light shade colors.</p>
+
+                                        </aside>
+                                    </div>
+
+                                    <div class="map-item img-item3">
+                                        <a class="marker marker_i3" href="#marker_i3">3</a>
+
+                                        <aside id="marker_i3" class="map-popup">
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Turn Off the TV when not required </p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />The screen brightness, resolution, sound if are on high setting will cause the electricity bill to be high</p>
+
+                                        </aside>
+                                    </div>
+
+                                    <div class="map-item img-item4">
+                                        <a class="marker marker_i4" href="#marker_i4">4</a>
+
+                                        <aside id="marker_i4" class="map-popup">
+
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Always keep the AC off when not in use </p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />I your AC is continously on, ask your parents to clean coils, air filter as they may be dirty.</p>
+
+                                        </aside>
+                                    </div>
+
+                                    <div class="map-item img-item5">
+                                        <a class="marker marker_i5" href="#marker_i5">5</a>
+
+                                        <aside id="marker_i5" class="map-popup">
+
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Turn off the fan when not in use, </p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Continously running your electric fan may cause more dust in the house.</p>
+
+                                        </aside>
+                                    </div>
+
+                                    <div class="map-item img-item6">
+                                        <a class="marker marker_i6" href="#marker_i6">6</a>
+
+                                        <aside id="marker_i6" class="map-popup">
+
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Switch off Light in daytime, Use Natural Lights </p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Flooring can also contribute to more amount of light in house, A wooden, ceramic or stone finish will cause more light to reflect on.</p>
+
+                                        </aside>
+                                    </div>
+
+                                    <img src="~/images/Living_room.jpg" /Solar tubes>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <alpha href="#">
+                                            <head_sticky>Renewable Energy Fact</head_sticky>
+                                            <para><br />
+                                            1. Try to use more renewable energy devices such as Window solar charger <br />
+                                            2. Ask parents to use Tubular Skylight in house, It is a solar chimney that allows more natural light in house.<br />
+                                    
+                                            </para>
+                                        </alpha>
+                                    </li>
+
+
+
+                                </ul>
+                            </div>
+                        </section>
+
+                        @*For 7 section*@
+                        <h2>
+                            <p class="step-icon"><span><i class="fa fa-gamepad" aria-hidden="true"></i></span></p>
+                            <span class="step-text">Test your Knowledge</span>
+                        </h2>
+                        <section>
+                            <div class="inner">
+                                <div class="form-heading">
+                                   
+                                </div>
+
+                                    <div class="map">
+
+                                        <div class="map-item bed-item1">
+                                            <a class="marker marker_i1" href="#marker_i1">1</a>
+
+                                            <aside id="marker_i1" class="map-popup">
+                                                <p class="marker-p"><h5><b>Good Job!</b></h5><br>Turn Off the TV when not required </p>
+
+                                                <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Try to use the standby mode on tv, whenever you are not using it, it saves much electricity.</p>
+
+                                            </aside>
+                                        </div>
+
+                                        <div class="map-item bed-item2">
+                                            <a class="marker marker_i2" href="#marker_i2">2</a>
+
+                                            <aside id="marker_i2" class="map-popup">
+                                                <p class="marker-p"><h5><b>Good Job!</b></h5><br>Keep your laptop on standby when not in use.</p>
+
+                                                <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Having a continously running laptop will degrade the device battery life by 10% and sometimes u face heating issue. </p>
+
+
+                                            </aside>
+                                        </div>
+
+                                        <div class="map-item bed-item3">
+                                            <a class="marker marker_i3" href="#marker_i3">3</a>
+
+                                            <aside id="marker_i3" class="map-popup">
+                                                <p class="marker-p"><h5><b>Good Job!</b></h5><br>Turn off the fan when not in use, </p>
+                                                <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Sleeping with a table fan on is risky, there is a small possibilty of the appliance to be too hot and catching fire. </p>
+
+
+                                            </aside>
+                                        </div>
+
+                                    
+                                        <div class="map-item bed-item5">
+                                            <a class="marker marker_i5" href="#marker_i5">4</a>
+
+                                            <aside id="marker_i5" class="map-popup">
+                                                <p class="marker-p"><h5><b>Good Job!</b></h5><br>There is no need to have all lights to be kept on.</p>
+
+                                                <p class="marker-p"><h5><b>Do you Know?</b></h5><br /> An LED electric bulb reduce your electricity bill by 5%.</p>
+
+                                            </aside>
+                                        </div>
+
+                                        <div class="map-item bed-item6">
+                                            <a class="marker marker_i6" href="#marker_i6">5</a>
+
+                                            <aside id="marker_i6" class="map-popup">
+                                                <p class="marker-p"><h5><b>Good Job!</b></h5><br>There is no need to have all lights to be kept on.</p>
+
+                                                <p class="marker-p"><h5><b>Do you Know?</b></h5><br /> Ask your parents to not use a cool flourescent bulb for study lamp as it will cause a strain on your eyes.</p>
+
+                                            </aside>
+                                        </div>
+
+                                        <img src="~/images/Bedroom.jpg" />
+
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <alpha href="#">
+                                                <head_sticky>Renewable Energy Hack</head_sticky>
+                                                <para>
+                                                    <br />
+                                                    1. A LED bulb do not emits any polluting radiation, hence switch to them. <br />
+                                                    2. Instead of using traditional wood heater, Be smart ask for an electric blanket<br />
+                                                    3. Unplug all devices from wall when not in use.
+                                                </para>
+                                            </alpha>
+                                        </li>
+
+                                        
+
+
+                                    </ul>
+                                </div>
+                        </section>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
