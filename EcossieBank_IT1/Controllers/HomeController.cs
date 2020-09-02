@@ -61,7 +61,7 @@ namespace EcossieBank_IT1.Controllers
 
                     EmailSender es = new EmailSender();
                     es.Send(toEmail, subject, contents);
-
+                    ViewBag.Current = "Contact";
                     ViewBag.Result = "Email has been send.";
 
                     ModelState.Clear();

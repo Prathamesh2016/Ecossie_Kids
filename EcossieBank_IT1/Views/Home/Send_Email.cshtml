@@ -103,9 +103,13 @@
         </div>
     </body>
 
-    <script type="text/javascript">
+    if (@ViewBag.Result != null)
+    {
+        <script type="text/javascript">
 
             alert("@ViewBag.Result");
-    </script>
+        </script>
+
+    }
 
 }
