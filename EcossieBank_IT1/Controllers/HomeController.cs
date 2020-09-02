@@ -11,6 +11,7 @@ namespace EcossieBank_IT1.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Current = "Index";
             return View();
         }
 
@@ -24,7 +25,7 @@ namespace EcossieBank_IT1.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-            ViewBag.Current = "Contact";
+            ViewBag.Current = "Send_Email";
             return View();
         }
 
@@ -42,9 +43,10 @@ namespace EcossieBank_IT1.Controllers
             return View();
         }
 
-        [HttpGet]
+       
         public ActionResult Send_Email()
         {
+            ViewBag.Current = "Send_Email";
             return View(new SendEmailViewModel());
         }
 
@@ -61,11 +63,11 @@ namespace EcossieBank_IT1.Controllers
 
                     EmailSender es = new EmailSender();
                     es.Send(toEmail, subject, contents);
-                    ViewBag.Current = "Contact";
+                    
                     ViewBag.Result = "Email has been sent.";
 
                     ModelState.Clear();
-
+                    ViewBag.Current = "Send_Email";
                     return View(new SendEmailViewModel());
                 }
                 catch
@@ -73,6 +75,7 @@ namespace EcossieBank_IT1.Controllers
                     return View();
                 }
             }
+            ViewBag.Current = "Send_Email";
             return View();
         }
 
