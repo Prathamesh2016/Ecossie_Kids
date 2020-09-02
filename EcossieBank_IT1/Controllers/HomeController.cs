@@ -17,31 +17,32 @@ namespace EcossieBank_IT1.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-
+            ViewBag.Current = "About";
             return View();
         }
 
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
+            ViewBag.Current = "Contact";
             return View();
         }
 
         public ActionResult Tips()
         {
             ViewBag.Message = "Your contact page.";
-
+            ViewBag.Current = "Tips";
             return View();
         }
 
-        public ActionResult Demo()
+        public ActionResult Image_Game()
         {
-            ViewBag.Message = "Your contact page.";
-
+            ViewBag.Message = "Your game page.";
+            ViewBag.Current = "Image_Game";
             return View();
         }
 
+        [HttpGet]
         public ActionResult Send_Email()
         {
             return View(new SendEmailViewModel());
@@ -72,7 +73,6 @@ namespace EcossieBank_IT1.Controllers
                     return View();
                 }
             }
-
             return View();
         }
 

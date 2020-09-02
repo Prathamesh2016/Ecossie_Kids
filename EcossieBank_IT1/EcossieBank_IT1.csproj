@@ -185,6 +185,7 @@
     <Content Include="images\flaticon\svg\004-marketing.svg" />
     <Content Include="images\flaticon\svg\005-deal.svg" />
     <Content Include="images\flaticon\svg\006-research.svg" />
+    <Content Include="images\game rule.PNG" />
     <Content Include="images\giphy.gif" />
     <Content Include="images\giphy2.gif" />
     <Content Include="images\handwash.jpg" />
@@ -201,6 +202,7 @@
     <Content Include="images\img_6.jpg" />
     <Content Include="images\kid_transparent.png" />
     <Content Include="images\Kitchen.jpg" />
+    <Content Include="images\Learn_game.jpg" />
     <Content Include="images\led.jpg" />
     <Content Include="images\Living_room.jpg" />
     <Content Include="images\logo4.png" />
@@ -417,6 +419,7 @@
     <Content Include="scss\_site-navbar.scss" />
     <Content Include="Views\Home\Tips.cshtml" />
     <Content Include="Views\Home\Send_Email.cshtml" />
+    <Content Include="Views\Home\Image_Game.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

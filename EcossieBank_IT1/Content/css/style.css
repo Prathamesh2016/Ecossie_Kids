@@ -2662,3 +2662,12 @@ h1, h2, h3, h4, h5,
 .tips-banner {
     background-image: url('../../images/hero_3.jpg');
 }
+
+.image-game-banner {
+    background-image: url('../../images/Learn_game.jpg');
+}
+
+
+.bg-imgbtn {
+    background-color: #1E8D8A !important;
+}

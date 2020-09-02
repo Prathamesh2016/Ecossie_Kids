@@ -30,6 +30,11 @@ namespace EcossieBank_IT1
                url: "{controller}/{action}/{id}",
                defaults: new { controller = "Home", action = "Contact", id = UrlParameter.Optional }
            );
+            routes.MapRoute(
+              name: "PlayGame",
+              url: "{controller}/{action}/{id}",
+              defaults: new { controller = "Home", action = "ImageGame", id = UrlParameter.Optional }
+          );
         }
     }
 }

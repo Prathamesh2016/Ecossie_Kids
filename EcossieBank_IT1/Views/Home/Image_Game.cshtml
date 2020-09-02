@@ -1,0 +1,652 @@
+﻿
+@{
+    ViewBag.Title = "Image_Game";
+    Layout = "~/Views/Shared/_CustomLayout.cshtml";
+}
+
+<head>
+    <style>
+        @* Sticky note css *@;
+
+        body {
+            font-family: arial,sans-serif;
+            font-size: 100%;
+            margin: 1em;
+            background: #666;
+            color: #fff;
+          
+            display: grid;
+            height: 100vh;
+            place-items: center;
+        }
+
+        head_sticky, para {
+            font-size: 100%;
+            font-weight: normal;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+
+        ul {
+            overflow: hidden;
+            padding: 1em;
+        }
+
+            ul li alpha {
+                text-decoration: none;
+                color: #000;
+                background: #ffc;
+                display: block;
+                height: 20em;
+                width: 20em;
+                padding: 1em;
+                -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);
+                -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+                box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+                -moz-transition: -moz-transform .15s linear;
+                -o-transition: -o-transform .15s linear;
+                -webkit-transition: -webkit-transform .15s linear;
+            }
+
+            ul li {
+                margin: 1em;
+                float: left;
+            }
+
+                ul li head_sticky {
+                    font-size: 140%;
+                    font-weight: bold;
+                    padding-bottom: 10px;
+                }
+
+                ul li p {
+                    font-family: "Reenie Beanie",arial,sans-serif;
+                    font-size: 180%;
+                }
+
+                ul li alpha {
+                    -webkit-transform: rotate(-6deg);
+                    -o-transform: rotate(-6deg);
+                    -moz-transform: rotate(-6deg);
+                }
+
+                ul li:nth-child(even) alpha {
+                    -o-transform: rotate(4deg);
+                    -webkit-transform: rotate(4deg);
+                    -moz-transform: rotate(4deg);
+                    position: relative;
+                    top: 5px;
+                    background: #cfc;
+                }
+
+                ul li:nth-child(3n) alpha {
+                    -o-transform: rotate(-3deg);
+                    -webkit-transform: rotate(-3deg);
+                    -moz-transform: rotate(-3deg);
+                    position: relative;
+                    top: -5px;
+                    background: #ccf;
+                }
+
+                ul li:nth-child(5n) alpha {
+                    -o-transform: rotate(5deg);
+                    -webkit-transform: rotate(5deg);
+                    -moz-transform: rotate(5deg);
+                    position: relative;
+                    top: -10px;
+                }
+
+                ul li alpha:hover, ul li alpha:focus {
+                    box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+                    -moz-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+                    -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+                    -webkit-transform: scale(1.25);
+                    -moz-transform: scale(1.25);
+                    -o-transform: scale(1.25);
+                    position: relative;
+                    z-index: 5;
+                }
+
+        ol {
+            text-align: center;
+        }
+
+            ol li {
+                display: inline;
+                padding-right: 18px;
+            }
+
+                ol li alpha {
+                    color: #fff;
+                    text-align: justify;
+                }
+
+        @* Css for timer*@;
+        .base-timer {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+
+        .base-timer__svg {
+            transform: scaleX(-1);
+        }
+
+        .base-timer__circle {
+            fill: none;
+            stroke: none;
+        }
+
+        .base-timer__path-elapsed {
+            stroke-width: 7px;
+            stroke: grey;
+        }
+
+        .base-timer__path-remaining {
+            stroke-width: 7px;
+            stroke-linecap: round;
+            transform: rotate(90deg);
+            transform-origin: center;
+            transition: 1s linear all;
+            fill-rule: nonzero;
+            stroke: currentColor;
+        }
+
+            .base-timer__path-remaining.green {
+                color: rgb(65, 184, 131);
+            }
+
+            .base-timer__path-remaining.orange {
+                color: orange;
+            }
+
+            .base-timer__path-remaining.red {
+                color: red;
+            }
+
+        .base-timer__label {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+        
+    </style>
+</head>
+
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <div class="site-wrap" id="home-section">
+        <div class="ftco-blocks-cover-1">
+            <div class="site-section-cover overlay image-game-banner" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row align-items-center ">
+                        <div class="col-md-5 mt-5 pt-5">
+                            <span class="text-cursive h5 text-red">Learn while Playing</span>
+                            <h1 class="mb-3 font-weight-bold text-teal">Spot the Mistakes</h1>
+                            <p><a href="@Url.Action("Index", "Home")" class="text-white">Home</a> <span class="mx-3">/</span> <strong>Spot the Mistakes</strong></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class=" container-fluid page-content">
+        
+        <div class="container wizard-v6-content">
+
+            <div class="wizard-form">
+                <form class="form-register" id="form-register" action="#" method="post">
+                    <div id="form-total">
+
+                        <h2>
+                            <p class="step-icon"><span><i class="fa fa-gamepad" aria-hidden="true"></i></span></p>
+                            <span class="step-text">Game Instructions</span>
+                        </h2>
+                        <section>
+                            <div class="inner">
+                                <div class="form-heading">
+
+                                </div>
+                                @*add the image instruction*@
+                                <div class="map">
+                                    <img src="~/images/game rule.PNG" />
+                                </div>
+
+
+                            </div>
+                        </section>
+
+
+                        @*For 5 section*@
+                        <h2>
+                            <p class="step-icon"><span><i class="fa fa-gamepad" aria-hidden="true"></i></span></p>
+                            <span class="step-text">Kitchen Mistakes</span>
+
+                        </h2>
+
+                        <section>
+
+                            <div class="inner">
+
+                                <div class="form-heading">
+
+                                </div>
+                               <div>
+
+                               </div>
+                                <div class="map">
+                                    <div class="map-item map-item1">
+
+                                        <a class="marker marker1" href="#marker1">!</a>
+
+                                        <aside id="marker1" class="map-popup">
+
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Turn off the electric appliances when not in use, </p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Even when your appliances are not in use but the switch is on, they still consume electricity and will cost you 3% of your energy bill</p>
+                                        </aside>
+                                    </div>
+
+                                    <div class="map-item map-item2">
+                                        <a class="marker marker2" href="#marker2">!</a>
+
+                                        <aside id="marker2" class="map-popup">
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Close the Fridge when you are not using it.</p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br /> If the door is opened for too long it cause the compressor (the one which does cooling) to overheat and shut off.</p>
+
+                                        </aside>
+                                    </div>
+
+                                    <div class="map-item map-item3">
+                                        <a class="marker marker3" href="#marker3">!</a>
+
+                                        <aside id="marker3" class="map-popup">
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Turn off the fan when not in use, </p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Continously running your electric fan can actually heat your room up, So the next time you walk into room with fan on continously wont be that cooler instead it will be hotter than outside.</p>
+
+
+                                        </aside>
+                                    </div>
+
+                                    <div class="map-item map-item4">
+                                        <a class="marker marker4" href="#marker4">!</a>
+
+                                        <aside id="marker4" class="map-popup">
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Natural Light is Free, so use wenever there is plenty of light, Avoid using artifical light in day time </p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Natural light is directly related to room color the darker the room the less amount of natural light in house, so ask your parents to use light shade colors.</p>
+
+                                        </aside>
+                                    </div>
+
+                                    <div class="map-item map-item5">
+                                        <a class="marker marker5" href="#marker5">!</a>
+
+                                        <aside id="marker5" class="map-popup">
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Switch off Light in daytime, Use Natural Lights </p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Have more mirrors so that the light will be much reflected in the whole kitchen</p>
+
+                                        </aside>
+                                    </div>
+
+                                    <img src="~/images/Kitchen.jpg" />
+                                </div>
+                                <ul>
+
+
+                                    <li>
+                                        <alpha href="#">
+                                            <head_sticky>Renewable Energy Fact</head_sticky>
+                                            <para>
+                                                <br />
+                                                1. Have a recycling container in kitchen for your plastic waste<br />
+                                                2. Reduce your use of Plastic in Kitchen<br />
+                                                3. Ask mom and dad to buy kitchen cabinets and cupboard made of recycled material<br />
+                                                4. Use CFL bulbs in house,It reduces bill also it is more enviornmental friendly<br />
+
+
+                                            </para>
+                                        </alpha>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </section>
+
+                        @*For 6 section*@
+                        <h2>
+                            <p class="step-icon"><span><i class="fa fa-gamepad" aria-hidden="true"></i></span></p>
+                            <span class="step-text">Living-room Mistakes</span>
+                        </h2>
+                        <section>
+                            <div class="inner">
+                                <div class="form-heading">
+
+                                </div>
+                                <div class="map">
+
+                                    <div class="map-item img-item1">
+                                        <a class="marker marker_i1" href="#marker_i1">!</a>
+
+                                        <aside id="marker_i1" class="map-popup">
+
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Close the door when AC is ON</p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Keeping the Door closed will make temperature cooler inside, and will have less stress on AC</p>
+
+                                        </aside>
+                                    </div>
+
+                                    <div class="map-item img-item2">
+                                        <a class="marker marker_i2" href="#marker_i2">!</a>
+
+                                        <aside id="marker_i2" class="map-popup">
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Natural Light is Free, so use wenever there is plenty of light, Avoid using artifical light in day time </p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Natural light is directly related to room color the darker the room the less amount of natural light in house, so ask your parents to use light shade colors.</p>
+
+                                        </aside>
+                                    </div>
+
+                                    <div class="map-item img-item3">
+                                        <a class="marker marker_i3" href="#marker_i3">!</a>
+
+                                        <aside id="marker_i3" class="map-popup">
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Turn Off the TV when not required </p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />The screen brightness, resolution, sound if are on high setting will cause the electricity bill to be high</p>
+
+                                        </aside>
+                                    </div>
+
+                                    <div class="map-item img-item4">
+                                        <a class="marker marker_i4" href="#marker_i4">!</a>
+
+                                        <aside id="marker_i4" class="map-popup">
+
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Always keep the AC off when not in use </p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />I your AC is continously on, ask your parents to clean coils, air filter as they may be dirty.</p>
+
+                                        </aside>
+                                    </div>
+
+                                    <div class="map-item img-item5">
+                                        <a class="marker marker_i5" href="#marker_i5">!</a>
+
+                                        <aside id="marker_i5" class="map-popup">
+
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Turn off the fan when not in use, </p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Continously running your electric fan may cause more dust in the house.</p>
+
+                                        </aside>
+                                    </div>
+
+                                    <div class="map-item img-item6">
+                                        <a class="marker marker_i6" href="#marker_i6">!</a>
+
+                                        <aside id="marker_i6" class="map-popup">
+
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Switch off Light in daytime, Use Natural Lights </p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Flooring can also contribute to more amount of light in house, A wooden, ceramic or stone finish will cause more light to reflect on.</p>
+
+                                        </aside>
+                                    </div>
+
+                                    <img src="~/images/Living_room.jpg" /Solar tubes>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <alpha href="#">
+                                            <head_sticky>Renewable Energy Fact</head_sticky>
+                                            <para>
+                                                <br />
+                                                1. Try to use more renewable energy devices such as Window solar charger <br />
+                                                2. Ask parents to use Tubular Skylight in house, It is a solar chimney that allows more natural light in house.<br />
+
+                                            </para>
+                                        </alpha>
+                                    </li>
+
+
+
+                                </ul>
+                            </div>
+                        </section>
+
+                        @*For 7 section*@
+                        <h2>
+                            <p class="step-icon"><span><i class="fa fa-gamepad" aria-hidden="true"></i></span></p>
+                            <span class="step-text">Bedroom Mistakes</span>
+                        </h2>
+                        <section>
+                            <div class="inner">
+                                <div class="form-heading">
+
+                                </div>
+
+                                <div class="map">
+
+                                    <div class="map-item bed-item1">
+                                        <a class="marker marker_i1" href="#marker_i1">!</a>
+
+                                        <aside id="marker_i1" class="map-popup">
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Turn Off the TV when not required </p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Try to use the standby mode on tv, whenever you are not using it, it saves much electricity.</p>
+
+                                        </aside>
+                                    </div>
+
+                                    <div class="map-item bed-item2">
+                                        <a class="marker marker_i2" href="#marker_i2">!</a>
+
+                                        <aside id="marker_i2" class="map-popup">
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Keep your laptop on standby when not in use.</p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Having a continously running laptop will degrade the device battery life by 10% and sometimes u face heating issue. </p>
+
+
+                                        </aside>
+                                    </div>
+
+                                    <div class="map-item bed-item3">
+                                        <a class="marker marker_i3" href="#marker_i3">!</a>
+
+                                        <aside id="marker_i3" class="map-popup">
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>Turn off the fan when not in use, </p>
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br />Sleeping with a table fan on is risky, there is a small possibilty of the appliance to be too hot and catching fire. </p>
+
+
+                                        </aside>
+                                    </div>
+
+
+                                    <div class="map-item bed-item5">
+                                        <a class="marker marker_i5" href="#marker_i5">!</a>
+
+                                        <aside id="marker_i5" class="map-popup">
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>There is no need to have all lights to be kept on.</p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br /> An LED electric bulb reduce your electricity bill by 5%.</p>
+
+                                        </aside>
+                                    </div>
+
+                                    <div class="map-item bed-item6">
+                                        <a class="marker marker_i6" href="#marker_i6">!</a>
+
+                                        <aside id="marker_i6" class="map-popup">
+                                            <p class="marker-p"><h5><b>Good Job!</b></h5><br>There is no need to have all lights to be kept on.</p>
+
+                                            <p class="marker-p"><h5><b>Do you Know?</b></h5><br /> Ask your parents to not use a cool flourescent bulb for study lamp as it will cause a strain on your eyes.</p>
+
+                                        </aside>
+                                    </div>
+
+                                    <img src="~/images/Bedroom.jpg" />
+
+                                </div>
+                                <ul>
+                                    <li>
+                                        <alpha href="#">
+                                            <head_sticky>Renewable Energy Hack</head_sticky>
+                                            <para>
+                                                <br />
+                                                1. A LED bulb do not emits any polluting radiation, hence switch to them. <br />
+                                                2. Instead of using traditional wood heater, Be smart ask for an electric blanket<br />
+                                                3. Unplug all devices from wall when not in use.
+                                            </para>
+                                        </alpha>
+                                    </li>
+
+
+
+
+                                </ul>
+                            </div>
+                        </section>
+
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+const FULL_DASH_ARRAY = 283;
+const WARNING_THRESHOLD = 10;
+const ALERT_THRESHOLD = 5;
+
+const COLOR_CODES = {
+  info: {
+    color: "green"
+  },
+  warning: {
+    color: "orange",
+    threshold: WARNING_THRESHOLD
+  },
+  alert: {
+    color: "red",
+    threshold: ALERT_THRESHOLD
+  }
+};
+
+const TIME_LIMIT = 20;
+let timePassed = 0;
+let timeLeft = TIME_LIMIT;
+let timerInterval = null;
+let remainingPathColor = COLOR_CODES.info.color;
+
+document.getElementById("app").innerHTML = `
+<div class="base-timer">
+  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <g class="base-timer__circle">
+      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+      <path
+        id="base-timer-path-remaining"
+        stroke-dasharray="283"
+        class="base-timer__path-remaining ${remainingPathColor}"
+        d="
+          M 50, 50
+          m -45, 0
+          a 45,45 0 1,0 90,0
+          a 45,45 0 1,0 -90,0
+        "
+      ></path>
+    </g>
+  </svg>
+  <span id="base-timer-label" class="base-timer__label">${formatTime(
+    timeLeft
+  )}</span>
+</div>
+`;
+
+startTimer();
+
+function onTimesUp() {
+  clearInterval(timerInterval);
+}
+
+function startTimer() {
+  timerInterval = setInterval(() => {
+    timePassed = timePassed += 1;
+    timeLeft = TIME_LIMIT - timePassed;
+    document.getElementById("base-timer-label").innerHTML = formatTime(
+      timeLeft
+    );
+    setCircleDasharray();
+    setRemainingPathColor(timeLeft);
+
+    if (timeLeft === 0) {
+      onTimesUp();
+    }
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+
+function setRemainingPathColor(timeLeft) {
+  const { alert, warning, info } = COLOR_CODES;
+  if (timeLeft <= alert.threshold) {
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(warning.color);
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.add(alert.color);
+  } else if (timeLeft <= warning.threshold) {
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(info.color);
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.add(warning.color);
+  }
+}
+
+function calculateTimeFraction() {
+  const rawTimeFraction = timeLeft / TIME_LIMIT;
+  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+}
+
+function setCircleDasharray() {
+  const circleDasharray = `${(
+    calculateTimeFraction() * FULL_DASH_ARRAY
+  ).toFixed(0)} 283`;
+  document
+    .getElementById("base-timer-path-remaining")
+    .setAttribute("stroke-dasharray", circleDasharray);
+}
+</script>
