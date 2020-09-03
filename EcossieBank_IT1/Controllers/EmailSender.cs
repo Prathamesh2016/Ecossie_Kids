@@ -19,7 +19,7 @@ namespace EcossieBank_IT1.Controllers
             //system get message from user
             var client = new SendGridClient(API_KEY);
             var from = new EmailAddress(toEmail, "Email from User");
-            var to = new EmailAddress("llin0024@student.monash.edu", "");
+            var to = new EmailAddress("ecossiekids@gmail.com", "");
             var plainTextContent = contents;
             var htmlContent = "<p>" + contents + "</p>";
             var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
