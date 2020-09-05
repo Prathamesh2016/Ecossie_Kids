@@ -3,8 +3,9 @@
 <head>
     <title>EcossieBank &mdash; Website Template by Colorlib</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @Styles.Render("~/template/css")
+    <link rel="stylesheet" href="css/responsive.css" type="text/css" />
     <link rel="stylesheet" href="~/fonts/flaticon/font/flaticon.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -24,21 +25,21 @@
         <header class="site-navbar site-navbar-target" role="banner">
             <div class="container mb-3">
                 <div class="d-flex align-items-center">
-                    <div class="col-md-6 ml-auto align-self-end" align="left" >
-                        <a href="Index"><img src="~/images/logo4.png" alt="Image" class="img-fluid" ></a>
+                    <div class="col-md-6 ml-auto align-self-end" align="left">
+                        <a href="/Home/Index"><img src="~/images/Website_Logo.png" alt="Image" class="img-fluid" align="left"></a>
                     </div>
-                   @* <div class="site-quick-contact d-none d-lg-flex ml-auto ">
+                   <div class="site-quick-contact d-none d-lg-flex ml-auto ">
                         <div class="d-flex site-info align-items-center mr-5">
-                            <span class="block-icon mr-3"><i class="fa fa-map-marker-alt"></i></span>
-                            <span>Wellington Rd, Clayton VIC 3800 <br> Melbourne</span>
+                            <span class="block-icon mr-3"><i class="fa fa fa-book"></i></span>
+                            <span>Lets Educate with Fun</span>
                         </div>
-                        <div class="d-flex site-info align-items-center">
+                        @*<div class="d-flex site-info align-items-center">
                             <span class="block-icon mr-3"><i class="far fa-clock"></i></span>
                             <span>Monday - Friday 8:00AM - 7:00PM <br> Saturday, Sunday CLOSED</span>
-                        </div>
+                        </div>*@
 
                     </div>
-                       *@
+                      
                 </div>
             </div>
 
@@ -49,8 +50,8 @@
                     <nav class="site-navigation text-left mr-auto d-none d-lg-block" role="navigation">
                         <ul class="site-menu main-menu js-clone-nav mr-auto ">
                             <li class="@(ViewBag.Current == "Index" ? "active" : "")">@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li class="@(ViewBag.Current == "About" ? "active" : "")">@Html.ActionLink("About us", "About", "Home")</li>
                             <li class="@(ViewBag.Current == "Tips" ? "active" : "")">@Html.ActionLink("Learn", "Tips", "Home")</li>
+                            <li class="@(ViewBag.Current == "About" ? "active" : "")">@Html.ActionLink("About us", "About", "Home")</li>
                             <li class="@(ViewBag.Current == "Send_Email" ? "active" : "")">@Html.ActionLink("Contact us", "Send_Email", "Home")</li>
                         </ul>
                     </nav>
