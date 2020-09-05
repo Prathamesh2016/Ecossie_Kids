@@ -247,10 +247,10 @@
     <Content Include="images\Tips_Images\bathroom-washer-flip.gif" />
     <Content Include="images\Tips_Images\bathroom-washer.gif" />
     <Content Include="images\Tips_Images\Bathtub.gif" />
+    <Content Include="images\Tips_Images\bedroom - fan.gif" />
+    <Content Include="images\Tips_Images\bedroom -fan -flip.gif" />
     <Content Include="images\Tips_Images\bedroom-computer - flip.gif" />
     <Content Include="images\Tips_Images\bedroom-computer.gif" />
-    <Content Include="images\Tips_Images\bedroom-fan - flip.gif" />
-    <Content Include="images\Tips_Images\bedroom-fan.gif" />
     <Content Include="images\Tips_Images\bedroom-window - flip.gif" />
     <Content Include="images\Tips_Images\bedroom-window.gif" />
     <Content Include="images\Tips_Images\Fan_off.gif" />
