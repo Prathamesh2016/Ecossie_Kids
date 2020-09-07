@@ -42,6 +42,7 @@ namespace EcossieBank_IT1
                       "~/Scripts/jquery.easing.1.3.js",
                       "~/Scripts/bootstrap-datepicker.min.js",
                       "~/Scripts/aos.js",
+                     "~/Content/dist/index.min.js",
                       "~/Scripts/main.js"
                        ));
 
@@ -56,7 +57,6 @@ namespace EcossieBank_IT1
                           "~/Content/css/owl.theme.default.min.css",
                            "~/Content/css/aos.css",
                            "~/fonts/flaticon/font/flaticon.css",
-                           "~/Content/dist/index.min.js",
                             "~/Content/css/jquery-ui.min.css",
                            
                             //Main css
