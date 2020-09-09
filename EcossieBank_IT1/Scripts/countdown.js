@@ -23,6 +23,9 @@ let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
+let remainingPathColor1 = COLOR_CODES.info.color;
+let remainingPathColor2 = COLOR_CODES.info.color;
+
 
 document.getElementById("app").innerHTML = `
 <div class="base-timer">
@@ -48,7 +51,75 @@ document.getElementById("app").innerHTML = `
 </div>
 `;
 
-
+document.getElementById("app1").innerHTML = `
+<div class="base-timer">
+  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <g class="base-timer__circle">
+      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+      <path
+        id="base-timer-path-remaining1"
+        stroke-dasharray="283"
+        class="base-timer__path-remaining1 ${remainingPathColor1}"
+        d="
+          M 50, 50
+          m -45, 0
+          a 45,45 0 1,0 90,0
+          a 45,45 0 1,0 -90,0
+        "
+      ></path>
+    </g>
+  </svg>
+  <span id="base-timer-label1" class="base-timer__label1">${formatTime(
+    timeLeft
+)}</span>
+</div>
+`;
+document.getElementById("app1").innerHTML = `
+<div class="base-timer">
+  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <g class="base-timer__circle">
+      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+      <path
+        id="base-timer-path-remaining1"
+        stroke-dasharray="283"
+        class="base-timer__path-remaining1 ${remainingPathColor}"
+        d="
+          M 50, 50
+          m -45, 0
+          a 45,45 0 1,0 90,0
+          a 45,45 0 1,0 -90,0
+        "
+      ></path>
+    </g>
+  </svg>
+  <span id="base-timer-label1" class="base-timer__label1">${formatTime(
+    timeLeft
+)}</span>
+</div>
+`;
+document.getElementById("app2").innerHTML = `
+<div class="base-timer">
+  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <g class="base-timer__circle">
+      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+      <path
+        id="base-timer-path-remaining2"
+        stroke-dasharray="283"
+        class="base-timer__path-remaining2 ${remainingPathColor}"
+        d="
+          M 50, 50
+          m -45, 0
+          a 45,45 0 1,0 90,0
+          a 45,45 0 1,0 -90,0
+        "
+      ></path>
+    </g>
+  </svg>
+  <span id="base-timer-label2" class="base-timer__label2">${formatTime(
+    timeLeft
+)}</span>
+</div>
+`;
 
 
 
@@ -65,7 +136,13 @@ function startTimer() {
     timeLeft = TIME_LIMIT - timePassed;
     document.getElementById("base-timer-label").innerHTML = formatTime(
       timeLeft
-    );
+      );
+      document.getElementById("base-timer-label1").innerHTML = formatTime(
+          timeLeft
+      );
+      document.getElementById("base-timer-label2").innerHTML = formatTime(
+          timeLeft
+      );
     setCircleDasharray();
     setRemainingPathColor(timeLeft);
 
@@ -94,14 +171,38 @@ function setRemainingPathColor(timeLeft) {
       .classList.remove(warning.color);
     document
       .getElementById("base-timer-path-remaining")
-      .classList.add(alert.color);
+          .classList.add(alert.color);
+      document
+          .getElementById("base-timer-path-remaining1")
+          .classList.remove(warning.color);
+      document
+          .getElementById("base-timer-path-remaining1")
+          .classList.add(alert.color);
+      document
+          .getElementById("base-timer-path-remaining2")
+          .classList.remove(warning.color);
+      document
+          .getElementById("base-timer-path-remaining2")
+          .classList.add(alert.color);
   } else if (timeLeft <= warning.threshold) {
     document
       .getElementById("base-timer-path-remaining")
       .classList.remove(info.color);
     document
       .getElementById("base-timer-path-remaining")
-      .classList.add(warning.color);
+          .classList.add(warning.color);
+      document
+          .getElementById("base-timer-path-remaining1")
+          .classList.remove(info.color);
+      document
+          .getElementById("base-timer-path-remaining1")
+          .classList.add(warning.color);
+      document
+          .getElementById("base-timer-path-remaining2")
+          .classList.remove(info.color);
+      document
+          .getElementById("base-timer-path-remaining2")
+          .classList.add(warning.color);
   }
 }
 
@@ -116,5 +217,11 @@ function setCircleDasharray() {
   ).toFixed(0)} 283`;
   document
     .getElementById("base-timer-path-remaining")
-    .setAttribute("stroke-dasharray", circleDasharray);
+        .setAttribute("stroke-dasharray", circleDasharray);
+    document
+        .getElementById("base-timer-path-remaining1")
+        .setAttribute("stroke-dasharray", circleDasharray);
+    document
+        .getElementById("base-timer-path-remaining2")
+        .setAttribute("stroke-dasharray", circleDasharray);
 }

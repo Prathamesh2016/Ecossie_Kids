@@ -161,6 +161,24 @@
             fill-rule: nonzero;
             stroke: currentColor;
         }
+        .base-timer__path-remaining1 {
+            stroke-width: 7px;
+            stroke-linecap: round;
+            transform: rotate(90deg);
+            transform-origin: center;
+            transition: 1s linear all;
+            fill-rule: nonzero;
+            stroke: currentColor;
+        }
+        .base-timer__path-remaining2 {
+            stroke-width: 7px;
+            stroke-linecap: round;
+            transform: rotate(90deg);
+            transform-origin: center;
+            transition: 1s linear all;
+            fill-rule: nonzero;
+            stroke: currentColor;
+        }
 
             .base-timer__path-remaining.green {
                 color: rgb(65, 184, 131);
@@ -174,6 +192,29 @@
                 color: red;
             }
 
+        .base-timer__path-remaining1.green {
+            color: rgb(65, 184, 131);
+        }
+
+        .base-timer__path-remaining1.orange {
+            color: orange;
+        }
+
+        .base-timer__path-remaining1.red {
+            color: red;
+        }
+
+        .base-timer__path-remaining2.green {
+            color: rgb(65, 184, 131);
+        }
+
+        .base-timer__path-remaining2.orange {
+            color: orange;
+        }
+
+        .base-timer__path-remaining2.red {
+            color: red;
+        }
         .base-timer__label {
             position: absolute;
             width: 130px;
@@ -185,6 +226,26 @@
             font-size: 24px;
         }
 
+        .base-timer__label1 {
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .base-timer__label2 {
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
         time {
             height: 100px;
             width: 50%;
@@ -224,7 +285,7 @@
 
                         <h2>
                             <p class="step-icon"><span><i class="fa fa-gamepad" aria-hidden="true"></i></span></p>
-                            <span class="step-text">Game Instruction </span>
+                            <span class="step-text">Game Instructions</span>
                         </h2>
                         <section>
                             <div class="inner">
@@ -357,7 +418,7 @@
                             <div class="inner">
                                 <h3>
                                     Time left for you
-                                    <time id="app2" onload="startTimer()"></time>
+                                    <time id="app1"onload="startTimer()" ></time>
                                 </h3>
                                 <div class="form-heading">
 
@@ -464,7 +525,7 @@
                             <div class="inner">
                                 <h3>
                                     Time left for you
-                                    <time id="app3" onload="startTimer()"></time>
+                                    <time id="app2" onload="startTimer()"></time>
                                 </h3>
                                 <div class="form-heading">
 
@@ -565,3 +626,4 @@
 </body>
 
 <script src="~/Scripts/countdown.js"></script>
+<script src="~/Scripts/countdown1.js"></script>
