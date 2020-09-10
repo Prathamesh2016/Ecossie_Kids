@@ -7,6 +7,8 @@ using System.Web.Mvc;
 
 namespace EcossieBank_IT1.Controllers
 {
+    [BasicAuthenticationAttribute("EcossieKids", "EcoPathseekers25",
+    BasicRealm = "your-realm")]
     public class HomeController : Controller
     {
         public ActionResult Index()
