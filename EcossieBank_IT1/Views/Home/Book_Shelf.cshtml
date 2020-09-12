@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "Book_Shelf";
+    Layout = "~/Views/Shared/_CustomLayout.cshtml";
+}
+<head>
+
+    <link href="~/Content/css/bookshelf.css" rel="stylesheet" />
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <div class="site-wrap" id="home-section">
+
+
+
+
+        <div class="ftco-blocks-cover-1">
+            <div class="site-section-cover overlay contact-banner" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row align-items-center ">
+                        <div class="col-md-5 mt-5 pt-5">
+                            <span class="text-cursive h5 text-red">Read Books</span>
+                            <h1 class="mb-3 font-weight-bold text-teal">Learn from Reading Books</h1>
+                            <p><a href="@Url.Action("Index", "Home")" class="text-white">Home</a> <span class="mx-3">/</span> <strong>Books</strong></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>   @* Description of the form *@
+
+
+
+
+
+        <div class="site-section bg-light" id="contact-section">
+            <div class="container" align="center">
+                <dl class="bookshelf">
+
+
+
+
+                    <dt class="renewabledevices"><span>Learn about Devices</span></dt>
+                    <dd class="renewabledevices">
+                        Reading this book you will know about different<br>
+                        devices you can use in your daily life.<a class="publisherLink" href="#">Click here to read the book</a>
+                    </dd>
+
+                    <dt class="renewableenergy"><span>Types of Renewable Energy</span></dt>
+                    <dd class="renewableenergy">
+                        Grow your knowledge aby learning about different renewable energy resources,<br>
+                        that we can use in our day to day life.<br>
+                        <a class="publisherLink" href="#">Click here to read the book</a>.
+                    </dd>
+
+                    <dt class="globalwarming"><span>Global Warming is Real</span></dt>
+                    <dd class="globalwarming">
+
+                        <strong>What is Global Warming</strong> by EcoPathseekers<br>
+                        This book will grow your knowledge about global warming,<br>
+                        Global warming is one of the major concern learn more about it.<br>
+                        <a class="publisherLink" href="https://online.anyflip.com/dlmaw/kwfh/index.html">
+                            Click here to read the book
+                        </a>
+                    </dd>
+
+
+                </dl>
+            </div>
+        </div>   @* Form for adding User Info *@
+
+
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+    <script src="~/Scripts/bookshelf.js"></script>
+</body>
+

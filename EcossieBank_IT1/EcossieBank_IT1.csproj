@@ -147,6 +147,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\aos.css" />
+    <Content Include="Content\css\bookshelf.css" />
     <Content Include="Content\css\bootstrap-datepicker.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\bootstrap\bootstrap-grid.css" />
@@ -164,10 +165,20 @@
     <Content Include="Content\dist\style.css" />
     <Content Include="Content\images\ajax-loader.gif" />
     <Content Include="Content\images\ajax-loader.png" />
+    <Content Include="Content\images\Book Images\beautdesign-spine.png" />
+    <Content Include="Content\images\Book Images\cssmast-spine-full.png" />
+    <Content Include="Content\images\Book Images\dontmakemethink-spine.png" />
+    <Content Include="Content\images\Book Images\drawing-spine.png" />
+    <Content Include="Content\images\Book Images\photoshop-spine.png" />
+    <Content Include="Content\images\Book Images\php-spine.png" />
+    <Content Include="Content\images\Book Images\Renewable Energy.png" />
+    <Content Include="Content\images\Book Images\Renewable_devices.gif" />
+    <Content Include="Content\images\Book Images\Save the Earth now.png" />
     <Content Include="Content\images\icons-18-black.png" />
     <Content Include="Content\images\icons-18-white.png" />
     <Content Include="Content\images\icons-36-black.png" />
     <Content Include="Content\images\icons-36-white.png" />
+    <Content Include="Content\images\shelf.png" />
     <Content Include="Content\jquery-ui.min.css" />
     <Content Include="Content\jquery.mobile-1.1.0.css" />
     <Content Include="Content\jquery.mobile-1.1.0.min.css" />
@@ -280,6 +291,7 @@
     <Content Include="images\Website_Logo.png" />
     <Content Include="images\white-dots.png" />
     <Content Include="Scripts\aos.js" />
+    <Content Include="Scripts\bookshelf.js" />
     <Content Include="Scripts\bootstrap-datepicker.min.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -551,6 +563,7 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Home\Book_Shelf.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
