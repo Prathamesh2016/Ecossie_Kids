@@ -50,6 +50,7 @@
 
                     <nav class="site-navigation text-left mr-auto d-none d-lg-block" role="navigation">
                         <ul class="site-menu main-menu js-clone-nav mr-auto ">
+<<<<<<< HEAD
                             <li class="nav-item "><a href="/Home/Index" class="nav-link">Home</a></li>
 
 
@@ -77,6 +78,12 @@
 
 
 
+=======
+                            <li class="@(ViewBag.Current == "Index" ? "active" : "")">@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li class="@(ViewBag.Current == "Tips" ? "active" : "")">@Html.ActionLink("Learn", "Tips", "Home")</li>
+                            <li class="@(ViewBag.Current == "About" ? "active" : "")">@Html.ActionLink("About us", "About", "Home")</li>
+                            <li class="@(ViewBag.Current == "Send_Email" ? "active" : "")">@Html.ActionLink("Contact us", "Send_Email", "Home")</li>
+>>>>>>> parent of 0c321b1... Quiz page
                         </ul>
                     </nav>
 
