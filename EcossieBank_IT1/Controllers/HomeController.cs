@@ -7,6 +7,8 @@ using System.Web.Mvc;
 
 namespace EcossieBank_IT1.Controllers
 {
+    [BasicAuthenticationAttribute("EcossieKids", "EcoPathseekers25",
+    BasicRealm = "your-realm")]
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -43,10 +45,10 @@ namespace EcossieBank_IT1.Controllers
             return View();
         }
 
-        public ActionResult Quiz()
+        public ActionResult Book_Shelf()
         {
-            ViewBag.Message = "Your quiz page.";
-            ViewBag.Current = "Quiz";
+            ViewBag.Message = "Book_shelf";
+            ViewBag.Current = "Book_Shelf";
             return View();
         }
 
@@ -70,7 +72,7 @@ namespace EcossieBank_IT1.Controllers
 
                     EmailSender es = new EmailSender();
                     es.Send(toEmail, subject, contents);
-
+                    
                     ViewBag.Result = "Email has been sent.";
 
                     ModelState.Clear();
