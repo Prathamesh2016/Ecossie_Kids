@@ -285,7 +285,7 @@
 
                         <h2>
                             <p class="step-icon"><span><i class="fa fa-gamepad" aria-hidden="true"></i></span></p>
-                            <span class="step-text">Game Instructions</span>
+                            <span class="step-text" onclick='resetTimers();'>Game Instructions</span>
                         </h2>
                         <section>
                             <div class="inner">
@@ -311,11 +311,11 @@
                         </h2>
 
                         <section>
-                           
+
                             <div class="inner">
                                 <h3>
                                     Time left for you
-                                    <time id="app" onload="startTimer()"></time>
+                                    <time id="app"></time>
                                 </h3>
                                 <div class="form-heading">
 
@@ -418,7 +418,7 @@
                             <div class="inner">
                                 <h3>
                                     Time left for you
-                                    <time id="app1"onload="startTimer()" ></time>
+                                    <time id="app1"></time>
                                 </h3>
                                 <div class="form-heading">
 
@@ -525,7 +525,7 @@
                             <div class="inner">
                                 <h3>
                                     Time left for you
-                                    <time id="app2" onload="startTimer()"></time>
+                                    <time id="app2"></time>
                                 </h3>
                                 <div class="form-heading">
 
@@ -625,5 +625,4 @@
 
 </body>
 
-<script src="~/Scripts/countdown.js"></script>
-<script src="~/Scripts/countdown1.js"></script>
+
