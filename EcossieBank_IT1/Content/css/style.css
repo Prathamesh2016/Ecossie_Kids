@@ -2671,3 +2671,10 @@ h1, h2, h3, h4, h5,
 .bg-imgbtn {
     background-color: #1E8D8A !important;
 }
+.books-banner {
+    background-image: url('../../images/booshelf_bg.png');
+}
+
+.bookshelf-bg {
+    background-image: url('../images/book_wall_1.png');
+}

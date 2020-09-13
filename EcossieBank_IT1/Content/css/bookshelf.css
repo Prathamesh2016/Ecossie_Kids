@@ -98,7 +98,7 @@ dl.bookshelf dt span {
         background: url('../images/Book Images/dontmakemethink-spine.png') 0 0 no-repeat,
             url('../images/Book Images/Renewable Energy.png') 40px 0 no-repeat;
         left: 94px;
-        width: 270px;
+        width: 260px;
         z-index: 4;
     }
 
@@ -132,7 +132,7 @@ dl.bookshelf dt.psforphotographers span {
     dl.bookshelf dt.globalwarming {
         background: url('../images/Book Images/drawing-spine.png') 0 0 no-repeat, url('../images/Book Images/Save the Earth now.png') 40px 0 no-repeat;
         left: 265px;
-        width: 290px;
+        width: 260px;
         z-index: 7;
     }
 
