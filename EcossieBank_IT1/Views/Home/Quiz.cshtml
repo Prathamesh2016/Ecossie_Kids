@@ -44,10 +44,11 @@
                 <h1>Quiz 1</h1>
 
             </div>*@
-        <header>Quiz 1</header>
+        <header>Quiz </header>
         <div id="quiz-start-screen">
-            <p>Bushfire is a common natural disaster in Australia. Check your knowledge about the general facts related to bushfire.</p>
-            <p><a href="#" id="quiz-start-btn" class="quiz-button">Play Quiz</a></p>
+            <p>Quiz 1 is for beginer. Quiz 2 is for amateur. </p>
+            <p><a href="#" id="quiz-start-btn" class="quiz-button">Play Quiz1</a></p>
+            <p><a href="/Home/Quiz2" id="quiz2-btn" class="quiz-button">Play Quiz2</a></p>
         </div>
     </div>
 </div>
@@ -62,123 +63,127 @@
         counterFormat: 'Question %current of %total',
         questions: [
             {
-                'q': 'Which are the most urgent types of bushfire warnings?',
+                'q': 'It is cool outside and you feel very hot inside, what should you do?',
                 'options': [
-                    'Bushfire Advice',
-                    'Bushfire Emergency',
-                    'Bushfire Watch and Act'
-
-                ],
-                'correctIndex': 1,
-                'correctResponse': 'Correct! Bushfire Emergency is the most urgent level of warning. An Emergency warning means you are in imminent danger and need to take action now. You will be impacted.',
-                'incorrectResponse': 'Incorrect. Bushfire Emergency is the most urgent level of warning. A Watch and Act is the second level of warning. A Watch and Act warning means an emergency is heading towards you and conditions are changing and you need to take action now to protect yourself and your family.'
-            },
-            {
-                'q': 'What are some items you should include in your bushfire survival kit?',
-                'options': [
-                    'Battery-powered or wind-up radio',
-                    'Waterproof torch',
-                    'Toiletries including soap, hand wash gels, alcohol wipes, toilet paper, tissues, toothpaste and sanitary items',
-                    'All of the above'
-                ],
-                'correctIndex': 3,
-                'correctResponse': 'The correct answer is: All of the above! Good thinking. A battery-powered or wind-up radio means you can keep informed of the latest warnings on ABC Local Radio. It should be one part of your survival kit.',
-                'incorrectResponse': 'Incorrect response. Correct answer is All of the above!'
-            },
-            {
-                'q': 'If you decide to stay and defend your home, fire agencies recommend how many able-bodied, fit and determined adults as a minimum?',
-                'options': [
-                    'Two',
-                    'Three',
-                    'Five'
+                    'Open the windows',
+                    'Turn on the air-conditioner',
+                    'Open the windows and turn on the air-conditioner',
+                    'Eat a toast with cheese'
 
                 ],
                 'correctIndex': 0,
-                'correctResponse': 'Correct! Fire agencies say defending your home requires at least two able-bodied, fit and determined adults. Both adults need to be sure theyre physically and mentally prepared to work in difficult conditions. But, homes in an area with a Code Red or Catastrophic fire danger rating are difficult to defend, even if well prepared.',
-                'incorrectResponse': 'Incorrect, but an extra pair of hands can help. Fire agencies say defending your home requires at least two able-bodied, fit and determined adults. Both adults need to be sure they are physically and mentally prepared to work in difficult conditions. But, homes in an area with a Code Red or Catastrophic fire danger rating are difficult to defend, even if well prepared.'
+                'correctResponse': 'CORRECT! Open the windows to let the cool air enter your home. You don’t have to always rely on the air-conditioner!',
+                'incorrectResponse': 'Incorrect. You should open the windows to let the cool air enter your home. You don’t have to always rely on the air-conditioner!'
             },
             {
-                'q': 'Who are the people you need to inform about leaving early?',
+                'q': 'Why is the Earth getting hotter?',
                 'options': [
-                    'No one - only me',
-                    'Only adults',
-                    'Everyone at the house'
+                    'Covid-19',
+                    'Sun is getting hotter',
+                    'Global Warming',
+                    'No reason'
                 ],
                 'correctIndex': 2,
-                'correctResponse': 'Correct. For leaving early, you must inform all the members at the house about the plan. Every member should be informed about the leaving date, time and destination.',
-                'incorrectResponse': 'Incorrect. For leaving early, you must inform all the members at the house about the plan. Every member should be informed about the leaving date, time and destination. You need to give extra attention to the kids and elder people because they need more support mentally.'
+                'correctResponse': 'CORRECT! The Earth is getting hotter because of global warming, which means the increase in temperature around the world.',
+                'incorrectResponse': 'Incorrect. The Earth is getting hotter because of Global Warming, which means the increase in temperature around the world.'
             },
             {
-                'q': 'When should you start preparing for your bushfire leaving early plan?',
+                'q': 'If global warming continues, what will be the results?',
                 'options': [
-                    'Around November as temperatures start to rise',
-                    'Work out where you’re going on the day',
-                    'Well in advance of bushfire season'
+                    'More ice-cream to eat',
+                    'Animal extinction',
+                    'More islands appear',
+                    'More electricity for us to use',
+                    'Animal extinction and island disappearing'
+
                 ],
-                'correctIndex': 2,
-                'correctResponse': 'Correct! Well in advance. Dont wait and see. It is extremely dangerous to leave after there are signs of fire in your area. Come up with a plan to decide when to leave your home, where you will go and how you will get there. You should talk through your emergency plan with your family, as well as write it down. In an emergency you may not have time to plan.',
-                'incorrectResponse': 'Incorrect. You should work out your bushfire plan well in advance. Dont wait and see. It is extremely dangerous to leave after there are signs of fire in your area. Come up with a plan to decide when to leave your home, where you will go and how you will get there. You should talk through your emergency plan with your family, as well as write it down. In an emergency you may not have time to plan.'
+                'correctIndex': 4,
+                'correctResponse': 'CORRECT! Global warming will cause animal extinction due to environmental change. It will also cause the island disappearing due to rising sea level!',
+                'incorrectResponse': 'Incorrect. Global warming will cause animal extinction due to environmental change. It will also cause islands disappearing due to rising sea level!'
             },
             {
-                'q': 'If someone is suffering from heatstroke due to hot conditions, what should you do?',
+                'q': 'When you leave a room, what should you do?',
                 'options': [
-                    'Move them to a shaded area',
-                    'Try to cool them down',
-                    'Call 000',
-                    'All of the above'
-                ],
-                'correctIndex': 3,
-                'correctResponse': 'Correct! If someone is affected by heatstroke you should move them to a shaded area and try to cool them down. Call 000 and seek assistance immediately. Radiant heat kills very quickly. The human body cannot absorb large amounts of radiant heat or withstand extremely high temperatures. Radiant heat causes death from heatstroke where the body cooling system fails, leading to heat exhaustion and heart failure.',
-                'incorrectResponse': 'Incorrect, but you’re on the right track. If someone is affected by heatstroke you should move them to a shaded area and try to cool them down. Call 000 and seek assistance immediately. Radiant heat kills very quickly. The human body cannot absorb large amounts of radiant heat or withstand extremely high temperatures. Radiant heat causes death from heatstroke where the body cooling system fails, leading to heat exhaustion and heart failure.'
-            },
-            {
-                'q': 'When can an ember attack happen?',
-                'options': [
-                    'Before the bushfire',
-                    'After the bushfire',
-                    'During the bushfire',
-                    ' All of the above'
+                    'Do nothing',
+                    'Tidy up your bed',
+                    'Turn off the lights only',
+                    'Turn off all the electrical appliances in the room'
                 ],
                 'correctIndex': 3,
-                'correctResponse': 'Correct. Embar attack can happen any time, before, during and after the bushfire. This is the most common way houses catch fire. So, seal your house, clean your garden and backyard for being safe.',
-                'incorrectResponse': 'Incorrect. Embar attack can happen any time, before, during and after the bushfire. This is the most common way houses catch fire. So, seal your house, clean your garden and backyard for being safe.'
+                'correctResponse': 'CORRECT! You should turn off all the electrical appliances in the room, not just the lights!',
+                'incorrectResponse': 'Incorrect. You should turn off all the electrical appliances in the room, not just the lights!'
             },
             {
-                'q': 'Protective clothes should not be made of what material?',
+                'q': 'What causes Global Warming?',
                 'options': [
-                    'Wool ',
-                    'Cotton',
-                    'Denim',
-                    'Synthetics'
+                    'Reading books',
+                    'Using too much electricity',
+                    'Playing too much piano',
+                    'Playing too much basketball'
                 ],
-                'correctIndex': 3,
-                'correctResponse': 'Correct. Protective clothes should be made from 100% natural fibers like wool, cotton or denim. Must avoid synthetics materials. The clothes should be loose-fitting, covering all exposed skin. ',
-                'incorrectResponse': ' Incorrect. Protective clothes should be made from 100% natural fibers like wool, cotton or denim. Must avoid synthetics materials. The clothes should be loose-fitting, covering all exposed skin.'
+                'correctIndex': 1,
+                'correctResponse': 'CORRECT! The major cause of global warming is using too much electricity. Always try to do more fun activities that don’t consume electricity!',
+                'incorrectResponse': 'Incorrect. The major cause of global warming is using too much electricity. Doing fun activities that don’t consume electricity will not cause global warming.'
+            },
+            {
+                'q': 'You see the hair dryer is plugged in and no one is using it. What should you do?',
+                'options': [
+                    'Unplug it',
+                    'Play with it like a gun',
+                    'Put it in a refrigerator'
+                ],
+                'correctIndex': 0,
+                'correctResponse': 'CORRECT! Hair dryer is one of the most power-hungry products at home. Be sure to unplug it even if the power is not on!',
+                'incorrectResponse': 'Incorrect. You should unplug the hair dryer even the power is not on! It is one of the most power-hungry products at home.'
+            },
+            {
+                'q': 'Why should we unplug the table lamps when no one is using it?',
+                'options': [
+                    'It still costs electricity even when power is not on.',
+                    'It looks more tidy',
+                    'Just for fun'
+                ],
+                'correctIndex': 0,
+                'correctResponse': 'CORRECT! If you are able to unplug an electrical appliance, then do it! They still cost electricity even when power is not on.',
+                'incorrectResponse': 'Incorrect. If you are able to unplug an electrical appliance, then do it! They still cost electricity even when power is not on.'
+            },
+            {
+                'q': 'You should open the refrigerator door only when you want to...',
+                'options': [
+                    'Get your food or drink real quick ',
+                    'Play with the refrigerator light',
+                    'Feel the cool from refrigerator',
+                    'Play with the refrigerator door'
+                ],
+                'correctIndex': 0,
+                'correctResponse': 'CORRECT! Avoid unnecessarily opening the refrigerator because cold air escapes whenever you open it. It needs to spend electricity to bring the temperature down!',
+                'incorrectResponse': 'Incorrect. You should avoid unnecessarily opening the refrigerator because cold air escapes whenever you open it. It needs to spend electricity to bring the temperature down!'
             }
 
             ,
             {
-                'q': 'If you know someone in an area affected by bushfires but have been unable to get in contact with them, who should you call?',
+                'q': 'Why is taking showers better than baths?',
                 'options': [
-                    'The closest hospital',
-                    'The local council or shire',
-                    'The Red Cross',
-                    'Local police'
+                    'You can sing in the showers',
+                    'Baths are for adults',
+                    'Showers use less hot water'
                 ],
                 'correctIndex': 2,
-                'correctResponse': 'Correct!.The National Registration and Inquiry System is coordinated by the Australian Red Cross. If you are worried about the location of friends or family, call them on 1800 727 077 rather than contacting local agencies. If you are in a bushfire-affected area, when you are able you should call your family and friends to let them know you are safe.',
-                'incorrectResponse': 'Incorrect. The National Registration and Inquiry System is coordinated by the Australian Red Cross. If you are worried about the location of friends or family, call them on 1800 727 077 rather than contacting local agencies.If you are in a bushfire-affected area, when you are able you should call your family and friends to let them know you are safe.'
+                'correctResponse': 'CORRECT! Hot water is expensive. Shower is better because it uses less electricity to heat up the water.',
+                'incorrectResponse': 'Incorrect. Hot water is expensive. Shower is better because it uses less electricity to heat up the water.'
             },
             {
-                'q': 'Driving during a bushfire is very dangerous and is a last resort. If you get caught on the road, what can you do?',
+                'q': 'It is daylight outside and you feel too dark inside, what should you do?',
                 'options': [
-                    'Drive as fast as you can through the flames',
-                    'Wind up windows, close vents, put on your hazard lights and headlights'
+                    'Use the light from TV',
+                    'Open the curtain to bring in the natural light',
+                    'Open all the ceiling lights',
+                    'Use a torch light'
 
                 ],
                 'correctIndex': 1,
-                'correctResponse': 'Correct! If this is not possible, then pull over to the side of the road into a clear area, well away from debris that may ignite. You should also Wind up your car windows, close the vents, put on your hazard lights and headlights, leave the engine running and air conditioning on recirculate. Get down as low as possible below window level and cover up with a woollen blanket until the fire front passes.If you have water, drink it. Get out of the car only once the fire has passed.',
-                'incorrectResponse': 'Incorrect! Cars are a very dangerous place to be during a bushfire as they offer very little protection from radiant heat. Driving will take longer than you expect and road conditions can become dangerous. There may be road closures, smoke, fallen trees and embers.'
+                'correctResponse': 'CORRECT! Draw up the curtain to bring in the natural light. You won’t even need to switch on lights till sunset comes around!',
+                'incorrectResponse': 'Incorrect. Draw up the curtain to bring in the natural light. You won’t even need to switch on lights till sunset comes around!'
             }
         ]
     });
@@ -187,137 +192,7 @@
 
 
 </script>
-<script>
 
-
-    $('#quiz2').quiz({
-        //resultsScreen: '#results-screen',
-        //counter: false,
-        //homeButton: '#custom-home',
-        counterFormat: 'Question %current of %total',
-        questions: [
-            {
-                'q': 'Quize 2 Which are the most urgent types of bushfire warnings?',
-                'options': [
-                    'Bushfire Advice',
-                    'Bushfire Emergency',
-                    'Bushfire Watch and Act'
-
-                ],
-                'correctIndex': 1,
-                'correctResponse': 'Correct! Bushfire Emergency is the most urgent level of warning. An Emergency warning means you are in imminent danger and need to take action now. You will be impacted.',
-                'incorrectResponse': 'Incorrect. Bushfire Emergency is the most urgent level of warning. A Watch and Act is the second level of warning. A Watch and Act warning means an emergency is heading towards you and conditions are changing and you need to take action now to protect yourself and your family.'
-            },
-            {
-                'q': 'What are some items you should include in your bushfire survival kit?',
-                'options': [
-                    'Battery-powered or wind-up radio',
-                    'Waterproof torch',
-                    'Toiletries including soap, hand wash gels, alcohol wipes, toilet paper, tissues, toothpaste and sanitary items',
-                    'All of the above'
-                ],
-                'correctIndex': 3,
-                'correctResponse': 'The correct answer is: All of the above! Good thinking. A battery-powered or wind-up radio means you can keep informed of the latest warnings on ABC Local Radio. It should be one part of your survival kit.',
-                'incorrectResponse': 'Incorrect response. Correct answer is All of the above!'
-            },
-            {
-                'q': 'If you decide to stay and defend your home, fire agencies recommend how many able-bodied, fit and determined adults as a minimum?',
-                'options': [
-                    'Two',
-                    'Three',
-                    'Five'
-
-                ],
-                'correctIndex': 0,
-                'correctResponse': 'Correct! Fire agencies say defending your home requires at least two able-bodied, fit and determined adults. Both adults need to be sure theyre physically and mentally prepared to work in difficult conditions. But, homes in an area with a Code Red or Catastrophic fire danger rating are difficult to defend, even if well prepared.',
-                'incorrectResponse': 'Incorrect, but an extra pair of hands can help. Fire agencies say defending your home requires at least two able-bodied, fit and determined adults. Both adults need to be sure they are physically and mentally prepared to work in difficult conditions. But, homes in an area with a Code Red or Catastrophic fire danger rating are difficult to defend, even if well prepared.'
-            },
-            {
-                'q': 'Who are the people you need to inform about leaving early?',
-                'options': [
-                    'No one - only me',
-                    'Only adults',
-                    'Everyone at the house'
-                ],
-                'correctIndex': 2,
-                'correctResponse': 'Correct. For leaving early, you must inform all the members at the house about the plan. Every member should be informed about the leaving date, time and destination.',
-                'incorrectResponse': 'Incorrect. For leaving early, you must inform all the members at the house about the plan. Every member should be informed about the leaving date, time and destination. You need to give extra attention to the kids and elder people because they need more support mentally.'
-            },
-            {
-                'q': 'When should you start preparing for your bushfire leaving early plan?',
-                'options': [
-                    'Around November as temperatures start to rise',
-                    'Work out where you’re going on the day',
-                    'Well in advance of bushfire season'
-                ],
-                'correctIndex': 2,
-                'correctResponse': 'Correct! Well in advance. Dont wait and see. It is extremely dangerous to leave after there are signs of fire in your area. Come up with a plan to decide when to leave your home, where you will go and how you will get there. You should talk through your emergency plan with your family, as well as write it down. In an emergency you may not have time to plan.',
-                'incorrectResponse': 'Incorrect. You should work out your bushfire plan well in advance. Dont wait and see. It is extremely dangerous to leave after there are signs of fire in your area. Come up with a plan to decide when to leave your home, where you will go and how you will get there. You should talk through your emergency plan with your family, as well as write it down. In an emergency you may not have time to plan.'
-            },
-            {
-                'q': 'If someone is suffering from heatstroke due to hot conditions, what should you do?',
-                'options': [
-                    'Move them to a shaded area',
-                    'Try to cool them down',
-                    'Call 000',
-                    'All of the above'
-                ],
-                'correctIndex': 3,
-                'correctResponse': 'Correct! If someone is affected by heatstroke you should move them to a shaded area and try to cool them down. Call 000 and seek assistance immediately. Radiant heat kills very quickly. The human body cannot absorb large amounts of radiant heat or withstand extremely high temperatures. Radiant heat causes death from heatstroke where the body cooling system fails, leading to heat exhaustion and heart failure.',
-                'incorrectResponse': 'Incorrect, but you’re on the right track. If someone is affected by heatstroke you should move them to a shaded area and try to cool them down. Call 000 and seek assistance immediately. Radiant heat kills very quickly. The human body cannot absorb large amounts of radiant heat or withstand extremely high temperatures. Radiant heat causes death from heatstroke where the body cooling system fails, leading to heat exhaustion and heart failure.'
-            },
-            {
-                'q': 'When can an ember attack happen?',
-                'options': [
-                    'Before the bushfire',
-                    'After the bushfire',
-                    'During the bushfire',
-                    ' All of the above'
-                ],
-                'correctIndex': 3,
-                'correctResponse': 'Correct. Embar attack can happen any time, before, during and after the bushfire. This is the most common way houses catch fire. So, seal your house, clean your garden and backyard for being safe.',
-                'incorrectResponse': 'Incorrect. Embar attack can happen any time, before, during and after the bushfire. This is the most common way houses catch fire. So, seal your house, clean your garden and backyard for being safe.'
-            },
-            {
-                'q': 'Protective clothes should not be made of what material?',
-                'options': [
-                    'Wool ',
-                    'Cotton',
-                    'Denim',
-                    'Synthetics'
-                ],
-                'correctIndex': 3,
-                'correctResponse': 'Correct. Protective clothes should be made from 100% natural fibers like wool, cotton or denim. Must avoid synthetics materials. The clothes should be loose-fitting, covering all exposed skin. ',
-                'incorrectResponse': ' Incorrect. Protective clothes should be made from 100% natural fibers like wool, cotton or denim. Must avoid synthetics materials. The clothes should be loose-fitting, covering all exposed skin.'
-            }
-
-            ,
-            {
-                'q': 'If you know someone in an area affected by bushfires but have been unable to get in contact with them, who should you call?',
-                'options': [
-                    'The closest hospital',
-                    'The local council or shire',
-                    'The Red Cross',
-                    'Local police'
-                ],
-                'correctIndex': 2,
-                'correctResponse': 'Correct!.The National Registration and Inquiry System is coordinated by the Australian Red Cross. If you are worried about the location of friends or family, call them on 1800 727 077 rather than contacting local agencies. If you are in a bushfire-affected area, when you are able you should call your family and friends to let them know you are safe.',
-                'incorrectResponse': 'Incorrect. The National Registration and Inquiry System is coordinated by the Australian Red Cross. If you are worried about the location of friends or family, call them on 1800 727 077 rather than contacting local agencies.If you are in a bushfire-affected area, when you are able you should call your family and friends to let them know you are safe.'
-            },
-            {
-                'q': 'Driving during a bushfire is very dangerous and is a last resort. If you get caught on the road, what can you do?',
-                'options': [
-                    'Drive as fast as you can through the flames',
-                    'Wind up windows, close vents, put on your hazard lights and headlights'
-
-                ],
-                'correctIndex': 1,
-                'correctResponse': 'Correct! If this is not possible, then pull over to the side of the road into a clear area, well away from debris that may ignite. You should also Wind up your car windows, close the vents, put on your hazard lights and headlights, leave the engine running and air conditioning on recirculate. Get down as low as possible below window level and cover up with a woollen blanket until the fire front passes.If you have water, drink it. Get out of the car only once the fire has passed.',
-                'incorrectResponse': 'Incorrect! Cars are a very dangerous place to be during a bushfire as they offer very little protection from radiant heat. Driving will take longer than you expect and road conditions can become dangerous. There may be road closures, smoke, fallen trees and embers.'
-            }
-        ]
-    });
-</script>
 
 <script type="text/javascript">
 

@@ -1,4 +1,12 @@
-
+body {
+    margin: 0;
+    /*background: -webkit-linear-gradient(top, #FCAA2C 0, #F58220 100%) fixed;
+    background: linear-gradient(to top, #FCAA2C 0, #F58220 100%) fixed;*/
+    font-family: adelle-sans, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    
+    -webkit-font-smoothing: antialiased;
+}
 
 .quiz-container {
    padding-bottom:15px;
@@ -131,7 +139,7 @@ header {
     margin-bottom:20px;
     text-transform: uppercase;
     padding:20px 0;
-    font-weight: 400;
+    font-weight: 700;
     
 }
 @media only screen and (max-width: 450px){

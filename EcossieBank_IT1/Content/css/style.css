@@ -950,6 +950,16 @@ h1, h2, h3, h4, h5,
             color: #fd4d40;
         }
 
+.nav-link {
+    padding-top: 0.9rem !important;
+    padding-bottom: 0.9rem !important;
+    color: #000 !important;
+}
+
+    .nav-link.active {
+        color: #f7ca44 !important;
+    }
+
     .site-mobile-menu .site-nav-wrap .arrow-collapse {
         position: absolute;
         right: 0px;

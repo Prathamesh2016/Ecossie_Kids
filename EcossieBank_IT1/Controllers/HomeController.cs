@@ -38,6 +38,20 @@ namespace EcossieBank_IT1.Controllers
             return View();
         }
 
+        public ActionResult Quiz()
+        {
+            ViewBag.Message = "Your quiz page.";
+            ViewBag.Current = "Quiz";
+            return View();
+        }
+
+        public ActionResult Quiz2()
+        {
+            ViewBag.Message = "Your quiz2 page.";
+            ViewBag.Current = "Quiz2";
+            return View();
+        }
+
         public ActionResult Image_Game()
         {
             ViewBag.Message = "Your game page.";
