@@ -1,0 +1,148 @@
+
+
+.quiz-container {
+   padding-bottom:15px;
+    max-width: 70%;
+    margin: 1em auto;
+    background: #fff;
+    box-shadow: 0 3px 40px 0 rgba(0, 0, 0, .15);
+    margin-bottom: 15px;
+}
+
+    .quiz-container a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    .quiz-container .active-question {
+        padding: 0 20px 20px 20px;
+    }
+
+#quiz-header,
+#quiz-start-screen,
+#quiz-results-screen,
+#quiz-counter {
+    text-align: center;
+}
+
+.question {
+    font-size: 1.25em;
+}
+
+.answers {
+    list-style: none;
+    padding: 0;
+}
+
+    .answers a {
+        display: block;
+        padding: 0.5em 1em;
+        margin-bottom: 0.5em;
+        background: #e5e4e4;
+        border-radius: 10px;
+    }
+
+        .answers a.correct {
+            background: #090;
+        }
+
+        .answers a.incorrect {
+            background: #c00;
+        }
+
+        .answers a.correct,
+        .answers a.incorrect {
+            color: #fff;
+        }
+
+#quiz-controls {
+    background: #333;
+    color: #fff;
+    margin: 20px 20px 20px 20px;
+    padding:20px 0 20px 0;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#quiz-response {
+}
+
+#quiz-results {
+    font-size: 1.25em;
+}
+
+#quiz-buttons a,
+.quiz-container .quiz-button {
+    /*display: inline-block;
+    padding: 0.5em 1em;
+    background: #333;
+    color: #fff;
+    border-radius: 10px;*/
+    display: inline-block;
+    margin-right: 10px;
+    background: #339dff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 38px;
+    border-radius: 50px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 170px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#quiz-buttons a {
+    /*background: #fff;
+    color: #333;*/
+    display: inline-block;
+    margin-right: 10px;
+    background: #339dff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 30px;
+    border-radius: 50px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 170px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Quiz State Overrides */
+
+.quiz-results-state #quiz-controls {
+    background: none;
+    padding: 0;
+}
+
+.quiz-results-state #quiz-buttons a {
+    background: #333;
+    color: #fff;
+}
+
+header {
+    background: #003162;
+    text-align: center;
+    color: #FFF;
+    font-size: 12px;
+    margin-bottom:20px;
+    text-transform: uppercase;
+    padding:20px 0;
+    font-weight: 400;
+    
+}
+@media only screen and (max-width: 450px){
+    .question {
+        font-size: 15px;
+        text-align: center;
+    }
+    header {
+        font-size: 20px;
+    }
+    .answers a{
+        font-size:12px;
+    }
+}
