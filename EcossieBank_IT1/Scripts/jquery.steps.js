@@ -1142,27 +1142,19 @@
 
         
         if (anchor.attr("href") === "#form-total-h-1") {
-            if (timeLeft === TIME_LIMIT) {
-                startTimer();
-
-            }           
-            
+            resetTimer();
+            startTimer();
         }
         if (anchor.attr("href") === "#form-total-h-2") {
-            if (timeLeft1 === TIME_LIMIT) {
-                startTimer1();
 
-            }
-
+            resetTimer1();
+            startTimer1();
         }
         if (anchor.attr("href") === "#form-total-h-3") {
-            if (timeLeft2 === TIME_LIMIT) {
-                startTimer2();
 
-            }
-
+            resetTimer2();
+            startTimer2();
         }
-        
         if (anchor.parent().is(":not(.disabled):not(.current)")) {
 
             var href = anchor.attr("href"),
