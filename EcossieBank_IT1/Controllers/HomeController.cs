@@ -31,6 +31,15 @@ namespace EcossieBank_IT1.Controllers
             return View();
         }
 
+        public ActionResult Stats()
+        {
+            ViewBag.Message = "Your contact page.";
+            ViewBag.Current = "Stats";
+            return View();
+        }
+
+
+
         public ActionResult Tips()
         {
             ViewBag.Message = "Your contact page.";

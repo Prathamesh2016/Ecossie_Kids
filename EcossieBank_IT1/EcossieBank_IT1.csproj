@@ -158,6 +158,7 @@
     <Content Include="Content\css\jquery.quiz-min.css" />
     <Content Include="Content\css\magnific-popup.css" />
     <Content Include="Content\css\mediaelementplayer.css" />
+    <Content Include="Content\css\NavBar.css" />
     <Content Include="Content\css\owl.carousel.min.css" />
     <Content Include="Content\css\owl.theme.default.min.css" />
     <Content Include="Content\css\style.css" />
@@ -256,6 +257,8 @@
     <Content Include="images\school-board-wood-teaching.jpg" />
     <Content Include="images\shower.jpg" />
     <Content Include="images\signature.svg" />
+    <Content Include="images\stats_banner.jpg" />
+    <Content Include="images\stats_bg.gif" />
     <Content Include="images\tap.jpg" />
     <Content Include="images\thermostat.jpg" />
     <Content Include="images\Tips_Images\Ac_off.gif" />
@@ -572,6 +575,7 @@
     <Content Include="Views\Home\Book_Shelf.cshtml" />
     <Content Include="Views\Home\Quiz.cshtml" />
     <Content Include="Views\Home\Quiz2.cshtml" />
+    <Content Include="Views\Home\Stats.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -2546,7 +2546,7 @@ h1, h2, h3, h4, h5,
     }
 
 .text-red {
-    color: #fd4d40;
+    color: #2607B8;
 }
 
 .text-yellow {
@@ -2690,4 +2690,8 @@ h1, h2, h3, h4, h5,
 }
 .homepage-banner {
     background-image: url('../../images/HomePage-banner2.gif');
+}
+
+.stats-banner {
+    background-image: url('../../images/stats_banner.jpg');
 }

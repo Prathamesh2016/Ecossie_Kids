@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "Stats";
+    Layout = "~/Views/Shared/_CustomLayout.cshtml";
+}
+<style>
+    .stats-content {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        align-items: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -moz-align-items: center;
+        -webkit-align-items: center;
+        background: #E3810C;
+        flex-direction: column;
+        -o-flex-direction: column;
+        -ms-flex-direction: column;
+        -moz-flex-direction: column;
+        -webkit-flex-direction: column;
+    }
+</style>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <div class="site-wrap" id="home-section">
+
+
+
+
+        <div class="ftco-blocks-cover-1">
+            <div class="site-section-cover overlay stats-banner" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row align-items-center ">
+                        <div class="col-md-5 mt-5 pt-5">
+                            <span class="text-cursive h5 text-red">World Facts</span>
+                            <h1 class="mb-3 font-weight-bold text-teal">Enviornment Statistics</h1>
+                            <p><a href="~/Views/Home/Index.cshtml" class="text-white">Home</a> <span class="mx-3">/</span> <strong>Global Warming Concerns</strong></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>   @* Description of the form *@
+
+
+        <div class="site-section stats-content" id="contact-section">
+            <div class="container ">
+                <div class="infogram-embed" data-id="da17f2b4-e34f-404d-b88f-220f6d9f33a4" data-type="interactive" data-title="Untitled infographic"></div>
+                <script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script>
+            </div>
+        </div>   @* Form for adding User Info *@
+
+
+    </div>
+</body>

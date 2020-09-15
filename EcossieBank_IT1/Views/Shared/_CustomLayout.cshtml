@@ -1,12 +1,16 @@
-﻿<!doctype html>
+﻿
+
+<!doctype html>
 <html lang="en">
 <head>
-    <title>EcossieBank &mdash; Website Template by Colorlib</title>
+    <title>EcossieKids</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
+
     @Styles.Render("~/template/css")
     @*@<link rel="stylesheet" href="css/responsive.css" type="text/css" />@*@
+    <link href="~/Content/css/NavBar.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/fonts/flaticon/font/flaticon.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -44,114 +48,106 @@
                 </div>
             </div>
 
-            <div class="container">
-                <div class="menu-wrap d-flex align-items-center">
-                    <span class="d-inline-block d-lg-none"><a href="#" class="text-black site-menu-toggle js-menu-toggle py-5"><span class="icon-menu h3 text-black"></span></a></span>
-
-                    <nav class="site-navigation text-left mr-auto d-none d-lg-block dropdown" role="navigation">
-                       
-                        <ul class="site-menu main-menu js-clone-nav mr-auto dropdown">
-                            <li class="nav-item active "><a href="/Home/Index" class="nav-link">Home</a></li>
-                            <li class="nav-item"><a href="/Home/Tips" class="nav-link">Get Tips</a></li>
-                            <li class="nav-item"><a href="/Home/Book_Shelf" class="nav-link">Read Books</a></li>
-                            <li class="nav-item"><a href="/Home/Image_Game" class="nav-link">Image Game</a></li>
-                            <li class="nav-item"><a href="/Home/Quiz" class="nav-link">Quiz</a></li>
 
 
-                            @*<li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle dropdown" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Let's Learn</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/Home/Tips" style="color: #000; font-size:14px;">Learn Facts</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/Home/Book_Shelf" style="color: #000; font-size:14px;">Read Comics</a>
+
+
+            @*<div class="top-social ml-auto">
+
+                                <a href="https://www.facebook.com/ecossie-kids-107210307777396/"><span><i class="fab fa-facebook-f text-teal"></i></span></a>
+                                <a href="#"><span><i class="fab fa-twitter text-success"></i></span></a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </header>*@
+
+            <nav class="menu">
+                <ol>
+                    <li class="menu-item active  fas "><a href="/Home/Index">Home</a></li>
+                    <li class="menu-item fas">
+                        <a href="#0">Lets Learn</a>
+                        <ol class="sub-menu">
+                            <li class="menu-item fa-lightbulb "><a href="/Home/Tips">Learn Facts</a></li>
+                            <li class="menu-item fa-book-reader "><a href="/Home/Book_Shelf">Read Books</a></li>
+                            <li class="menu-item fa-globe-asia"><a href="/Home/Stats">Enviornmental Statistics</a></li>
+
+                        </ol>
+                    </li>
+                    
+                    <li class="menu-item fas">
+                        <a href="#0">Play Games</a>
+                        <ol class="sub-menu">
+                            <li class="menu-item fa-search"><a href="/Home/Image_Game">Spot Mistakes</a></li>
+                            <li class="menu-item fa-check-square "><a href="/Home/Quiz">Quiz</a></li>
+                        </ol>
+                    </li>
+                    <li class="menu-item fas"><a href="/home/about">About us</a></li>
+
+
+                    <li class="menu-item fas"><a href="/home/send_email">Contact us</a></li>
+                </ol>
+
+
+            
+    </div>
+
+
+    @RenderBody()
+
+
+    <div class="site-section py-5 bg-warning">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 d-flex">
+                    <h2 class="text-white m-0" align="centre">Lets Educate Children with Fun</h2>
+
+                    <a href="@Url.Action("Book_Shelf", "Home")" class="btn btn-primary btn-custom-1 py-3 px-5 ml-auto">Get Started</a>
+                </div>
             </div>
-        </li>
+        </div>
+    </div>
 
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Play Games</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/Home/Image_Game" style="color: #000; font-size:14px;">Image Game</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item " href="/Home/NearbyHospitals" style="color: #000; font-size:14px;">Quiz</a>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h2 class="footer-heading mb-3">About Us</h2>
+                    <p class="mb-5">Our vision as a brand is “A greener community” by encouraging more Victorians to save electricity at home and having an impact on a global level. </p>
 
-            </div>
-        </li>*@
-                            <li class="nav-item"><a href="/Home/About" class="nav-link">About Us</a></li>
-
-                            <li class="nav-item "><a href="/Home/Send_Email" class="nav-link">Contact Us</a></li>
-
-
-
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                    <div class="footer_section">
+                        <h3>Quick links</h3>
+                        <ul>
+                            <li><a href="/Home/Index"><span class="ion-ios-arrow-forward mr-3"></span>Home</a></li>
+                            <li><a href="/Home/About"><span class="ion-ios-arrow-forward mr-3"></span>About Us</a></li>
+                            <li><a href="/Home/Tips"><span class="ion-ios-arrow-forward mr-3"></span>Learn about Electricity</a></li>
+                            <li><a href="/Home/Send_Email"><span class="ion-ios-arrow-forward mr-3"></span>Contact Us</a></li>
                         </ul>
-                    </nav>
-
-
-                  
-                    <div class="top-social ml-auto">
-
-                        <a href="https://www.facebook.com/Ecossie-Kids-107210307777396/"><span><i class="fab fa-facebook-f text-teal"></i></span></a>
-                        <a href="#"><span><i class="fab fa-twitter text-success"></i></span></a>
-
                     </div>
                 </div>
             </div>
+            <div class="row pt-5 mt-5 text-center">
+                <div class="col-md-12">
+                    <div class="border-top pt-5">
+                        <p>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
-        </header>
-
-        @RenderBody()
-
-
-        <div class="site-section py-5 bg-warning">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-12 d-flex">
-                        <h2 class="text-white m-0" align="centre">Lets Educate Children with Fun</h2>
-
-                        <a href="@Url.Action("Book_Shelf", "Home")" class="btn btn-primary btn-custom-1 py-3 px-5 ml-auto">Get Started</a>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-
-        <footer class="site-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <h2 class="footer-heading mb-3">About Us</h2>
-                        <p class="mb-5">Our vision as a brand is “A greener community” by encouraging more Victorians to save electricity at home and having an impact on a global level. </p>
-
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-12">
-                        <div class="footer_section">
-                            <h3>Quick links</h3>
-                            <ul>
-                                <li><a href="/Home/Index"><span class="ion-ios-arrow-forward mr-3"></span>Home</a></li>
-                                <li><a href="/Home/About"><span class="ion-ios-arrow-forward mr-3"></span>About Us</a></li>
-                                <li><a href="/Home/Tips"><span class="ion-ios-arrow-forward mr-3"></span>Learn about Electricity</a></li>
-                                <li><a href="/Home/Send_Email"><span class="ion-ios-arrow-forward mr-3"></span>Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="row pt-5 mt-5 text-center">
-                    <div class="col-md-12">
-                        <div class="border-top pt-5">
-                            <p>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;
-                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+    </footer>
     </div>
 
 
-     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     @Scripts.Render("~/template/js")
