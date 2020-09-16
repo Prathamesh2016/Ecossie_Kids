@@ -183,6 +183,7 @@
     <Content Include="Content\images\Bedroom\lamp_front.gif" />
     <Content Include="Content\images\Bedroom\window_back.gif" />
     <Content Include="Content\images\Bedroom\window_front.gif" />
+    <Content Include="Content\images\Book Images\Banner.jpg" />
     <Content Include="Content\images\Book Images\beautdesign-spine.png" />
     <Content Include="Content\images\Book Images\Bookshelfbg.jpg" />
     <Content Include="Content\images\Book Images\cssmast-spine-full.png" />
