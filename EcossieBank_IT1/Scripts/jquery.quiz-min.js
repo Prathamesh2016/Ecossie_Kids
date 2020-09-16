@@ -98,7 +98,7 @@
         startButton: "#quiz-start-btn",
         homeButton: "#quiz-home-btn",
         resultsScreen: "#quiz-results-screen",
-        resultsFormat: "You got %score out of %total correct! " + '<p><a href="/Home/Quiz" id="back-btn" class="quiz-button">Next Quiz</a></p>',
+        resultsFormat: "You got %score out of %total correct! " + '<p><a href="/Home/Quiz/#quiz" id="back-btn" class="quiz-button">Next Quiz</a></p>',
         gameOverScreen: "#quiz-gameover-screen",
         nextButtonText: "Next",
         finishButtonText: "Finish",
