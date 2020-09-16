@@ -184,7 +184,7 @@
     <Content Include="Content\images\Bedroom\window_back.gif" />
     <Content Include="Content\images\Bedroom\window_front.gif" />
     <Content Include="Content\images\Book Images\beautdesign-spine.png" />
-    <Content Include="Content\images\Book Images\Bookshelf_bg.jpg" />
+    <Content Include="Content\images\Book Images\Bookshelfbg.jpg" />
     <Content Include="Content\images\Book Images\cssmast-spine-full.png" />
     <Content Include="Content\images\Book Images\dontmakemethink-spine.png" />
     <Content Include="Content\images\Book Images\drawing-spine.png" />
@@ -263,6 +263,7 @@
     <Content Include="images\hero_3.jpg" />
     <Content Include="images\homeImage3.jpeg" />
     <Content Include="images\homeImage4.jpeg" />
+    <Content Include="images\HomePage-banner2.gif" />
     <Content Include="images\img_1.jpg" />
     <Content Include="images\img_2.jpg" />
     <Content Include="images\img_3.jpg" />
@@ -379,6 +380,7 @@
     <Content Include="Scripts\bootstrap.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <None Include="Properties\PublishProfiles\EcossieBankIT2 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
