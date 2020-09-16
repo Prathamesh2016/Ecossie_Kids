@@ -240,12 +240,15 @@
     <Content Include="fonts\icomoon\fonts\icomoon.svg" />
     <Content Include="fonts\icomoon\Read Me.txt" />
     <Content Include="fonts\icomoon\style.css" />
+    <Content Include="fonts\Learn_game.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\about_us.jpg" />
     <Content Include="images\ac.jpg" />
     <Content Include="images\barchart1.jpeg" />
     <Content Include="images\Barchart1.png" />
     <Content Include="images\Bedroom.jpg" />
+    <Content Include="images\bookshelf_bg.jpg" />
     <Content Include="images\book_wall_1.png" />
     <Content Include="images\booshelf_bg.png" />
     <Content Include="images\curology-A9CUBfntOFQ-unsplash.jpg" />
@@ -300,6 +303,7 @@
     <Content Include="images\stats_bg.gif" />
     <Content Include="images\tap.jpg" />
     <Content Include="images\thermostat.jpg" />
+    <Content Include="images\Tips_bg.jpg" />
     <Content Include="images\Tips_Images\Ac_off.gif" />
     <Content Include="images\Tips_Images\Ac_On.gif" />
     <Content Include="images\Tips_Images\bathroom-exhaust fan - flip.gif" />

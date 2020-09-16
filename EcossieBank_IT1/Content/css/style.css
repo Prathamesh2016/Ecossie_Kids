@@ -2666,16 +2666,13 @@ h1, h2, h3, h4, h5,
 
 
 .background-banner {
-    background-image: url('../../images/hero_1.jpg');
+    background-image: url('../../images/about_us.jpg');
 }
 
 .contact-banner {
     background-image: url('../../images/hero_2.jpg');
 }
 
-.tips-banner {
-    background-image: url('../../images/hero_3.jpg');
-}
 
 .image-game-banner {
     background-image: url('../../images/Learn_game.jpg');
@@ -2686,7 +2683,7 @@ h1, h2, h3, h4, h5,
     background-color: #1E8D8A !important;
 }
 .books-banner {
-    background-image: url('../../images/booshelf_bg.png');
+    background-image: url('../../images/bookshelf_bg.jpg');
 }
 
 .bookshelf-bg {
@@ -2694,7 +2691,6 @@ h1, h2, h3, h4, h5,
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
-    height: 1000px;
 }
 .homepage-banner {
     background-image: url('../../images/HomePage-banner2.gif');
@@ -2705,4 +2701,7 @@ h1, h2, h3, h4, h5,
 }
 .quiz-banner {
     background-image: url('../../images/img_2.jpg');
+}
+.tips-banner {
+    background-image: url('../../images/Tips_bg.jpg');
 }
