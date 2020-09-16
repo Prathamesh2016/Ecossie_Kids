@@ -10,7 +10,7 @@ dl.bookshelf {
     height: 450px; /* height includes room for the description */
     position: relative;
     background: transparent url('../images/shelf.png') 0 290px no-repeat; /* 300px is height of tallest book */
-    left: 22%;
+    left: 27%;
 }
 
 dl.bookshelf dt {
@@ -226,8 +226,8 @@ dl.bookshelf dd.showBook {
 	display:block;
 	width:350px;
 	position: absolute;
-	top:340px;
-	left:500px;
+	top:320px;
+	left:470px;
 	background:rgba(0,0,0,0.8); /* RGBA background */
 	padding: 10px;
 	color:#fff;
