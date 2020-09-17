@@ -260,6 +260,7 @@
     <Content Include="images\flaticon\svg\005-deal.svg" />
     <Content Include="images\flaticon\svg\006-research.svg" />
     <Content Include="images\game rule.PNG" />
+    <Content Include="images\game_rule.jpg" />
     <Content Include="images\giphy.gif" />
     <Content Include="images\giphy2.gif" />
     <Content Include="images\handwash.jpg" />
