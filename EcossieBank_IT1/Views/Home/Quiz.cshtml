@@ -3,7 +3,17 @@
     ViewBag.Title = "Quiz";
     Layout = "~/Views/Shared/_CustomLayout.cshtml";
 }
-
+<style>
+    .site-navbar {
+        background: transparent;
+        margin-bottom: 0px;
+        z-index: 1999;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding: 1rem;
+    }
+</style>
 
 <title>Quiz</title>
 <link rel="stylesheet" type="text/css" href="~/Content/css/jquery.quiz-min.css" />
@@ -42,176 +52,322 @@
             <h1 style="text-align:center;"></h1>
             <div id="quiz">
                 @*<div id="quiz-header">
-                    <h1>Quiz 1</h1>
+                        <h1>Quiz 1</h1>
 
-                </div>*@
+                    </div>*@
                 <header>Quiz </header>
 
                 <div id="quiz-start-screen">
                     <p style="text-align:center;"><img src="~/images/Quizsmile.jpeg" width="200" height="200" /></p>
-                    <p>Quiz 1 is for beginer. Quiz 2 is for amateur. </p>
-                    <p><a href="#" id="quiz-start-btn" class="quiz-button">Play Quiz1</a></p>
+                    <p>There are 3 level Quiz.</p>
+                    <p><a href="/Home/Quiz1" id="quiz1-btn" class="quiz-button">Play Quiz1</a></p>
                     <p><a href="/Home/Quiz2" id="quiz2-btn" class="quiz-button">Play Quiz2</a></p>
+                    <p><a href="/Home/Quiz3" id="quiz2-btn" class="quiz-button">Play Quiz3</a></p>
+                    <h1>
+                        Score
+                    </h1>
+                    <h2>
+                        Quiz1: <span id="result-quiz1" />
+                    </h2>
+                    <h2>
+                        Quiz2: <span id="result-quiz2" />
+                    </h2>
+                    <h2>
+                        Quiz3: <span id="result-quiz3" />
+                    </h2>
                 </div>
             </div>
         </div>
     </div>
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-        <script src="~/Scripts/jquery.quiz-min.js"></script>
-        <script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="~/Scripts/jquery.quiz-min.js"></script>
+    <script src="~/Scripts/quizResult.js"></script>
+    <script>
+        var quizContent = [
+            {
+                'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wcj7Kf.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wcj7Kf.gif" alt="Image" class="img-fluid"></a></p>It is cool outside and you feel very hot inside, what should you do?',
+                'options': [
+                    'Open the windows',
+                    'Turn on the air-conditioner',
+                    'Open the windows and turn on the air-conditioner',
+                    'Eat a toast with cheese'
 
-            $('#quiz').quiz({
-                //resultsScreen: '#results-screen',
-                //counter: false,
-                //homeButton: '#custom-home',
-                counterFormat: 'Question %current of %total',
-                questions: [
-                    {
-                        'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wcj7Kf.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wcj7Kf.gif" alt="Image" class="img-fluid"></a></p>It is cool outside and you feel very hot inside, what should you do?',
-                        'options': [
-                            'Open the windows',
-                            'Turn on the air-conditioner',
-                            'Open the windows and turn on the air-conditioner',
-                            'Eat a toast with cheese'
+                ],
+                'correctIndex': 0,
+                'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/15/w6VIjH.gif"  width="200" height="200"  /></p>CORRECT! Open the windows to let the cool air enter your home. You don’t have to always rely on the air-conditioner!',
+                'incorrectResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/15/w6VIjH.gif"  width="200" height="200"  /></p>Incorrect. You should open the windows to let the cool air enter your home. You don’t have to always rely on the air-conditioner!'
+            },
+            {
+                'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wcjxGn.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wcjxGn.gif" alt="Image" class="img-fluid"></a></p>Why is the Earth getting hotter?',
+                'options': [
+                    'Covid-19',
+                    'Sun is getting hotter',
+                    'Global Warming',
+                    'No reason'
+                ],
+                'correctIndex': 2,
+                'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcL336.gif"  width="200" height="200"  /></p>CORRECT! The Earth is getting hotter because of global warming, which means the increase in temperature around the world.',
+                'incorrectResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcL336.gif"  width="200" height="200"  /></p>Incorrect. The Earth is getting hotter because of Global Warming, which means the increase in temperature around the world.'
+            },
+            {
+                'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wcvSx0.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wcvSx0.gif" alt="Image" class="img-fluid"></a></p>If global warming continues, what will be the results?',
+                'options': [
+                    'More ice-cream to eat',
+                    'Animal extinction',
+                    'More islands appear',
+                    'More electricity for us to use',
+                    'Animal extinction and island disappearing'
 
-                        ],
-                        'correctIndex': 0,
-                        'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/15/w6VIjH.gif"  width="200" height="200"  /></p>CORRECT! Open the windows to let the cool air enter your home. You don’t have to always rely on the air-conditioner!',
-                        'incorrectResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/15/w6VIjH.gif"  width="200" height="200"  /></p>Incorrect. You should open the windows to let the cool air enter your home. You don’t have to always rely on the air-conditioner!'
-                    },
-                    {
-                        'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wcjxGn.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wcjxGn.gif" alt="Image" class="img-fluid"></a></p>Why is the Earth getting hotter?',
-                        'options': [
-                            'Covid-19',
-                            'Sun is getting hotter',
-                            'Global Warming',
-                            'No reason'
-                        ],
-                        'correctIndex': 2,
-                        'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcL336.gif"  width="200" height="200"  /></p>CORRECT! The Earth is getting hotter because of global warming, which means the increase in temperature around the world.',
-                        'incorrectResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcL336.gif"  width="200" height="200"  /></p>Incorrect. The Earth is getting hotter because of Global Warming, which means the increase in temperature around the world.'
-                    },
-                    {
-                        'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wcvSx0.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wcvSx0.gif" alt="Image" class="img-fluid"></a></p>If global warming continues, what will be the results?',
-                        'options': [
-                            'More ice-cream to eat',
-                            'Animal extinction',
-                            'More islands appear',
-                            'More electricity for us to use',
-                            'Animal extinction and island disappearing'
+                ],
+                'correctIndex': 4,
+                'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcX06f.gif"  width="300" height="300"  /></p>CORRECT! Global warming will cause animal extinction due to environmental change. It will also cause the island disappearing due to rising sea level!',
+                'incorrectResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcX06f.gif"  width="300" height="300"  /></p>Incorrect. Global warming will cause animal extinction due to environmental change. It will also cause islands disappearing due to rising sea level!'
+            },
+            {
+                'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wcv9MV.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wcv9MV.gif" alt="Image" class="img-fluid"></a></p>When you leave a room, what should you do?',
+                'options': [
+                    'Do nothing',
+                    'Tidy up your bed',
+                    'Turn off the lights only',
+                    'Turn off all the electrical appliances in the room'
+                ],
+                'correctIndex': 3,
+                'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcLBCt.gif"  width="200" height="200"  /></p>CORRECT! You should turn off all the electrical appliances in the room, not just the lights!',
+                'incorrectResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcLBCt.gif"  width="200" height="200"  /></p>Incorrect. You should turn off all the electrical appliances in the room, not just the lights!'
+            },
+            {
+                'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wcvPqU.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wcvPqU.gif" alt="Image" class="img-fluid"></a></p>What causes Global Warming?',
+                'options': [
+                    'Reading books',
+                    'Using too much electricity',
+                    'Playing too much piano',
+                    'Playing too much basketball'
+                ],
+                'correctIndex': 1,
+                'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcL4Cq.gif"  width="200" height="200"  /></p>CORRECT! The major cause of global warming is using too much electricity. Always try to do more fun activities that don’t consume electricity!',
+                'incorrectResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcL4Cq.gif"  width="200" height="200"  /></p>Incorrect. The major cause of global warming is using too much electricity. Doing fun activities that don’t consume electricity will not cause global warming.'
+            },
+            {
+                'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wcvFZF.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wcvFZF.gif" alt="Image" class="img-fluid"></a></p>You see the hair dryer is plugged in and no one is using it. What should you do?',
+                'options': [
+                    'Unplug it',
+                    'Play with it like a gun',
+                    'Put it in a refrigerator'
+                ],
+                'correctIndex': 0,
+                'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcLovT.gif"  width="200" height="200"  /></p>CORRECT! Hair dryer is one of the most power-hungry products at home. Be sure to unplug it even if the power is not on!',
+                'incorrectResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcLovT.gif"  width="200" height="200"  /></p>Incorrect. You should unplug the hair dryer even the power is not on! It is one of the most power-hungry products at home.'
+            },
+            {
+                'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wcveR1.md.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wcveR1.md.gif" alt="Image" class="img-fluid"></a></p>Why should we unplug the table lamps when no one is using it?',
+                'options': [
+                    'It still costs electricity even when power is not on.',
+                    'It looks more tidy',
+                    'Just for fun'
+                ],
+                'correctIndex': 0,
+                'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcL7KU.gif"  width="200" height="200"  /></p>CORRECT! If you are able to unplug an electrical appliance, then do it! They still cost electricity even when power is not on.',
+                'incorrectResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcL7KU.gif"  width="200" height="200"  /></p>Incorrect. If you are able to unplug an electrical appliance, then do it! They still cost electricity even when power is not on.'
+            },
+            {
+                'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wcvtzt.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wcvtzt.gif" alt="Image" class="img-fluid"></a></p>You should open the refrigerator door only when you want to...',
+                'options': [
+                    'Get your food or drink real quick ',
+                    'Play with the refrigerator light',
+                    'Feel the cool from refrigerator',
+                    'Play with the refrigerator door'
+                ],
+                'correctIndex': 0,
+                'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcXrnS.gif"  width="200" height="200"  /></p>CORRECT! Avoid unnecessarily opening the refrigerator because cold air escapes whenever you open it. It needs to spend electricity to bring the temperature down!',
+                'incorrectResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcXrnS.gif"  width="200" height="200"  /></p>Incorrect. You should avoid unnecessarily opening the refrigerator because cold air escapes whenever you open it. It needs to spend electricity to bring the temperature down!'
+            }
 
-                        ],
-                        'correctIndex': 4,
-                        'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcX06f.gif"  width="300" height="300"  /></p>CORRECT! Global warming will cause animal extinction due to environmental change. It will also cause the island disappearing due to rising sea level!',
-                        'incorrectResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcX06f.gif"  width="300" height="300"  /></p>Incorrect. Global warming will cause animal extinction due to environmental change. It will also cause islands disappearing due to rising sea level!'
-                    },
-                    {
-                        'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wcv9MV.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wcv9MV.gif" alt="Image" class="img-fluid"></a></p>When you leave a room, what should you do?',
-                        'options': [
-                            'Do nothing',
-                            'Tidy up your bed',
-                            'Turn off the lights only',
-                            'Turn off all the electrical appliances in the room'
-                        ],
-                        'correctIndex': 3,
-                        'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcLBCt.gif"  width="200" height="200"  /></p>CORRECT! You should turn off all the electrical appliances in the room, not just the lights!',
-                        'incorrectResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcLBCt.gif"  width="200" height="200"  /></p>Incorrect. You should turn off all the electrical appliances in the room, not just the lights!'
-                    },
-                    {
-                        'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wcvPqU.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wcvPqU.gif" alt="Image" class="img-fluid"></a></p>What causes Global Warming?',
-                        'options': [
-                            'Reading books',
-                            'Using too much electricity',
-                            'Playing too much piano',
-                            'Playing too much basketball'
-                        ],
-                        'correctIndex': 1,
-                        'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcL4Cq.gif"  width="200" height="200"  /></p>CORRECT! The major cause of global warming is using too much electricity. Always try to do more fun activities that don’t consume electricity!',
-                        'incorrectResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcL4Cq.gif"  width="200" height="200"  /></p>Incorrect. The major cause of global warming is using too much electricity. Doing fun activities that don’t consume electricity will not cause global warming.'
-                    },
-                    {
-                        'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wcvFZF.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wcvFZF.gif" alt="Image" class="img-fluid"></a></p>You see the hair dryer is plugged in and no one is using it. What should you do?',
-                        'options': [
-                            'Unplug it',
-                            'Play with it like a gun',
-                            'Put it in a refrigerator'
-                        ],
-                        'correctIndex': 0,
-                        'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcLovT.gif"  width="200" height="200"  /></p>CORRECT! Hair dryer is one of the most power-hungry products at home. Be sure to unplug it even if the power is not on!',
-                        'incorrectResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcLovT.gif"  width="200" height="200"  /></p>Incorrect. You should unplug the hair dryer even the power is not on! It is one of the most power-hungry products at home.'
-                    },
-                    {
-                        'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wcveR1.md.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wcveR1.md.gif" alt="Image" class="img-fluid"></a></p>Why should we unplug the table lamps when no one is using it?',
-                        'options': [
-                            'It still costs electricity even when power is not on.',
-                            'It looks more tidy',
-                            'Just for fun'
-                        ],
-                        'correctIndex': 0,
-                        'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcL7KU.gif"  width="200" height="200"  /></p>CORRECT! If you are able to unplug an electrical appliance, then do it! They still cost electricity even when power is not on.',
-                        'incorrectResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcL7KU.gif"  width="200" height="200"  /></p>Incorrect. If you are able to unplug an electrical appliance, then do it! They still cost electricity even when power is not on.'
-                    },
-                    {
-                        'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wcvtzt.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wcvtzt.gif" alt="Image" class="img-fluid"></a></p>You should open the refrigerator door only when you want to...',
-                        'options': [
-                            'Get your food or drink real quick ',
-                            'Play with the refrigerator light',
-                            'Feel the cool from refrigerator',
-                            'Play with the refrigerator door'
-                        ],
-                        'correctIndex': 0,
-                        'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcXrnS.gif"  width="200" height="200"  /></p>CORRECT! Avoid unnecessarily opening the refrigerator because cold air escapes whenever you open it. It needs to spend electricity to bring the temperature down!',
-                        'incorrectResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcXrnS.gif"  width="200" height="200"  /></p>Incorrect. You should avoid unnecessarily opening the refrigerator because cold air escapes whenever you open it. It needs to spend electricity to bring the temperature down!'
-                    }
+            ,
+            {
+                'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wcvUQP.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wcvUQP.gif" alt="Image" class="img-fluid"></a></p>Why is taking showers better than baths?',
+                'options': [
+                    'You can sing in the showers',
+                    'Baths are for adults',
+                    'Showers use less hot water'
+                ],
+                'correctIndex': 2,
+                'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcXy7Q.gif"  width="200" height="200"  /></p>CORRECT! Hot water is expensive. Shower is better because it uses less electricity to heat up the water.',
+                'incorrectResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcXy7Q.gif"  width="200" height="200"  /></p>Incorrect. Hot water is expensive. Shower is better because it uses less electricity to heat up the water.'
+            },
+            {
+                'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wcvczq.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wcvczq.gif" alt="Image" class="img-fluid"></a></p>It is daylight outside and you feel too dark inside, what should you do?',
+                'options': [
+                    'Use the light from TV',
+                    'Open the curtain to bring in the natural light',
+                    'Open all the ceiling lights',
+                    'Use a torch light'
 
-                    ,
-                    {
-                        'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wcvUQP.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wcvUQP.gif" alt="Image" class="img-fluid"></a></p>Why is taking showers better than baths?',
-                        'options': [
-                            'You can sing in the showers',
-                            'Baths are for adults',
-                            'Showers use less hot water'
-                        ],
-                        'correctIndex': 2,
-                        'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcXy7Q.gif"  width="200" height="200"  /></p>CORRECT! Hot water is expensive. Shower is better because it uses less electricity to heat up the water.',
-                        'incorrectResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcXy7Q.gif"  width="200" height="200"  /></p>Incorrect. Hot water is expensive. Shower is better because it uses less electricity to heat up the water.'
-                    },
-                    {
-                        'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wcvczq.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wcvczq.gif" alt="Image" class="img-fluid"></a></p>It is daylight outside and you feel too dark inside, what should you do?',
-                        'options': [
-                            'Use the light from TV',
-                            'Open the curtain to bring in the natural light',
-                            'Open all the ceiling lights',
-                            'Use a torch light'
+                ],
+                'correctIndex': 1,
+                'correctResponse': 'CORRECT! A smaller load of laundry may use less water, but the washing machine will use the same amount of electricity no matter how big the load is. Therefore, it is best to wait for a full load before using it.',
+                'incorrectResponse': 'Incorrect. A smaller load of laundry may use less water, but the washing machine will use the same amount of electricity no matter how big the load is. Therefore, it is best to wait for a full load before using it.'
+            },
+            {
+                'q': 'After using the bathroom, you should remember to…',
+                'options': [
+                    'Close the bathroom exhaust fan.',
+                    'Close all the bathroom lights.',
+                    'Both are correct.'
 
-                        ],
-                        'correctIndex': 1,
-                        'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcXckj.md.gif"  width="200" height="200"  /></p>CORRECT! Draw up the curtain to bring in the natural light. You won’t even need to switch on lights till sunset comes around!',
-                        'incorrectResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcXckj.md.gif"  width="200" height="200"  /></p>Incorrect. Draw up the curtain to bring in the natural light. You won’t even need to switch on lights till sunset comes around!'
-                    }
-                ]
-            });
-
-
-
-
-        </script>
+                ],
+                'correctIndex': 2,
+                'correctResponse': 'CORRECT! Remember to close all the bathroom lights and the exhaust fan as well if there is one in your bathroom.',
+                'incorrectResponse': 'Incorrect. Remember to close all the bathroom lights and the exhaust fan as well if there is one in your bathroom.'
+            },
+            {
+                'q': 'Which is the best practice after using a laptop?',
+                'options': [
+                    'Charge the laptop overnight.',
+                    'Shut down the laptop.',
+                    'Put it to sleep mode and go to bed.'
 
 
-        <script type="text/javascript">
+                ],
+                'correctIndex': 1,
+                'correctResponse': 'CORRECT! Shutting down the laptop will save more electricity than just putting it to sleep mode. Avoid overcharging your laptop because it may have a negative effect on battery lifespan and waste of electricity consumption.',
+                'incorrectResponse': 'Incorrect. Shutting down the laptop will save more electricity than just putting it to sleep mode. Avoid overcharging your laptop because it may have a negative effect on battery lifespan and waste of electricity consumption.'
+            },
+            {
+                'q': 'What can you do to save electricity after using a Desktop?',
+                'options': [
+                    'Completely shut down the PC.',
+                    'Unplug the PC.',
+                    'Both are correct.'
 
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-36251023-1']);
-            _gaq.push(['_setDomainName', 'jqueryscript.net']);
-            _gaq.push(['_trackPageview']);
+                ],
+                'correctIndex': 2,
+                'correctResponse': 'CORRECT! If no one is using the Desktop, you should completely shut it down and unplug it if you can.',
+                'incorrectResponse': 'Incorrect. The answer is both. If no one is using the Desktop, you should completely shut it down and unplug it if you can.'
+            },
+            {
+                'q': 'Why is a laptop more energy efficient than a Desktop?',
+                'options': [
+                    'A laptop can run without connecting the power plug.',
+                    'A laptop is easier to carry around.',
+                    'A laptop can be shut down.'
 
-            (function () {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
+                ],
+                'correctIndex': 0,
+                'correctResponse': 'CORRECT! A laptop can run without connecting the power plug when its battery still has power. However, make sure to switch off the charger and unplug it after charging the laptop.',
+                'incorrectResponse': 'Incorrect. A laptop is more energy efficient because it can run without connecting the power plug when its battery still has power. However, make sure to switch off the charger and unplug it after charging the laptop.'
+            },
+            {
+                'q': 'The recommended shower time is…',
+                'options': [
+                    '30 minutes.',
+                    '2 minutes.',
+                    '5 minutes.'
 
-        </script>
-        @Scripts.Render("~/bundles/jquery")
+                ],
+                'correctIndex': 2,
+                'correctResponse': 'CORRECT! Generally, the recommended shower time would be around 5 to 10 minutes. This is enough time to cleanse yourself without overdoing it.',
+                'incorrectResponse': 'Incorrect. 2 minutes is too short, while 30 minutes is too long! Generally, the recommended shower time would be around 5 to 10 minutes. This is enough time to cleanse yourself without overdoing it.'
+            },
+            {
+                'q': 'What should you do with the table lamp when no one is using it?',
+                'options': [
+                    'Unplug the table lamp.',
+                    'Switch off the table lamp.',
+                    'Clean the lightbulb.',
+                    'Unplug and switch off the table lamp.'
+
+                ],
+                'correctIndex': 3,
+                'correctResponse': 'CORRECT! You should switch off the table lamp and unplug it if you can when no one is using it.',
+                'incorrectResponse': 'Incorrect. You should switch off the table lamp and unplug it if you can when no one is using it.'
+            },
+            {
+                'q': 'What should you do before switching off the electrical appliances?',
+                'options': [
+                    'Dry your hands and make sure they are not wet.',
+                    'Clean the electrical appliance.',
+                    'Test whether the electrical appliance is working properly.'
+
+                ],
+                'correctIndex': 0,
+                'correctResponse': 'CORRECT! It could be dangerous to switch off electrical appliances with wet hands because you can get electrocuted! Make sure your hands are clean and dry before handling any appliances.',
+                'incorrectResponse': 'Incorrect. It could be dangerous to switch off electrical appliances with wet hands because you can get electrocuted! Make sure your hands are clean and dry before handling any appliances.'
+            },
+            {
+                'q': 'You can save electricity usage on television by…',
+                'options': [
+                    'Reducing the brightness of the screen.',
+                    'Switching to energy-saving mode',
+                    'Both are correct.'
+
+                ],
+                'correctIndex': 2,
+                'correctResponse': 'CORRECT! Reducing the brightness of the screen and switching to energy-saving mode can help to reduce the electricity consumption of televisions.',
+                'incorrectResponse': 'Incorrect. The answer is both. Reducing the brightness of the screen and switching to energy-saving mode can help to reduce the electricity consumption of televisions.'
+            },
+            {
+                'q': 'Before going to bed, what should I do with the television to save the most electricity?',
+                'options': [
+                    'Play some music before going to bed.',
+                    'Leave the television on standby mode at night.',
+                    'Switch off the television.'
+
+                ],
+                'correctIndex': 2,
+                'correctResponse': 'CORRECT! Switching off the television will save more electricity than leaving it on standby mode at night. Avoid leaving the television open if it is unnecessary.',
+                'incorrectResponse': 'Incorrect. Switching off the television can save the most electricity. Leaving it on standby mode at night will still consume a bit of electricity. Avoid leaving the television open if it is unnecessary.'
+            },
+            {
+                'q': 'If we want to use the washing machine, we should wait for a...',
+                'options': [
+                    'A full load of laundry because it uses the same amount of electricity, no matter how big the load is.',
+                    'A small load of laundry because it uses a lower amount of electricity.',
+                    'A full load of laundry because it uses less water.'
+
+                ],
+                'correctIndex': 0,
+                'correctResponse': 'CORRECT! A smaller load of laundry may use less water, but the washing machine will use the same amount of electricity no matter how big the load is. Therefore, it is best to wait for a full load before using it.',
+                'incorrectResponse': 'Incorrect. A smaller load of laundry may use less water, but the washing machine will use the same amount of electricity no matter how big the load is. Therefore, it is best to wait for a full load before using it.'
+            }
+        ]
+        function randomquizContent(array) {
+            var j, x, i = 0, len = array.length;
+            for (i; i < len; i++) {
+                j = Math.floor(Math.random() * len);
+                x = array[i];
+                array[i] = array[j];
+                array[j] = x;
+            }
+        }
+        randomquizContent(quizContent);
+        $('#quiz').quiz({
+            //resultsScreen: '#results-screen',
+            //counter: false,
+            //homeButton: '#custom-home',
+            counterFormat: 'Question %current of %total',
+            questions: quizContent.slice(0, 10)
+        });
+
+
+
+
+    </script>
+
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    @Scripts.Render("~/bundles/jquery")
 
 </body>

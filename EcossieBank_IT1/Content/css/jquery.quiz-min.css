@@ -4,13 +4,12 @@ body {
     background: linear-gradient(to top, #FCAA2C 0, #F58220 100%) fixed;*/
     font-family: adelle-sans, Avenir, Helvetica, Arial, sans-serif;
     font-size: 16px;
-    
     -webkit-font-smoothing: antialiased;
 }
 
 .quiz-container {
-   padding-bottom:15px;
-    max-width: 70%;
+    padding-bottom: 15px;
+    width: 100%;
     margin: 1em auto;
     background: #fff;
     box-shadow: 0 3px 40px 0 rgba(0, 0, 0, .15);
@@ -67,7 +66,7 @@ body {
     background: #333;
     color: #fff;
     margin: 20px 20px 20px 20px;
-    padding:20px 0 20px 0;
+    padding: 20px 0 20px 0;
     text-align: center;
     border-radius: 10px;
 }
@@ -136,21 +135,24 @@ header {
     text-align: center;
     color: #FFF;
     font-size: 12px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
     text-transform: uppercase;
-    padding:20px 0;
+    padding: 20px 0;
     font-weight: 700;
-    
 }
-@media only screen and (max-width: 450px){
+
+@media only screen and (max-width: 90%) {
     .question {
+        width: 70%;
         font-size: 15px;
         text-align: center;
     }
+
     header {
         font-size: 20px;
     }
-    .answers a{
-        font-size:12px;
+
+    .answers a {
+        font-size: 12px;
     }
 }

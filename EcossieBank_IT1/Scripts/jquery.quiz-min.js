@@ -3,6 +3,8 @@
  * Copyright (c) 2018 JC Hamill - http://jchamill.github.com/jquery-quiz/
  * License: MIT
  */
+
+
 ! function (a, b, c, d) {
     "use strict";
     a.quiz = function (b, d) {
@@ -46,9 +48,11 @@
                 }), b += "</div>", 0 === a(k).length && (b += '<div id="' + k.substr(1) + '">', b += '<p id="quiz-results"></p>', b += "</div>"), b += '<div id="quiz-controls">', b += '<p id="quiz-response"></p>', b += '<div id="quiz-buttons">', b += '<a href="#" id="quiz-next-btn">' + m + "</a>", b += '<a href="#" id="quiz-finish-btn">' + n + "</a>", b += '<a href="#" id="quiz-restart-btn">' + o + "</a>", b += "</div>", b += "</div>", e.$el.append(b).addClass("quiz-container quiz-start-state"), a("#quiz-counter").hide(), a(".question-container").hide(), a(l).hide(), a(k).hide(), a("#quiz-controls").hide()
             },
             start: function () {
+
                 e.$el.removeClass("quiz-start-state").addClass("quiz-questions-state"), a(h).hide(), a("#quiz-controls").hide(), a("#quiz-finish-btn").hide(), a("#quiz-restart-btn").hide(), a("#questions").show(), a("#quiz-counter").show(), a(".question-container:first-child").show().addClass("active-question"), e.methods.updateCounter()
             },
             answerQuestion: function (b) {
+
                 if (!r) {
                     r = !0;
                     var c = a(b),
@@ -60,11 +64,13 @@
                     else if (c.addClass("incorrect"), d = f[h].incorrectResponse, !e.options.allowIncorrect) return void e.methods.gameOver(d);
                     a("#quiz-response").html(d), a("#quiz-controls").fadeIn(), "function" == typeof e.options.answerCallback && e.options.answerCallback(p, g, f[h])
                 }
+
             },
             nextQuestion: function () {
                 r = !1, a(".active-question").hide().removeClass("active-question").next(".question-container").show().addClass("active-question"), a("#quiz-controls").hide(), ++p === g && (a("#quiz-next-btn").hide(), a("#quiz-finish-btn").show()), e.methods.updateCounter(), "function" == typeof e.options.nextCallback && e.options.nextCallback()
             },
             gameOver: function (b) {
+                localStorage.setItem("QUIZ1RESULT", "1111");
                 if (0 === a(l).length) {
                     var c = "";
                     c += '<div id="' + l.substr(1) + '">', c += '<p id="quiz-gameover-response"></p>', c += '<p><a href="#" id="quiz-retry-btn">' + o + "</a></p>", c += "</div>", e.$el.append(c)
@@ -72,6 +78,19 @@
                 a("#quiz-gameover-response").html(b), a("#quiz-counter").hide(), a("#questions").hide(), a("#quiz-finish-btn").hide(), a(l).show()
             },
             finish: function () {
+                if (sessionStorage.getItem("QuizNumber") == "1") {
+
+                    sessionStorage.setItem("QUIZ1RESULT", q);
+                }
+                if (sessionStorage.getItem("QuizNumber") == "2") {
+
+                    sessionStorage.setItem("QUIZ2RESULT", q);
+                }
+                if (sessionStorage.getItem("QuizNumber") == "3") {
+
+                    sessionStorage.setItem("QUIZ3RESULT", q);
+                }
+
                 e.$el.removeClass("quiz-questions-state").addClass("quiz-results-state"), a(".active-question").hide().removeClass("active-question"), a("#quiz-counter").hide(), a("#quiz-response").hide(), a("#quiz-finish-btn").hide(), a("#quiz-next-btn").hide(), a("#quiz-restart-btn").show(), a(k).show();
                 var b = e.options.resultsFormat.replace("%score", q).replace("%total", g);
                 a("#quiz-results").html(b), "function" == typeof e.options.finishCallback && e.options.finishCallback()
@@ -98,7 +117,7 @@
         startButton: "#quiz-start-btn",
         homeButton: "#quiz-home-btn",
         resultsScreen: "#quiz-results-screen",
-        resultsFormat: "You got %score out of %total correct! " + '<p><a href="/Home/Quiz/#quiz" id="back-btn" class="quiz-button">Next Quiz</a></p>',
+        resultsFormat: "You got %score out of %total correct! " + '<p><a href="/Home/Quiz/#quiz" id="back-btn" class="quiz-button" onclick="submitScore()">Next Quiz</a></p>',
         gameOverScreen: "#quiz-gameover-screen",
         nextButtonText: "Next",
         finishButtonText: "Finish",
@@ -109,3 +128,9 @@
         })
     }
 }(jQuery, window, document);
+function submitScore() {
+    alert(q);
+    sessionStorage.setItem("QUIZ1RESULT", q);
+    return;
+
+}

@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Quiz2";
+    ViewBag.Title = "Quiz3";
     Layout = "~/Views/Shared/_CustomLayout.cshtml";
 }
 <style>
@@ -74,9 +74,9 @@
                     <h1>Quiz 1</h1>
 
                 </div>*@
-            <header>Quiz 2</header>
+            <header>Quiz 3</header>
             <div id="quiz-start-screen">
-                <p>Check your knowledge for level 2 Quiz.</p>
+                <p>Check your knowledge for level 3 Quiz.</p>
                 <p><a href="#" id="quiz-start-btn" class="quiz-button">START</a></p>
 
             </div>
@@ -96,7 +96,8 @@
 </script>
 
 <script>
-    sessionStorage.setItem("QuizNumber", "2");
+
+    sessionStorage.setItem("QuizNumber", "3");
     var quizContent = [
         {
             'q': '<p style="text-align:center;"><img src="https://s1.ax1x.com/2020/09/16/wczA3R.gif" width="180" height="180" /></p>What is the atmosphere to Earth?',
@@ -336,7 +337,7 @@
         //counter: false,
         //homeButton: '#custom-home',
         counterFormat: 'Question %current of %total',
-        questions: quizContent.slice(0, 10)
+        questions: quizContent.slice(0,10)
 
     });
 
