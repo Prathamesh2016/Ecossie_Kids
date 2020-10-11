@@ -156,6 +156,7 @@
     <Content Include="Content\css\jquery-ui.css" />
     <Content Include="Content\css\jquery.fancybox.min.css" />
     <Content Include="Content\css\jquery.quiz-min.css" />
+    <Content Include="Content\css\Leaderboard.css" />
     <Content Include="Content\css\magnific-popup.css" />
     <Content Include="Content\css\mediaelementplayer.css" />
     <Content Include="Content\css\NavBar.css" />
@@ -197,6 +198,9 @@
     <Content Include="Content\images\Book Images\Save the Earth now.png" />
     <Content Include="Content\images\book_wall.png" />
     <Content Include="Content\images\book_wall_1.png" />
+    <Content Include="Content\images\Checklist\Start_Checklist.jpg" />
+    <Content Include="Content\images\Checklist\SummerChecklist.jpg" />
+    <Content Include="Content\images\Checklist\WinterChecklist.jpg" />
     <Content Include="Content\images\icons-18-black.png" />
     <Content Include="Content\images\icons-18-white.png" />
     <Content Include="Content\images\icons-36-black.png" />
@@ -270,6 +274,8 @@
     <Content Include="images\homeImage3.jpeg" />
     <Content Include="images\homeImage4.jpeg" />
     <Content Include="images\HomePage-banner2.gif" />
+    <Content Include="images\Home_Page\home_banner.gif" />
+    <Content Include="images\Home_Page\index_bg.gif" />
     <Content Include="images\img_1.jpg" />
     <Content Include="images\img_2.jpg" />
     <Content Include="images\img_3.jpg" />
@@ -622,6 +628,9 @@
     <Content Include="Views\Home\Quiz.cshtml" />
     <Content Include="Views\Home\Quiz2.cshtml" />
     <Content Include="Views\Home\Stats.cshtml" />
+    <Content Include="Views\Home\Additional_Tips.cshtml" />
+    <Content Include="Views\Home\Leaderboard.cshtml" />
+    <Content Include="Views\Home\RenewableStats.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "RenewableStats";
+    Layout = "~/Views/Shared/_CustomLayout.cshtml";
+}
+
+
+
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <div class="site-wrap" id="home-section">
+
+
+
+
+        <div class="ftco-blocks-cover-1">
+            <div class="site-section-cover overlay stats-banner" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row align-items-center ">
+                        <div class="col-md-5 mt-5 pt-5">
+                            <span class="text-cursive h5 text-mine">Facts</span>
+                            <h1 class="mb-3 font-weight-bold text-teal">Renewable Energy</h1>
+                            <p><a href="~/Views/Home/Index.cshtml" class="text-white">Home</a> <span class="mx-3">/</span> <strong>Stats</strong></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>   @* Description of the form *@
+
+
+        <div class="site-section stats-content" id="contact-section">
+            <div class="container ">
+                <div class="infogram-embed" data-id="feed9e04-a5e7-4e31-b214-7d263f312ee2" data-type="interactive" data-title="Renewable Energy Facts"></div>
+                <script>
+!function (e, i, n, s)
+                    { var t = "InfogramEmbeds", d = e.getElementsByTagName("script")[0]; if (window[t] && window[t].initialized) window[t].process && window[t].process(); else if (!e.getElementById(n)) { var o = e.createElement("script"); o.async = 1, o.id = n, o.src = "https://e.infogram.com/js/dist/embed-loader-min.js", d.parentNode.insertBefore(o, d) } }(document, 0, "infogram-async");</script>
+            </div>
+        </div>   @* Form for adding User Info *@
+
+
+    </div>
+</body>

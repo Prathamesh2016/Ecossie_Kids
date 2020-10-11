@@ -2521,14 +2521,8 @@ h1, h2, h3, h4, h5,
             transform: translate(-50%, -50%);
         }
 
-    .block-2 h2 {
-        font-size: 18px;
-        color: #fff;
-    }
 
-    .block-2 p {
-        color: rgba(255, 255, 255, 0.7);
-    }
+    
 
     .block-2.red,
     .block-2.red .wrap-icon {
@@ -2559,7 +2553,10 @@ h1, h2, h3, h4, h5,
 
 .text-teal {
     color: #16c3b0;
+    font-size:24px;
+    font-family:sans-serif;
 }
+
 
 .package {
     color: #777;
@@ -2663,6 +2660,16 @@ h1, h2, h3, h4, h5,
 .bg-teal {
     background: #16c3b0;
 }
+.bg-lightpurple,
+.bg-lightpurple .wrap-icon {
+    background-color: #9c72d6;
+}
+
+.bg-white-mine,
+.bg-white-mine .wrap-icon {
+    background-color: #FFFFFF;
+}
+
 
 
 .background-banner {
@@ -2692,9 +2699,18 @@ h1, h2, h3, h4, h5,
     width: 100%;
     background-repeat: no-repeat;
 }
+
 .homepage-banner {
     background-image: url('../../images/HomePage-banner2.gif');
+    /*background-image: url('../../images/Home_Page/home_banner.gif');*/
 }
+
+
+.homepage-bg {
+    background-image: url('../../images/Home_Page/home_bg.gif');
+    background-repeat: no-repeat;
+}
+
 
 .stats-banner {
     background-image: url('../../images/stats_banner.jpg');

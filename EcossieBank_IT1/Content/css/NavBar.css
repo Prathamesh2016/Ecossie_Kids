@@ -58,11 +58,11 @@ body {
     }
 
     .menu-item:nth-child(4) > a::before {
-        content: "\f0c0";
+        content: "\f080";
     }
 
     .menu-item:nth-child(5) > a::before {
-        content: "\f0e0";
+        content: "\f0c0";
     }
 
     .menu-item:nth-child(1) > a::before {

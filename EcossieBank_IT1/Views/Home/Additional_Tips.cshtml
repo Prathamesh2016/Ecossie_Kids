@@ -1,0 +1,280 @@
+﻿
+@{
+    ViewBag.Title = "Additional_Tips";
+    Layout = "~/Views/Shared/_CustomLayout.cshtml";
+}
+
+<head>
+    <meta charset="utf-8">
+    <title>Wizard-v6</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        @* Sticky note css *@ ;
+        body {
+            font-family: arial,sans-serif;
+            font-size: 100%;
+            margin: 1em;
+            background: #666;
+            color: #fff;
+        }
+
+        head_sticky, para {
+            font-size: 100%;
+            font-weight: normal;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+
+        ul {
+            overflow: hidden;
+            padding: 1em;
+        }
+
+            ul li alpha {
+                text-decoration: none;
+                color: #000;
+                background: #ffc;
+                display: block;
+                height: 20em;
+                width: 20em;
+                padding: 1em;
+                -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);
+                -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+                box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+                -moz-transition: -moz-transform .15s linear;
+                -o-transition: -o-transform .15s linear;
+                -webkit-transition: -webkit-transform .15s linear;
+            }
+
+            ul li {
+                margin: 1em;
+                float: left;
+            }
+
+                ul li head_sticky {
+                    font-size: 140%;
+                    font-weight: bold;
+                    padding-bottom: 10px;
+                }
+
+                ul li p {
+                    font-family: "Reenie Beanie",arial,sans-serif;
+                    font-size: 180%;
+                }
+
+                ul li alpha {
+                    -webkit-transform: rotate(-6deg);
+                    -o-transform: rotate(-6deg);
+                    -moz-transform: rotate(-6deg);
+                }
+
+                ul li:nth-child(even) alpha {
+                    -o-transform: rotate(4deg);
+                    -webkit-transform: rotate(4deg);
+                    -moz-transform: rotate(4deg);
+                    position: relative;
+                    top: 5px;
+                    background: #cfc;
+                }
+
+                ul li:nth-child(3n) alpha {
+                    -o-transform: rotate(-3deg);
+                    -webkit-transform: rotate(-3deg);
+                    -moz-transform: rotate(-3deg);
+                    position: relative;
+                    top: -5px;
+                    background: #ccf;
+                }
+
+                ul li:nth-child(5n) alpha {
+                    -o-transform: rotate(5deg);
+                    -webkit-transform: rotate(5deg);
+                    -moz-transform: rotate(5deg);
+                    position: relative;
+                    top: -10px;
+                }
+
+                ul li alpha:hover, ul li alpha:focus {
+                    box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+                    -moz-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+                    -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+                    -webkit-transform: scale(1.25);
+                    -moz-transform: scale(1.25);
+                    -o-transform: scale(1.25);
+                    position: relative;
+                    z-index: 5;
+                }
+
+        ol {
+            text-align: center;
+        }
+
+            ol li {
+                display: inline;
+                padding-right: 18px;
+            }
+
+                ol li alpha {
+                    color: #fff;
+                    text-align:justify;
+                }
+
+
+
+
+    </style>
+
+</head>
+
+
+
+
+<div class="ftco-blocks-cover-1">
+
+    <div class="site-section-cover overlay tips-banner" data-stellar-background-ratio="0.5">
+
+        <div class="container">
+            <div class="row align-items-center ">
+                <div class="col-md-5 mt-5 pt-5">
+                    <span class="text-cursive h5 text-mine">Additional Tips</span>
+                    <h1 class="mb-3 font-weight-bold text-teal">More Tips</h1>
+                    <p><a href="@Url.Action("Index", "Home")" class="text-white">Home</a> <span class="mx-3">/</span> <strong>Additional Tips</strong></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="site-section stats-content" id="contact-section">
+    <div class="container ">
+        <div style="margin:auto; padding-top:20px;">
+            <ul>
+                <li style="width:50%;">
+                    <alpha href="#">
+                        <h6>Electricity Fact</h6>
+                        <para>1. A water heater when run continously for 3 hrs will cost you 36$ per month </para>
+                        <para>2. Ask your parents to switch to solar water heater, less bill and no global warming effect.  </para>
+                    </alpha>
+                </li>
+
+                <li>
+                    <alpha href="#">
+                        <a href="~/images/Checklist/SummerChecklist.pdf">
+                            <h6>Here is your Checklist</h6>
+                            <para>
+                                <para>Most electric consumption happens in summer</para><br />
+                                Here is a checklist that will help you to reduce some electricity consumption in summer.
+                            </para>
+                            <p style="color:#0094ff; font-size:13px;">Click here</p>
+
+                        </a>
+                    </alpha>
+                </li>
+            </ul>
+            <ul>
+                <li style="width:30.33%">
+                    <alpha href="#">
+                        <h6>Tip #1</h6>
+                        <para>In the summer you can open your windows during the evening to cool your bedroom. </para>
+                    </alpha>
+                </li>
+
+                <li style="width:30.33%">
+                    <alpha href="#">
+                        <h6>Tip #2</h6>
+                        <para>During the winter, you can turn down your thermostat. Simple, right? Plus, you can go for hemp sheets that are a natural thermo-controller.</para>
+                    </alpha>
+                </li>
+
+                <li style="width:30.33%">
+                    <alpha href="#">
+                        <h6>Tip #3</h6>
+                        <para>
+                            Promote airflow through your home and block the afternoon sun. You could save you up to $10 (2 fans) or $45 (1 window unit AC) during the summer.
+                        </para>
+                    </alpha>
+                </li>
+
+            </ul>
+
+            <ul>
+                <li style="width:30.33%">
+                    <alpha href="#">
+                        <h6>Tip #1</h6>
+                        <para>By switching from hot to cold water for an average of three loads per week, you could save up to $22 per year on your energy bill.</para>
+
+                    </alpha>
+                </li>
+
+                <li style="width:30.33%">
+                    <alpha href="#">
+                        <h6>Tip #2</h6>
+                        <para>A dry towel added to your dryer load can significantly reduce drying times. If you're doing seven loads a week this could save you $27 a year.</para>
+                    </alpha>
+                </li>
+
+
+                <li style="width:30.33%">
+                    <alpha href="#">
+                        <h6>Tip #3</h6>
+                        <para>Avoid using the oven in summer – try salads, smoothies or barbecue. You'll reduce the heat in your home and save on your home cooling costs.</para>
+                    </alpha>
+                </li>
+
+
+
+            </ul>
+
+            <ul>
+
+
+                <li style="width:30.33%">
+                    <alpha href="#">
+                        <head_sticky>Tip #1</head_sticky>
+                        <para>
+                            <br />An insulated ceiling can make a big difference to your energy bills.
+                            Effective ceiling insulation can save you up to 20 per cent on your cooling and heating costs.
+                        </para>
+                    </alpha>
+                </li>
+                <li style="width:30.33%">
+                    <alpha href="#">
+                        <a href="~/images/Checklist/WinterChecklist.pdf" target="_blank">
+                            <h6>Tip #2</h6>
+                            <para>
+                                Great Job Kid!! you have Learned a lot heres another checklist for the Winter season.
+                            </para>
+                            <p style="color:#0094ff; font-size:13px;">Click here</p>
+
+                        </a>
+                    </alpha>
+                </li>
+
+                <li style="width:30.33%">
+                    <alpha href="#">
+                        <head_sticky>Solar Fact</head_sticky>
+                        <para>
+                            <br />The sun is an excellent form of energy, just look at the renewable electricity we generate from it.
+                            Keeping your curtains open during the day can help bring warmth and light into your home,
+                            reducing your need for energy required to heat or light your house.
+                        </para>
+                    </alpha>
+                </li>
+
+
+
+
+            </ul>
+
+        </div>
+    </div>
+</div>
