@@ -274,8 +274,15 @@
     <Content Include="images\homeImage3.jpeg" />
     <Content Include="images\homeImage4.jpeg" />
     <Content Include="images\HomePage-banner2.gif" />
+    <Content Include="images\Home_Page\building.gif" />
+    <Content Include="images\Home_Page\earth_sick.gif" />
+    <Content Include="images\Home_Page\effect.png" />
     <Content Include="images\Home_Page\home_banner.gif" />
-    <Content Include="images\Home_Page\index_bg.gif" />
+    <Content Include="images\Home_Page\middle section.gif" />
+    <Content Include="images\Home_Page\sky_bg.gif" />
+    <Content Include="images\Home_Page\sky_bg.png" />
+    <Content Include="images\Home_Page\too_late.gif" />
+    <Content Include="images\Home_Page\why earth.gif" />
     <Content Include="images\img_1.jpg" />
     <Content Include="images\img_2.jpg" />
     <Content Include="images\img_3.jpg" />
@@ -432,6 +439,7 @@
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
     <Content Include="Scripts\py.js" />
+    <Content Include="Scripts\quizResult.js" />
     <Content Include="Scripts\slick.min.js" />
     <Content Include="Scripts\src\index.js" />
     <Content Include="Scripts\src\methods\defaults.js" />
@@ -496,6 +504,7 @@
     <Content Include="Scripts\src\utils\setAttributes.js" />
     <Content Include="Scripts\src\utils\setStyles.js" />
     <Content Include="Scripts\src\utils\setupEventListeners.js" />
+    <Content Include="Scripts\topBtn.js" />
     <Content Include="Scripts\typed.js" />
     <Content Include="Scripts\umd\popper-utils.js" />
     <Content Include="Scripts\umd\popper-utils.min.js" />
@@ -631,6 +640,8 @@
     <Content Include="Views\Home\Additional_Tips.cshtml" />
     <Content Include="Views\Home\Leaderboard.cshtml" />
     <Content Include="Views\Home\RenewableStats.cshtml" />
+    <Content Include="Views\Home\Quiz1.cshtml" />
+    <Content Include="Views\Home\Quiz3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

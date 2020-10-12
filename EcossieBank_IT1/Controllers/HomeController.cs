@@ -58,6 +58,12 @@ namespace EcossieBank_IT1.Controllers
             ViewBag.Current = "Quiz";
             return View();
         }
+        public ActionResult Quiz1()
+        {
+            ViewBag.Message = "Your quiz page.";
+            ViewBag.Current = "Quiz";
+            return View();
+        }
 
         public ActionResult Quiz2()
         {
@@ -97,6 +103,12 @@ namespace EcossieBank_IT1.Controllers
         public ActionResult Send_Email()
         {
             ViewBag.Current = "Send_Email";
+            return View(new SendEmailViewModel());
+        }
+
+        public ActionResult Leaderboard()
+        {
+            ViewBag.Current = "Leaderboard";
             return View(new SendEmailViewModel());
         }
 

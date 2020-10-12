@@ -1128,14 +1128,14 @@ h1, h2, h3, h4, h5,
         .site-section-cover,
         .site-section-cover .container > .row {
             height: calc(100vh - 196px);
-            min-height: 777px;
+            min-height: 650px;
         }
 
 @media (max-width: 991.98px) {
     .site-section-cover,
     .site-section-cover .container > .row {
         height: calc(70vh - 196px);
-        min-height: 777px;
+        min-height: 650px;
     }
 }
 
@@ -2707,9 +2707,23 @@ h1, h2, h3, h4, h5,
 
 
 .homepage-bg {
-    background-image: url('../../images/Home_Page/home_bg.gif');
+    background-image: url('../../images/Home_Page/sky_bg.png');
     background-repeat: no-repeat;
+    background-size: cover;
+
 }
+
+.foot-bg {
+    background-image: url('../../images/Home_Page/building.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.site-myfooter {
+    padding: 4em 0;
+    background: #FFFFFF;
+}
+
 
 
 .stats-banner {
@@ -2720,4 +2734,17 @@ h1, h2, h3, h4, h5,
 }
 .tips-banner {
     background-image: url('../../images/Tips_bg.jpg');
+}
+
+.topBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    background: #6ab04c;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
