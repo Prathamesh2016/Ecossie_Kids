@@ -1,24 +1,11 @@
-/*!
+﻿/*!
  * jquery-quiz v0.0.1 - A simple jQuery quiz plugin.
  * Copyright (c) 2018 JC Hamill - http://jchamill.github.com/jquery-quiz/
  * License: MIT
  */
 
-var nextquitLink = "";
-if (sessionStorage.getItem("QuizNumber") == "1") {
+var nextquitLink = '<p><a href="/Home/Quiz3" id="back-btn" class="quiz-button" ">Next Quiz</a></p>';
 
-    nextquitLink = '<p><a href="/Home/Quiz2" id="back-btn" class="quiz-button" ">Next Quiz</a></p>';
-}
-if (sessionStorage.getItem("QuizNumber") == "2") {
-
-    nextquitLink = '<p><a href="/Home/Quiz3" id="back-btn" class="quiz-button" ">Next Quiz</a></p>';
-}
-if (sessionStorage.getItem("QuizNumber") == "3") {
-
-    nextquitLink = "";
-}
-
-nextquitLink = '<p><a href="/Home/Quiz2" id="back-btn" class="quiz-button" ">Next Quiz</a></p>';
 ! function (a, b, c, d) {
     "use strict";
     a.quiz = function (b, d) {

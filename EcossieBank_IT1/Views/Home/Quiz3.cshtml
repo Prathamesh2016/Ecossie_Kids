@@ -74,7 +74,7 @@
                     <h1>Quiz 1</h1>
 
                 </div>*@
-            <header>Quiz 3</header>
+            <header>>Level 3 Quiz</header>
             <div id="quiz-start-screen">
                 <p>Check your knowledge for level 3 Quiz.</p>
                 <p><a href="#" id="quiz-start-btn" class="quiz-button">START</a></p>
@@ -86,7 +86,7 @@
 
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-<script src="~/Scripts/jquery.quiz-min.js"></script>
+<script src="~/Scripts/q3.js"></script>
 <script>
 
 
@@ -99,227 +99,110 @@
 
     sessionStorage.setItem("QuizNumber", "3");
     var quizContent = [
+        //1
         {
-            'q': '<p style="text-align:center;"><img src="https://s1.ax1x.com/2020/09/16/wczA3R.gif" width="180" height="180" /></p>What is the atmosphere to Earth?',
+            'q': '<p style="text-align:center;"><img src="https://s1.ax1x.com/2020/10/13/0h2ZAU.png" width="560" height="560" /></p>Have you gone through all / most of the Daily Tips flip cards about things to consider at home?',
             'options': [
-                'A layer of feathers that keep the life on Earth feel comfy',
-                'A layer of gases that keep the life on Earth warm',
-                'A layer of clouds that keep the life on Earth away from sunlight'
-
-            ],
-            'correctIndex': 1,
-            'correctResponse': '<p style="text-align:center;" ><img src="https://i.loli.net/2020/09/16/6cpyVfNGdWmn4iw.gif"  width="180" height="180"  /></p>CORRECT! The atmosphere is a layer of gases that protects and keeps life on Earth warm. It makes the Earth the perfect planet for humans to live on.',
-            'incorrectResponse': '<p style="text-align:center;" ><img src="https://i.loli.net/2020/09/16/6cpyVfNGdWmn4iw.gif"  width="180" height="180"  /></p>Incorrect. The atmosphere is a layer of gases that protects and keeps life on Earth warm. It makes the Earth the perfect planet for humans to live on.'
-        },
-        {
-            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wczEg1.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wczEg1.gif"alt="Image" class="img-fluid"  width="180" height="180"></a></p>Greenhouse effect is the process of……',
-            'options': [
-                'Greenhouse gases in atmosphere cool down the temperature of Earth',
-                'Atmosphere blocks all the sunlight from hitting the Earth',
-                'Greenhouse gases in atmosphere trap the heat from sunlight'
-
-            ],
-            'correctIndex': 2,
-            'correctResponse': '<p style="text-align:center;" ><img src="https://i.loli.net/2020/09/16/Tei4qv9wCGnKIxg.gif"  width="180" height="180"  /></p>CORRECT! Greenhouse effect is the process of greenhouse gases in the atmosphere trap the heat from sunlight. They let sunlight pass through the atmosphere, but they prevent the heat from sunlight from leaving the atmosphere.',
-            'incorrectResponse': '<p style="text-align:center;" ><img src="https://i.loli.net/2020/09/16/Tei4qv9wCGnKIxg.gif"  width="180" height="180"  /></p>Incorrect.  Greenhouse effect is the process of greenhouse gases in the atmosphere trap the heat from sunlight. They let sunlight pass through the atmosphere, but they prevent the heat from sunlight from leaving the atmosphere.'
-        },
-        {
-            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wczMUe.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wczMUe.gif"alt="Image" class="img-fluid" width="180" height="180"></a></p>The reason for Global Warming is due to…',
-            'options': [
-                'Over-consumption of non-renewable energy to generate electricity',
-                'Cow farts',
-                'No, Global Warming is not real'
+                'Yes, I have gone through the Daily Tips flip cards.',
+                'No, I have not done it yet'
 
             ],
             'correctIndex': 0,
-            'correctResponse': '<p style="text-align:center;" ><img src="https://i.loli.net/2020/09/16/zc3sondBAJVMQmk.gif"  width="180" height="180"  /></p>CORRECT! Global warming is a real global issue due to over-consumption of non-renewable energy to generate electricity. There are some myths about the causes of global warming but those are just fictions not facts!',
-            'incorrectResponse': '<p style="text-align:center;" ><img src="https://i.loli.net/2020/09/16/zc3sondBAJVMQmk.gif"  width="180" height="180"  /></p>Incorrect. Global warming is a real global issue due to over-consumption of non-renewable energy to generate electricity. There are some myths about the causes of global warming but those are just fictions not facts!'
+            'correctResponse': 'Good Job! You received 3 points for it. From now on, you should try to follow the daily tips to save electricity at home!',
+            'incorrectResponse': 'Remember to check out the interesting flip cards on the Daily Tips page to know how to save electricity!'
         },
+        //2
         {
-            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wczYKP.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wczYKP.gif"alt="Image" class="img-fluid" width="180" height="180"></a></p>What are the negative effects of global warming on Earth?',
+            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/10/13/0h2u9J.png" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/10/13/0h2u9J.png"alt="Image" class="img-fluid"   width="560" height="560"></a></p>Have you printed one / both of the Electricity Saving Challenge to complete the checklist?',
             'options': [
-                'Sea ice melting',
-                'Wildfires',
-                'Island disappearing',
-                'All of above'
-            ],
-            'correctIndex': 3,
-            'correctResponse': '<p style="text-align:center;" ><img src="https://i.loli.net/2020/09/16/I6q1JaomRrYV3kE.gif"  width="180" height="180"  /></p>CORRECT! Sea ice melting, wildfires and island disappearing are all negative effects of global warming due to the extreme hot temperature of Earth.',
-            'incorrectResponse': '<p style="text-align:center;" ><img src="https://i.loli.net/2020/09/16/I6q1JaomRrYV3kE.gif"  width="180" height="180"  /></p>Incorrect. All of the above are negative effects of global warming due to the extreme hot temperature of Earth.'
-        },
-        {
-            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wczNb8.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wczNb8.gif"alt="Image" class="img-fluid" width="180" height="180"></a></p>Which is NOT a source of renewable energy?',
-            'options': [
-                'Solar',
-                'Wind',
-                'Coal',
-                'Water'
-            ],
-            'correctIndex': 2,
-            'correctResponse': '<p style="text-align:center;" ><img src="https://i.loli.net/2020/09/16/qbJuWn72rCjY1GM.gif"  width="180" height="180"  /></p>CORRECT! Coal is not a renewable source. In fact, the over-consumption of coal to generate electricity in Australia has contributed to global warming.',
-            'incorrectResponse': '<p style="text-align:center;" ><img src="https://i.loli.net/2020/09/16/qbJuWn72rCjY1GM.gif"  width="180" height="180"  /></p>Incorrect. Coal is not a renewable source. In fact, the over-consumption of coal to generate electricity in Australia has contributed to global warming.'
-        },
-        {
-            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wczw5Q.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wczw5Q.gif"alt="Image" class="img-fluid" width="180" height="180"></a></p>How does Wind Energy generate clean electricity?',
-            'options': [
-                'Wind passes over the bottom of wind turbines',
-                'Wind passes over the blades of wind turbines and make it turn ',
-                'Wind passes over the lightbulbs',
-                'Wind passes over the switches'
-            ],
-            'correctIndex': 1,
-            'correctResponse': '<p style="text-align:center;" ><img src="https://i.loli.net/2020/09/16/s3gBcmSa9MhkYEj.gif"  width="180" height="180"  /></p>CORRECT! The wind passes by wind turbines and makes its blades to turn so that it can generate clean electricity.',
-            'incorrectResponse': '<p style="text-align:center;" ><img src="https://i.loli.net/2020/09/16/s3gBcmSa9MhkYEj.gif"  width="180" height="180"  /></p>Incorrect. The wind passes by wind turbines and makes its blades to turn so that it can generate clean electricity.'
-        },
-        {
-            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wczr2n.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wczr2n.gif"alt="Image" class="img-fluid" width="180" height="180"></a></p>How does solar panels use solar energy to make electricity?',
-            'options': [
-                'Solar panels have layers of solar cells to collect and store sunlight',
-                'Solar panels block the sunlight from hitting the buildings',
-                'Solar panels turn like turbines when sunlight reaches its surface'
+                'Yes, I have printed it and completed the checklist.',
+                'No, I have not done it yet.'
 
             ],
             'correctIndex': 0,
-            'correctResponse': '<p style="text-align:center;" ><img src="https://i.loli.net/2020/09/16/4CT2rDJhIgcys6a.gif"  width="180" height="180"  /></p>CORRECT! Solar panels have layers of solar cells to collect and store sunlight. The collected sunlight will then be used to generate clean electricity.',
-            'incorrectResponse': '<p style="text-align:center;" ><img src="https://i.loli.net/2020/09/16/4CT2rDJhIgcys6a.gif"  width="180" height="180"  /></p>Incorrect. Solar panels have layers of solar cells to collect and store sunlight. The collected sunlight will then be used to generate clean electricity. Solar panels do not block sunlight and turn like turbines!'
+            'correctResponse': 'Good Job! You received 3 points for it. Tag us on Facebook or Instagram after you have completed the checklist.',
+            'incorrectResponse': 'Remember to check out the Electricity Saving Challenge and print it to complete the checklist! Tag us on Facebook or Instagram after you have completed the checklist.'
         },
+        //3
         {
-            'q': '<p style="text-align:center;" ><a href="https://ftp.bmp.ovh/imgs/2020/09/5a8d034327b922d2.gif" data-fancybox="gal"><img src="https://ftp.bmp.ovh/imgs/2020/09/5a8d034327b922d2.gif"alt="Image" class="img-fluid" width="180" height="180"></a></p>Hydropower generation is the use of…',
+            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/10/13/0h2K39.png" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/10/13/0h2K39.png"alt="Image" class="img-fluid"  width="560" height="560"></a></p>Have you read the Cause of Global Warming digital book?',
             'options': [
-                'Water level difference ',
-                'Hydro Turbine',
-                'Water cleaning',
-                'Water level difference and the turn of hydro turbine'
+                'Yes, I have read it.',
+                'No, I have not read it yet.'
+
             ],
-            'correctIndex': 3,
-            'correctResponse': '<p style="text-align:center;" ><img src="https://i.loli.net/2020/09/16/coBAgIOeZuHwUGs.gif"  width="180" height="180"  /></p>CORRECT! When the water flows from a high level to lower level, it turns the hydro turbine and generates electricity.',
-            'incorrectResponse': '<p style="text-align:center;" ><img src="https://i.loli.net/2020/09/16/coBAgIOeZuHwUGs.gif"  width="180" height="180"  /></p> Incorrect. When the water flows from a high level to lower level, it turns the hydro turbine and generates electricity.'
+            'correctIndex': 0,
+            'correctResponse': 'Good Job! You received 4 points for it. Now you know what has caused global warming and what is the impact on our environment!',
+            'incorrectResponse': 'Remember to check out the Cause of Global Warming digital book to read interesting comics about global warming issues!'
+        },
+        //4
+        {
+            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/10/13/0h2Qj1.png" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/10/13/0h2Qj1.png"alt="Image" class="img-fluid"  width="560" height="560"></a></p>Have you read the Renewable Energy book?',
+            'options': [
+                'Yes, I have read it.',
+                'No, I have not read it yet.'
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Good Job! You received 4 points for it. Now you have more knowledge about the 3 types of renewable energy that can be used for a greener community!',
+            'incorrectResponse': 'Remember to check out the Renewable Energy digital book to read interesting comics about renewable energy sources!'
+        },
+        //5
+        {
+            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/10/13/0h2Qj1.png" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/10/13/0h2Qj1.png"alt="Image" class="img-fluid"  width="560" height="560"></a></p>Have you read the Green Product book?',
+            'options': [
+                'Yes, I have read it.',
+                'No, I have not read it yet.'
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Good Job! You received 4 points for it. Now you have more knowledge about what is a green product and how does it benefit our environment!',
+            'incorrectResponse': 'Remember to check out the Green Product digital book to read interesting comics about green products!'
+        },
+        //6
+        {
+            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/10/13/0h2t4e.png" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/10/13/0h2t4e.png"alt="Image" class="img-fluid"  width="560" height="560"></a></p>Have you played the Spot the Mistakes game for all 3 locations?',
+            'options': [
+                'Yes, I have played the game.',
+                'No, I have not played the game.'
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Good Job! You received 3 points for it. Hope that you were able to spot all mistakes within the time given!',
+            'incorrectResponse': 'Remember to check out the Spot the Mistakes game to test yourself whether you can find all the mistakes for all 3 locations at home!'
+        },
+        //7
+        {
+            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/10/13/0h2DDP.png" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/10/13/0h2DDP.png"alt="Image" class="img-fluid"  width="560" height="560"></a></p>Have you played the Catch the Renewable Energy game?',
+            'options': [
+                'Yes, I have played the game.',
+                'No, I have not played the game.'
+
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Good Job! You received 3 points for it. Hope you enjoyed the flash game!',
+            'incorrectResponse': 'Remember to check out the Catch the Renewable Energy game for a cute and casual flash game!'
+        },
+        //8
+        {
+            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/10/13/0h2rHf.png" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/10/13/0h2rHf.png"alt="Image" class="img-fluid"  width="560" height="560"></a></p>Have you read the information which is presented in Climate Change Facts?',
+            'options': [
+                'Yes, I have read the information. ',
+                'No, I have not read it yet.'
+            ],
+            'correctIndex': 0,
+            'correctResponse': 'Good Job! You received 3 points for it. You have viewed many statistics about climate change!',
+            'incorrectResponse': 'Remember to check out the Climate Change Facts in Fun Data page to view informative statistics about climate change!'
         }
 
         ,
+        //9
         {
-            'q': '<p style="text-align:center;" ><a href="https://ftp.bmp.ovh/imgs/2020/09/487b6a63ae17bb65.gif" data-fancybox="gal"><img src="https://ftp.bmp.ovh/imgs/2020/09/487b6a63ae17bb65.gif"alt="Image" class="img-fluid" width="180" height="180"></a></p>What are the benefits of renewable energy?',
+            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/10/13/0h26US.png" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/10/13/0h26US.png"alt="Image" class="img-fluid"  width="560" height="560"></a></p>Have you read the information which is presented in Renewable Energy Facts?',
             'options': [
-                'They are sustainable energy source',
-                'They won’t pollute the environment',
-                'Both are correct'
-            ],
-            'correctIndex': 2,
-            'correctResponse': '<p style="text-align:center;" ><img src="https://i.loli.net/2020/09/16/axBoWcA2G6MuRtN.gif"  width="180" height="180"  /></p>CORRECT! Renewable energy is sustainable energy and won’t pollute the environment because it does not produce greenhouse gas emission.',
-            'incorrectResponse': '<p style="text-align:center;" ><img src="https://i.loli.net/2020/09/16/axBoWcA2G6MuRtN.gif"  width="180" height="180"  /></p>Incorrect. The answer is both. Renewable energy is sustainable energy and won’t pollute the environment because it does not produce greenhouse gas emission.'
-        },
-        {
-            'q': '<p style="text-align:center;" ><a href="https://ftp.bmp.ovh/imgs/2020/09/1485084204cbad2d.gif" data-fancybox="gal"><img src="https://ftp.bmp.ovh/imgs/2020/09/1485084204cbad2d.gif"alt="Image" class="img-fluid" width="180" height="180"></a></p>What is the renewable energy that can be commonly used at home?',
-            'options': [
-                'Solar energy',
-                'Water energy',
-                'Wind Energy'
-
+                'Yes, I have read the information.',
+                'No, I have not read it yet.'
             ],
             'correctIndex': 0,
-            'correctResponse': '<p style="text-align:center;" ><img src="https://i.loli.net/2020/09/16/bAw26BM8xzO5GVI.gif"  width="180" height="180"  /></p>CORRECT! Solar energy is commonly used at home by having solar panels on the roof to collect sunlight.',
-            'incorrectResponse': '<p style="text-align:center;" ><img src="https://i.loli.net/2020/09/16/bAw26BM8xzO5GVI.gif"  width="180" height="180"  /></p>Incorrect. Solar energy is commonly used at home by having solar panels on the roof to collect sunlight.'
-        },
-        {
-            'q': 'What is a Green Product?',
-            'options': [
-                'Sustainable product that has minimal impact on the environment.',
-                'Green painted product that is good for the eyes.',
-                'Unsustainable product that has a huge impact on the environment.',
-                'Sustainable product that has a huge impact on the environment.'
-
-            ],
-            'correctIndex': 0,
-            'correctResponse': 'CORRECT! Green Products are sustainable products that have minimal impact on the environment.',
-            'incorrectResponse': 'Incorrect. Green Products are sustainable products that have minimal impact on the environment.'
-        },
-        {
-            'q': 'The basic goals of Green Products are…',
-            'options': [
-                'Reducing waste.',
-                'Minimising resource efficiency.',
-                'Reducing waste and maximising resource efficiency.',
-                'Reducing waste and minimising resource efficiency.'
-
-            ],
-            'correctIndex': 2,
-            'correctResponse': 'CORRECT! Reducing waste and maximising resource efficiency are the two basic goals of Green Products.',
-            'incorrectResponse': 'Incorrect. Reducing waste and maximising resource efficiency are the two basic goals of Green Products.'
-        },
-        {
-            'q': 'Which of the following is true about Green Product?',
-            'options': [
-                'Green Product increases the use of resources and fossil fuels.',
-                'Green Product is made from organic and biodegradable materials.',
-                'Green Product has a shorter service life than traditional products.'
-
-            ],
-            'correctIndex': 1,
-            'correctResponse': 'CORRECT! Green Product is made from organic and biodegradable materials that do not pollute the environment. Generally, it has a longer service life than trad products and reduces the use of resources and fossil fuels.',
-            'incorrectResponse': 'Incorrect. Green Product is made from organic and biodegradable materials that do not pollute the environment. Generally, it has a longer service life than trad products and reduces the use of resources and fossil fuels.'
-        },
-        {
-            'q': 'How do solar water heaters contribute to the environment?',
-            'options': [
-                'Solar water heaters drive its energy from the sun.',
-                'Solar water heaters are not resilient.',
-                'Solar water heaters produce more carbon footprint than traditional water heaters.'
-
-            ],
-            'correctIndex': 0,
-            'correctResponse': 'CORRECT! Solar water heaters can reduce carbon emissions because they drive their energy from the sun. They are usually very resilient and produce less carbon footprint than traditional water heaters.',
-            'incorrectResponse': 'Incorrect. Solar water heaters can reduce carbon emissions because they drive their energy from the sun. They are usually very resilient and produce less carbon footprint than traditional water heaters.'
-        },
-        {
-            'q': 'How does a shower timer restrict you from using too much hot water?',
-            'options': [
-                'Shower timer keeps track of your time spent for showering.',
-                'Shower timer senses the temperature of the water.',
-                'Shower timer records the amount of water is used.'
-
-            ],
-            'correctIndex': 0,
-            'correctResponse': 'CORRECT! Shower timer can be used to keep track of your time spent for showering and restrict you from wasting electricity to generate hot water.',
-            'incorrectResponse': 'Incorrect. Shower timer can be used to keep track of your time spent for showering and restrict you from wasting electricity to generate hot water.'
-        },
-        {
-            'q': 'Which of the following is false about wind energy?',
-            'options': [
-                'Wind turbines are used to capture kinetic energy from the wind and generate electricity.',
-                'Wind is a clean fuel energy source.',
-                'Wind energy is cost efficient.',
-                'None of the above.'
-
-            ],
-            'correctIndex': 3,
-            'correctResponse': 'CORRECT! All of the above are true about wind energy.',
-            'incorrectResponse': 'Incorrect. All of the above are true about wind energy.'
-        },
-        {
-            'q': 'Which of the following is/are true about solar energy?',
-            'options': [
-                'Solar is a clean fuel energy source.',
-                'Solar energy systems generally require a lot of maintenance.',
-                'Sun is a non-sustainable energy source.',
-                'All of the above'
-
-            ],
-            'correctIndex': 0,
-            'correctResponse': 'CORRECT! Solar is a clean fuel energy source. Sun is a sustainable energy source and solar energy systems generally do not require a lot of maintenance.',
-            'incorrectResponse': 'Incorrect. Solar is a clean fuel energy source. Sun is a sustainable energy source and solar energy systems generally do not require a lot of maintenance.'
-        },
-        {
-            'q': 'Which of the following is false about water energy?',
-            'options': [
-                'Water energy is also called hydropower.',
-                'SWater is a non-sustainable energy source.',
-                'Water energy uses the water level difference to make the hydro turbine turn and generate electricity.',
-                'None of the above.'
-
-            ],
-            'correctIndex': 1,
-            'correctResponse': 'CORRECT! Just like other renewable energy, water is a sustainable energy source.',
-            'incorrectResponse': 'Incorrect. Just like other renewable energy, water is a sustainable energy source. Water energy, also called hydropower, uses the water level difference to make the hydro turbine turn and generate electricity.'
+            'correctResponse': 'Good Job! You received 3 points for it. You have viewed many statistics about renewable energy!',
+            'incorrectResponse': 'Remember to check out the Renewable Energy Facts in Fun Data page to view informative statistics about renewable energy!'
         }
     ]
     function randomquizContent(array) {
@@ -331,13 +214,13 @@
             array[j] = x;
         }
     }
-    randomquizContent(quizContent);
+    //randomquizContent(quizContent);
     $('#quiz').quiz({
         //resultsScreen: '#results-screen',
         //counter: false,
         //homeButton: '#custom-home',
         counterFormat: 'Question %current of %total',
-        questions: quizContent.slice(0,10)
+        questions: quizContent.slice(0, 9)
 
     });
 
