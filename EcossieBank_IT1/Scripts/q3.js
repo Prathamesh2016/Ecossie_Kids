@@ -96,11 +96,11 @@ var nextquitLink = '<p><a href="/Home/Quiz3" id="back-btn" class="quiz-button" "
             finish: function () {
                 if (sessionStorage.getItem("QuizNumber") == "1") {
 
-                    sessionStorage.setItem("QUIZ1RESULT", q * 10);
+                    sessionStorage.setItem("QUIZ1RESULT", q * 3);
                 }
                 if (sessionStorage.getItem("QuizNumber") == "2") {
 
-                    sessionStorage.setItem("QUIZ2RESULT", q * 10);
+                    sessionStorage.setItem("QUIZ2RESULT", q * 4);
                 }
                 if (sessionStorage.getItem("QuizNumber") == "3") {
 

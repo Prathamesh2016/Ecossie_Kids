@@ -68,6 +68,7 @@ nextquitLink = '<p><a href="/Home/Quiz2" id="back-btn" class="quiz-button" ">Nex
             },
             answerQuestion: function (b) {
 
+               
                 if (!r) {
                     r = !0;
                     var c = a(b),
@@ -92,6 +93,7 @@ nextquitLink = '<p><a href="/Home/Quiz2" id="back-btn" class="quiz-button" ">Nex
 
                     else if (c.addClass("incorrect"), d = f[h].incorrectResponse, !e.options.allowIncorrect) return void e.methods.gameOver(d);
                     a("#quiz-response").html(d), a("#quiz-controls").fadeIn(), "function" == typeof e.options.answerCallback && e.options.answerCallback(p, g, f[h])
+                    document.getElementById("quiz-controls").focus();
                 }
 
             },
@@ -109,11 +111,11 @@ nextquitLink = '<p><a href="/Home/Quiz2" id="back-btn" class="quiz-button" ">Nex
             finish: function () {
                 if (sessionStorage.getItem("QuizNumber") == "1") {
 
-                    sessionStorage.setItem("QUIZ1RESULT", q * 10);
+                    sessionStorage.setItem("QUIZ1RESULT", q * 3);
                 }
                 if (sessionStorage.getItem("QuizNumber") == "2") {
 
-                    sessionStorage.setItem("QUIZ2RESULT", q * 10);
+                    sessionStorage.setItem("QUIZ2RESULT", q * 4);
                 }
                 if (sessionStorage.getItem("QuizNumber") == "3") {
 
