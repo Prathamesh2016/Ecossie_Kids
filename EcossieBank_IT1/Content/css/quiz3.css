@@ -1,9 +1,9 @@
-body {
+﻿body {
     margin: 0;
     /*background: -webkit-linear-gradient(top, #FCAA2C 0, #F58220 100%) fixed;
     background: linear-gradient(to top, #FCAA2C 0, #F58220 100%) fixed;*/
     font-family: Helvetica;
-    font-size: 20px;
+    font-size: 18px;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -75,7 +75,7 @@ body {
     /*left: 20%;
     right: 20%;
     top: 15%;*/
-    top: -727px;
+    top: -618px;
 }
 
 #quiz-response {

@@ -4,6 +4,7 @@
     Layout = "~/Views/Shared/_CustomLayout.cshtml";
 }
 <style>
+
     #quizbox {
         position: absolute;
         left: 5%;
@@ -16,7 +17,11 @@
         border-radius: 7px;
         z-index: 10000;
         display: none;
-        overflow: auto
+        overflow: auto;
+        background-image: url(https://s1.ax1x.com/2020/10/16/0bOmrj.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        /*background-image: url(https://s1.ax1x.com/2020/10/17/0O8jqf.png);*/
     }
 
     .site-navbar {
@@ -31,7 +36,7 @@
 </style>
 
 <title>Quiz</title>
-<link rel="stylesheet" type="text/css" href="~/Content/css/jquery.quiz-min.css" />
+<link rel="stylesheet" type="text/css" href="~/Content/css/quiz3.css" />
 
 <div class="ftco-blocks-cover-1">
     <div class="site-section-cover overlay quiz-banner" data-stellar-background-ratio="0.5">
@@ -101,108 +106,108 @@
     var quizContent = [
         //1
         {
-            'q': '<p style="text-align:center;"><img src="https://s1.ax1x.com/2020/10/13/0h2ZAU.png" width="560" height="560" /></p>Have you gone through all / most of the Daily Tips flip cards about things to consider at home?',
+            'q': '<p style="text-align:center;"><img src="https://i.imgur.com/aFHtwtn.png" width="560" height="560" /></p>Have you gone through all / most of the Daily Tips flip cards about things to consider at home?',
             'options': [
                 'Yes, I have gone through the Daily Tips flip cards.',
                 'No, I have not done it yet'
 
             ],
             'correctIndex': 0,
-            'correctResponse': 'Good Job! You received 3 points for it. From now on, you should try to follow the daily tips to save electricity at home!',
-            'incorrectResponse': 'Remember to check out the interesting flip cards on the Daily Tips page to know how to save electricity!'
+            'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/10/18/0Oh7xs.gif"   width="850" height="450"  /></p>',
+            'incorrectResponse': '<p style="text-align:center;" ><img src="https://i.imgur.com/6y1CHlg.gif"   width="850" height="450"  /></p>'
         },
         //2
         {
-            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/10/13/0h2u9J.png" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/10/13/0h2u9J.png"alt="Image" class="img-fluid"   width="560" height="560"></a></p>Have you printed one / both of the Electricity Saving Challenge to complete the checklist?',
+            'q': '<p style="text-align:center;" ><a href="https://i.imgur.com/yk2pN2g.png" data-fancybox="gal"><img src="https://i.imgur.com/yk2pN2g.png"alt="Image" class="img-fluid"   width="560" height="560"></a></p>Have you printed one / both of the Electricity Saving Challenge to complete the checklist?',
             'options': [
                 'Yes, I have printed it and completed the checklist.',
                 'No, I have not done it yet.'
 
             ],
             'correctIndex': 0,
-            'correctResponse': 'Good Job! You received 3 points for it. Tag us on Facebook or Instagram after you have completed the checklist.',
-            'incorrectResponse': 'Remember to check out the Electricity Saving Challenge and print it to complete the checklist! Tag us on Facebook or Instagram after you have completed the checklist.'
+            'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/10/18/0OhbMn.gif"   width="850" height="450"  /></p>',
+            'incorrectResponse': '<p style="text-align:center;" ><img src="https://i.imgur.com/HQEUQej.gif"   width="850" height="450"  /></p>'
         },
         //3
         {
-            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/10/13/0h2K39.png" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/10/13/0h2K39.png"alt="Image" class="img-fluid"  width="560" height="560"></a></p>Have you read the Cause of Global Warming digital book?',
+            'q': '<p style="text-align:center;" ><a href="https://i.imgur.com/4sZQaTH.png" data-fancybox="gal"><img src="https://i.imgur.com/4sZQaTH.png"alt="Image" class="img-fluid"  width="560" height="560"></a></p>Have you read the Cause of Global Warming digital book?',
             'options': [
                 'Yes, I have read it.',
                 'No, I have not read it yet.'
 
             ],
             'correctIndex': 0,
-            'correctResponse': 'Good Job! You received 4 points for it. Now you know what has caused global warming and what is the impact on our environment!',
-            'incorrectResponse': 'Remember to check out the Cause of Global Warming digital book to read interesting comics about global warming issues!'
+            'correctResponse': '<p style="text-align:center;" ><img src="https://i.imgur.com/j4U2Lzj.gif"   width="850" height="450"  /></p>',
+            'incorrectResponse': '<p style="text-align:center;" ><img src="https://i.imgur.com/nkqcEhI.gif"   width="850" height="450"  /></p>'
         },
         //4
         {
-            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/10/13/0h2Qj1.png" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/10/13/0h2Qj1.png"alt="Image" class="img-fluid"  width="560" height="560"></a></p>Have you read the Renewable Energy book?',
+            'q': '<p style="text-align:center;" ><a href="https://i.imgur.com/wrnKlZY.png" data-fancybox="gal"><img src="https://i.imgur.com/wrnKlZY.png"alt="Image" class="img-fluid"  width="560" height="560"></a></p>Have you read the Renewable Energy book?',
             'options': [
                 'Yes, I have read it.',
                 'No, I have not read it yet.'
             ],
             'correctIndex': 0,
-            'correctResponse': 'Good Job! You received 4 points for it. Now you have more knowledge about the 3 types of renewable energy that can be used for a greener community!',
-            'incorrectResponse': 'Remember to check out the Renewable Energy digital book to read interesting comics about renewable energy sources!'
+            'correctResponse': '<p style="text-align:center;" ><img src="https://i.imgur.com/iT43sWN.gif"   width="850" height="450"  /></p>',
+            'incorrectResponse': '<p style="text-align:center;" ><img src="https://i.imgur.com/SPnADiw.gif"   width="850" height="450"  /></p>'
         },
         //5
         {
-            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/10/13/0h2Qj1.png" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/10/13/0h2Qj1.png"alt="Image" class="img-fluid"  width="560" height="560"></a></p>Have you read the Green Product book?',
+            'q': '<p style="text-align:center;" ><a href="https://i.imgur.com/TKFqzwp.png" data-fancybox="gal"><img src="https://i.imgur.com/TKFqzwp.png"alt="Image" class="img-fluid"  width="560" height="560"></a></p>Have you read the Green Product book?',
             'options': [
                 'Yes, I have read it.',
                 'No, I have not read it yet.'
             ],
             'correctIndex': 0,
-            'correctResponse': 'Good Job! You received 4 points for it. Now you have more knowledge about what is a green product and how does it benefit our environment!',
-            'incorrectResponse': 'Remember to check out the Green Product digital book to read interesting comics about green products!'
+            'correctResponse': '<p style="text-align:center;" ><img src="https://i.imgur.com/qWCLjkp.gif"   width="850" height="450"  /></p>',
+            'incorrectResponse': '<p style="text-align:center;" ><img src="https://i.imgur.com/mIXsEtV.gif"   width="850" height="450"  /></p>'
         },
         //6
         {
-            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/10/13/0h2t4e.png" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/10/13/0h2t4e.png"alt="Image" class="img-fluid"  width="560" height="560"></a></p>Have you played the Spot the Mistakes game for all 3 locations?',
+            'q': '<p style="text-align:center;" ><a href="https://i.imgur.com/KVLxc1M.png" data-fancybox="gal"><img src="https://i.imgur.com/KVLxc1M.png"alt="Image" class="img-fluid"  width="560" height="560"></a></p>Have you played the Spot the Mistakes game for all 3 locations?',
             'options': [
                 'Yes, I have played the game.',
                 'No, I have not played the game.'
             ],
             'correctIndex': 0,
-            'correctResponse': 'Good Job! You received 3 points for it. Hope that you were able to spot all mistakes within the time given!',
-            'incorrectResponse': 'Remember to check out the Spot the Mistakes game to test yourself whether you can find all the mistakes for all 3 locations at home!'
+            'correctResponse': '<p style="text-align:center;" ><img src="https://i.imgur.com/INkj84r.gif"   width="850" height="450"  /></p>',
+            'incorrectResponse': '<p style="text-align:center;" ><img src="https://i.imgur.com/5mpuVJu.gif"   width="850" height="450"  /></p>'
         },
         //7
         {
-            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/10/13/0h2DDP.png" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/10/13/0h2DDP.png"alt="Image" class="img-fluid"  width="560" height="560"></a></p>Have you played the Catch the Renewable Energy game?',
+            'q': '<p style="text-align:center;" ><a href="https://i.imgur.com/a8OeUmq.png" data-fancybox="gal"><img src="https://i.imgur.com/a8OeUmq.png"alt="Image" class="img-fluid"  width="560" height="560"></a></p>Have you played the Catch the Renewable Energy game?',
             'options': [
                 'Yes, I have played the game.',
                 'No, I have not played the game.'
 
             ],
             'correctIndex': 0,
-            'correctResponse': 'Good Job! You received 3 points for it. Hope you enjoyed the flash game!',
-            'incorrectResponse': 'Remember to check out the Catch the Renewable Energy game for a cute and casual flash game!'
+            'correctResponse': '<p style="text-align:center;" ><img src="https://i.imgur.com/g9Qgk1R.gif"   width="850" height="450"  /></p>',
+            'incorrectResponse': '<p style="text-align:center;" ><img src="https://i.imgur.com/Z5X3D0A.gif"   width="850" height="450"  /></p>'
         },
         //8
         {
-            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/10/13/0h2rHf.png" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/10/13/0h2rHf.png"alt="Image" class="img-fluid"  width="560" height="560"></a></p>Have you read the information which is presented in Climate Change Facts?',
+            'q': '<p style="text-align:center;" ><a href="https://i.imgur.com/ZRBtKa2.png" data-fancybox="gal"><img src="https://i.imgur.com/ZRBtKa2.png"alt="Image" class="img-fluid"  width="560" height="560"></a></p>Have you read the information which is presented in Climate Change Facts?',
             'options': [
                 'Yes, I have read the information. ',
                 'No, I have not read it yet.'
             ],
             'correctIndex': 0,
-            'correctResponse': 'Good Job! You received 3 points for it. You have viewed many statistics about climate change!',
-            'incorrectResponse': 'Remember to check out the Climate Change Facts in Fun Data page to view informative statistics about climate change!'
+            'correctResponse': '<p style="text-align:center;" ><img src="https://i.imgur.com/XYd4PBI.gif"   width="850" height="450"  /></p>',
+            'incorrectResponse': '<p style="text-align:center;" ><img src="https://i.imgur.com/JKvKQzo.gif"   width="850" height="450"  /></p>'
         }
 
         ,
         //9
         {
-            'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/10/13/0h26US.png" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/10/13/0h26US.png"alt="Image" class="img-fluid"  width="560" height="560"></a></p>Have you read the information which is presented in Renewable Energy Facts?',
+            'q': '<p style="text-align:center;" ><a href="https://i.imgur.com/2lWpgNd.png" data-fancybox="gal"><img src="https://i.imgur.com/2lWpgNd.png"alt="Image" class="img-fluid"  width="560" height="560"></a></p>Have you read the information which is presented in Renewable Energy Facts?',
             'options': [
                 'Yes, I have read the information.',
                 'No, I have not read it yet.'
             ],
             'correctIndex': 0,
-            'correctResponse': 'Good Job! You received 3 points for it. You have viewed many statistics about renewable energy!',
-            'incorrectResponse': 'Remember to check out the Renewable Energy Facts in Fun Data page to view informative statistics about renewable energy!'
+            'correctResponse': '<p style="text-align:center;" ><img src="https://i.imgur.com/DAtJ0Xz.gif"   width="850" height="450"  /></p>',
+            'incorrectResponse': '<p style="text-align:center;" ><img src="https://i.imgur.com/r0mnLUs.gif"   width="850" height="450"  /></p>'
         }
     ]
     function randomquizContent(array) {
