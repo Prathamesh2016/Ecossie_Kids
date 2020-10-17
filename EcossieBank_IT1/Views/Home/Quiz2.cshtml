@@ -355,13 +355,13 @@
             array[j] = x;
         }
     }
-    //randomquizContent(quizContent);
+    randomquizContent(quizContent);
     $('#quiz').quiz({
         //resultsScreen: '#results-screen',
         //counter: false,
         //homeButton: '#custom-home',
         counterFormat: 'Question %current of %total',
-        questions: quizContent.slice(0, 20)
+        questions: quizContent.slice(0, 10)
 
     });
 
