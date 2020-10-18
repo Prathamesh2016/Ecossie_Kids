@@ -1,4 +1,5 @@
 ﻿
+
 @{
     ViewBag.Title = "Quiz";
     Layout = "~/Views/Shared/_CustomLayout.cshtml";
@@ -39,7 +40,6 @@
             <div class="jquery-script-center">
                 <div class="jquery-script-ads">
                     <script type="text/javascript">
-
                     </script>
                     <script type="text/javascript"
                             src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
@@ -52,9 +52,8 @@
             <h1 style="text-align:center;"></h1>
             <div id="quiz">
                 @*<div id="quiz-header">
-                        <h1>Quiz 1</h1>
-
-                    </div>*@
+                <h1>Quiz 1</h1>
+            </div>*@
                 <header>Quiz </header>
 
                 <div id="quiz-start-screen">
@@ -76,6 +75,17 @@
                     </h2>
                 </div>
             </div>
+            <form method="post">
+                <input required='' type='text' name="name">
+
+                <input required='' type='text' name="name" id="quiz-1-result" readonly>
+                <input required='' type='text' name="name" id="quiz-2-result" readonly>
+                <input required='' type='text' name="name" id="quiz-3-result" readonly>
+
+
+                <input type="submit" class="quiz-button">
+
+            </form>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
@@ -90,7 +100,6 @@
                     'Turn on the air-conditioner',
                     'Open the windows and turn on the air-conditioner',
                     'Eat a toast with cheese'
-
                 ],
                 'correctIndex': 0,
                 'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/15/w6VIjH.gif"  width="200" height="200"  /></p>CORRECT! Open the windows to let the cool air enter your home. You don’t have to always rely on the air-conditioner!',
@@ -116,7 +125,6 @@
                     'More islands appear',
                     'More electricity for us to use',
                     'Animal extinction and island disappearing'
-
                 ],
                 'correctIndex': 4,
                 'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcX06f.gif"  width="300" height="300"  /></p>CORRECT! Global warming will cause animal extinction due to environmental change. It will also cause the island disappearing due to rising sea level!',
@@ -180,7 +188,6 @@
                 'correctResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcXrnS.gif"  width="200" height="200"  /></p>CORRECT! Avoid unnecessarily opening the refrigerator because cold air escapes whenever you open it. It needs to spend electricity to bring the temperature down!',
                 'incorrectResponse': '<p style="text-align:center;" ><img src="https://s1.ax1x.com/2020/09/16/wcXrnS.gif"  width="200" height="200"  /></p>Incorrect. You should avoid unnecessarily opening the refrigerator because cold air escapes whenever you open it. It needs to spend electricity to bring the temperature down!'
             }
-
             ,
             {
                 'q': '<p style="text-align:center;" ><a href="https://s1.ax1x.com/2020/09/16/wcvUQP.gif" data-fancybox="gal"><img src="https://s1.ax1x.com/2020/09/16/wcvUQP.gif" alt="Image" class="img-fluid"></a></p>Why is taking showers better than baths?',
@@ -200,7 +207,6 @@
                     'Open the curtain to bring in the natural light',
                     'Open all the ceiling lights',
                     'Use a torch light'
-
                 ],
                 'correctIndex': 1,
                 'correctResponse': 'CORRECT! A smaller load of laundry may use less water, but the washing machine will use the same amount of electricity no matter how big the load is. Therefore, it is best to wait for a full load before using it.',
@@ -212,7 +218,6 @@
                     'Close the bathroom exhaust fan.',
                     'Close all the bathroom lights.',
                     'Both are correct.'
-
                 ],
                 'correctIndex': 2,
                 'correctResponse': 'CORRECT! Remember to close all the bathroom lights and the exhaust fan as well if there is one in your bathroom.',
@@ -224,8 +229,6 @@
                     'Charge the laptop overnight.',
                     'Shut down the laptop.',
                     'Put it to sleep mode and go to bed.'
-
-
                 ],
                 'correctIndex': 1,
                 'correctResponse': 'CORRECT! Shutting down the laptop will save more electricity than just putting it to sleep mode. Avoid overcharging your laptop because it may have a negative effect on battery lifespan and waste of electricity consumption.',
@@ -237,7 +240,6 @@
                     'Completely shut down the PC.',
                     'Unplug the PC.',
                     'Both are correct.'
-
                 ],
                 'correctIndex': 2,
                 'correctResponse': 'CORRECT! If no one is using the Desktop, you should completely shut it down and unplug it if you can.',
@@ -249,7 +251,6 @@
                     'A laptop can run without connecting the power plug.',
                     'A laptop is easier to carry around.',
                     'A laptop can be shut down.'
-
                 ],
                 'correctIndex': 0,
                 'correctResponse': 'CORRECT! A laptop can run without connecting the power plug when its battery still has power. However, make sure to switch off the charger and unplug it after charging the laptop.',
@@ -261,7 +262,6 @@
                     '30 minutes.',
                     '2 minutes.',
                     '5 minutes.'
-
                 ],
                 'correctIndex': 2,
                 'correctResponse': 'CORRECT! Generally, the recommended shower time would be around 5 to 10 minutes. This is enough time to cleanse yourself without overdoing it.',
@@ -274,7 +274,6 @@
                     'Switch off the table lamp.',
                     'Clean the lightbulb.',
                     'Unplug and switch off the table lamp.'
-
                 ],
                 'correctIndex': 3,
                 'correctResponse': 'CORRECT! You should switch off the table lamp and unplug it if you can when no one is using it.',
@@ -286,7 +285,6 @@
                     'Dry your hands and make sure they are not wet.',
                     'Clean the electrical appliance.',
                     'Test whether the electrical appliance is working properly.'
-
                 ],
                 'correctIndex': 0,
                 'correctResponse': 'CORRECT! It could be dangerous to switch off electrical appliances with wet hands because you can get electrocuted! Make sure your hands are clean and dry before handling any appliances.',
@@ -298,7 +296,6 @@
                     'Reducing the brightness of the screen.',
                     'Switching to energy-saving mode',
                     'Both are correct.'
-
                 ],
                 'correctIndex': 2,
                 'correctResponse': 'CORRECT! Reducing the brightness of the screen and switching to energy-saving mode can help to reduce the electricity consumption of televisions.',
@@ -310,7 +307,6 @@
                     'Play some music before going to bed.',
                     'Leave the television on standby mode at night.',
                     'Switch off the television.'
-
                 ],
                 'correctIndex': 2,
                 'correctResponse': 'CORRECT! Switching off the television will save more electricity than leaving it on standby mode at night. Avoid leaving the television open if it is unnecessary.',
@@ -322,7 +318,6 @@
                     'A full load of laundry because it uses the same amount of electricity, no matter how big the load is.',
                     'A small load of laundry because it uses a lower amount of electricity.',
                     'A full load of laundry because it uses less water.'
-
                 ],
                 'correctIndex': 0,
                 'correctResponse': 'CORRECT! A smaller load of laundry may use less water, but the washing machine will use the same amount of electricity no matter how big the load is. Therefore, it is best to wait for a full load before using it.',
@@ -346,53 +341,21 @@
             counterFormat: 'Question %current of %total',
             questions: quizContent.slice(0, 10)
         });
-
-
-
-
     </script>
 
 
     <script type="text/javascript">
-
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-36251023-1']);
         _gaq.push(['_setDomainName', 'jqueryscript.net']);
         _gaq.push(['_trackPageview']);
-
         (function () {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
-
     </script>
     @Scripts.Render("~/bundles/jquery")
 
-<script type="text/javascript">
-    window.addEventListener('load', () => {
-
-        // Via Query parameters - GET
-        /* const params = (new URL(document.location)).searchParams;
-        const name = params.get('name');
-        const surname = params.get('surname'); */
-
-        // Via local Storage
-        /* const name = localStorage.getItem('NAME');
-        const surname = localStorage.getItem('SURNAME'); */
-
-        const q1 = sessionStorage.getItem('QUIZ1RESULT');
-        const q2 = sessionStorage.getItem('QUIZ2RESULT');
-        const q3 = sessionStorage.getItem('QUIZ3RESULT');
-        ViewBag.quizResult1 = q1;
-        ViewBag.quizResult2 = q2;
-        ViewBag.quizResult3 = q3;
-        
-
-        document.getElementById('result-quiz1').innerHTML = ViewBag.quizResult1;
-        document.getElementById('result-quiz2').innerHTML = ViewBag.quizResult2;
-        document.getElementById('result-quiz3').innerHTML = ViewBag.quizResult3;
-
-    })
-</script>
-</body >
+    
+</body>
