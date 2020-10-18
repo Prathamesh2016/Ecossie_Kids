@@ -149,7 +149,7 @@ nextquitLink = '<p><a href="/Home/Quiz2" id="back-btn" class="quiz-button" ">Nex
         startButton: "#quiz-start-btn",
         homeButton: "#quiz-home-btn",
         resultsScreen: "#quiz-results-screen",
-        resultsFormat: "You got %score out of %total correct! " + nextquitLink + '<p><a href="/Home/Quiz/#quiz" id="back-btn" class="quiz-button" ">Quit</a></p>',
+        resultsFormat: "You got %score out of %total correct! " + '<p style="text-align:center;"><img src="https://i.imgur.com/7BaieBv.png" width="400" height="400" /></p>'+ nextquitLink + '<p><a href="/Home/Quiz/#quiz" id="back-btn" class="quiz-button" ">Quit</a></p>',
         gameOverScreen: "#quiz-gameover-screen",
         nextButtonText: "Next",
         finishButtonText: "Finish",

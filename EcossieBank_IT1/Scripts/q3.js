@@ -134,7 +134,7 @@ var nextquitLink = '<p><a href="/Home/Quiz3" id="back-btn" class="quiz-button" "
         startButton: "#quiz-start-btn",
         homeButton: "#quiz-home-btn",
         resultsScreen: "#quiz-results-screen",
-        resultsFormat: "You got %score out of %total correct! "  + '<p><a href="/Home/Quiz/#quiz" id="back-btn" class="quiz-button" ">Back</a></p>',
+        resultsFormat: "You got %score out of %total correct! " + '<p style="text-align:center;"><img src="https://i.imgur.com/MtJSP5Q.gif" width="400" height="400" /></p>'+ '<p><a href="/Home/Quiz/#quiz" id="back-btn" class="quiz-button" ">Back</a></p>',
         gameOverScreen: "#quiz-gameover-screen",
         nextButtonText: "Next",
         finishButtonText: "Finish",
