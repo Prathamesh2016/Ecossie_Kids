@@ -11,6 +11,10 @@ namespace EcossieBank_IT1.Controllers
     BasicRealm = "your-realm")]
     public class HomeController : Controller
     {
+
+
+        private DashboardEntities db = new DashboardEntities();
+
         public ActionResult Index()
         {
             ViewBag.Current = "Index";
@@ -23,6 +27,15 @@ namespace EcossieBank_IT1.Controllers
             ViewBag.Current = "About";
             return View();
         }
+
+        [HttpPost]
+        public JsonResult DoesUserNameExist(string name)
+        {
+            bool isValid = db.Dashboards.ToList().Exists(p => p.name.Equals(name, StringComparison.CurrentCultureIgnoreCase));
+            return Json(isValid);
+
+        }
+
 
         public ActionResult Contact()
         {
@@ -45,13 +58,19 @@ namespace EcossieBank_IT1.Controllers
             return View();
         }
 
+        public ActionResult RenewableGame()
+        {
+            ViewBag.Message = "Your contact page.";
+            ViewBag.Current = "RenewableGame";
+            return View();
+        }
+
         public ActionResult Tips()
         {
             ViewBag.Message = "Your contact page.";
             ViewBag.Current = "Tips";
             return View();
         }
-
         public ActionResult Quiz()
         {
             ViewBag.Message = "Your quiz page.";
@@ -62,6 +81,18 @@ namespace EcossieBank_IT1.Controllers
 
             return View();
         }
+        [HttpPost]
+        public ActionResult Quiz(FormCollection form)
+        {
+            string demo = form["name"].ToString();
+            int quiz1 = Convert.ToInt32(ViewBag.Data);
+            int quiz2 = Convert.ToInt32(form["result_quiz2"].ToString());
+            int quiz3 = Convert.ToInt32(form["result_quiz3"].ToString());
+            ViewBag.Message = "Your quiz page.";
+            ViewBag.Current = "Quiz";
+            return View();
+        }
+
         public ActionResult Quiz1()
         {
             ViewBag.Message = "Your quiz page.";
@@ -143,6 +174,16 @@ namespace EcossieBank_IT1.Controllers
             }
             ViewBag.Current = "Send_Email";
             return View();
+        }
+
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
         }
 
 

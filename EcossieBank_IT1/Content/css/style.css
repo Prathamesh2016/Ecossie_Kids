@@ -2672,39 +2672,30 @@ h1, h2, h3, h4, h5,
 
 
 
-.background-banner {
-    background-image: url('../../images/about_us.jpg');
-}
-
-.contact-banner {
-    background-image: url('../../images/hero_2.jpg');
-}
 
 
 .image-game-banner {
-    background-image: url('../../images/Learn_game.jpg');
+    background-image: url('../../images/Banner/Spot_mistake.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(120%);
 }
 
 
 .bg-imgbtn {
     background-color: #1E8D8A !important;
 }
-.books-banner {
-    background-image: url('../../images/bookshelf_bg.jpg');
-}
+
 
 .bookshelf-bg {
-    background-image: url('../images/Banner.jpg');
+    background-image: url('../images/Banner.png');
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
 }
 
-.homepage-banner {
-    background-image: url('../../images/HomePage-banner2.gif');
-    /*background-image: url('../../images/Home_Page/home_banner.gif');*/
-}
 
+l
 
 .homepage-bg {
     background-image: url('../../images/Home_Page/sky_bg.png');
@@ -2725,15 +2716,80 @@ h1, h2, h3, h4, h5,
 }
 
 
+.about-banner {
+    background-image: url('../../images/Banner/about_banner.gif');
+    filter: brightness(130%);
+    background-repeat: no-repeat;
+}
 
-.stats-banner {
-    background-image: url('../../images/stats_banner.jpg');
+.contact-banner {
+    background-image: url('../../images/Banner/contact_banner.gif');
+    filter: brightness(120%);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+.homepage-banner {
+    background-image: url('../../images/HomePage-banner2.gif');
+    filter: brightness(120%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-image: url('../../images/Home_Page/home_banner.gif');*/
+}
+
+.books-banner {
+    background-image: url('../../images/Banner/read_books.gif');
+    filter: brightness(130%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.climate-banner {
+    background-image: url('../../images/Banner/climate_banner.gif');
+    filter: brightness(130%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.renewable-banner {
+    background-image: url('../../images/Banner/renewable_banner.gif');
+    filter: brightness(130%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .quiz-banner {
-    background-image: url('../../images/img_2.jpg');
+    background-image: url('../../images/Banner/QUIZ.gif');
+    filter: brightness(140%);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+.facts-banner {
+    background-image: url('../../images/Banner/fun_fact.gif');
+    filter: brightness(123%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.catch-banner {
+    background-image: url('../../images/Banner/catch_game.gif');
+    filter: brightness(120%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .tips-banner {
-    background-image: url('../../images/Tips_bg.jpg');
+    background-image: url('../../images/Banner/tips_banner.gif');
+    background-size: cover;
+    filter: brightness(120%);
+}
+
+.Tips-bg {
+    background-image: url('../images/Additional_Tips/Tips_board.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .topBtn {

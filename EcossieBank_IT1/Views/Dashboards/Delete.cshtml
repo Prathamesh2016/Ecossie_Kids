@@ -1,0 +1,73 @@
+﻿@model EcossieBank_IT1.Models.Dashboard
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_CustomLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Dashboard</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.total_score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total_score)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.quiz1_score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quiz1_score)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.quiz2_score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quiz2_score)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.quiz3_score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quiz3_score)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.badge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.badge)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

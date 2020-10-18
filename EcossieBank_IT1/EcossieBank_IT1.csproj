@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -47,6 +48,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="SendGrid, Version=9.21.0.0, Culture=neutral, PublicKeyToken=4f047e93159395ca, processorArchitecture=MSIL">
       <HintPath>..\packages\SendGrid.9.21.0\lib\net452\SendGrid.dll</HintPath>
@@ -58,6 +65,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -130,11 +138,30 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BasicAuthenticationAttribute.cs" />
+    <Compile Include="Controllers\DashboardsController.cs" />
     <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\EmailSender.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dashboard.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dashboard.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dashboard.cs">
+      <DependentUpon>Dashboard.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dashboard.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dashboard.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dashboard1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dashboard.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SendEmailViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -153,6 +180,7 @@
     <Content Include="Content\css\bootstrap\bootstrap-grid.css" />
     <Content Include="Content\css\bootstrap\bootstrap-reboot.css" />
     <Content Include="Content\css\bootstrap\bootstrap.css" />
+    <Content Include="Content\css\checklist.css" />
     <Content Include="Content\css\jquery-ui.css" />
     <Content Include="Content\css\jquery.fancybox.min.css" />
     <Content Include="Content\css\jquery.quiz-min.css" />
@@ -163,12 +191,15 @@
     <Content Include="Content\css\owl.carousel.min.css" />
     <Content Include="Content\css\owl.theme.default.min.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\textbox.css" />
     <Content Include="Content\css\Tips.css" />
     <Content Include="Content\dist\index.min.js" />
     <Content Include="Content\dist\style.css" />
+    <Content Include="Content\images\Additional Tips\WhatsApp Image 2020-10-15 at 12.36.57 PM.jpeg" />
+    <Content Include="Content\images\Additional_Tips\Tips_board.png" />
     <Content Include="Content\images\ajax-loader.gif" />
     <Content Include="Content\images\ajax-loader.png" />
-    <Content Include="Content\images\Banner.jpg" />
+    <Content Include="Content\images\Banner.png" />
     <Content Include="Content\images\Bathroom Facts\bathtub_back.gif" />
     <Content Include="Content\images\Bathroom Facts\bathtub_front.gif" />
     <Content Include="Content\images\Bathroom Facts\HairDryer_back.gif" />
@@ -249,6 +280,17 @@
     <Content Include="Content\Site.css" />
     <Content Include="images\about_us.jpg" />
     <Content Include="images\ac.jpg" />
+    <Content Include="images\Banner\about_banner.gif" />
+    <Content Include="images\Banner\catch_game.gif" />
+    <Content Include="images\Banner\climate_banner.gif" />
+    <Content Include="images\Banner\contact_banner.gif" />
+    <Content Include="images\Banner\fun_fact.gif" />
+    <Content Include="images\Banner\QUIZ.gif" />
+    <Content Include="images\Banner\QUIZ.png" />
+    <Content Include="images\Banner\read_books.gif" />
+    <Content Include="images\Banner\renewable_banner.gif" />
+    <Content Include="images\Banner\Spot_mistake.gif" />
+    <Content Include="images\Banner\tips_banner.gif" />
     <Content Include="images\barchart1.jpeg" />
     <Content Include="images\Barchart1.png" />
     <Content Include="images\Bedroom.jpg" />
@@ -355,6 +397,16 @@
     <Content Include="images\tv.jpg" />
     <Content Include="images\Website_Logo.png" />
     <Content Include="images\white-dots.png" />
+    <Content Include="Models\Dashboard.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Dashboard.edmx</DependentUpon>
+      <LastGenOutput>Dashboard.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Dashboard.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Dashboard.edmx</DependentUpon>
+      <LastGenOutput>Dashboard1.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\aos.js" />
     <Content Include="Scripts\bookshelf.js" />
     <Content Include="Scripts\bootstrap-datepicker.min.js" />
@@ -386,6 +438,13 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <EntityDeploy Include="Models\Dashboard.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Dashboard.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Dashboard.edmx.diagram">
+      <DependentUpon>Dashboard.edmx</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\EcossieBankIT120200831012402 - Web Deploy.pubxml" />
     <Content Include="Scripts\countdown.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
@@ -403,6 +462,7 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <None Include="Properties\PublishProfiles\EcossieBankIT12Deploy - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\EcossieBankIT2 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\EcossieBankIT3 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -642,6 +702,12 @@
     <Content Include="Views\Home\RenewableStats.cshtml" />
     <Content Include="Views\Home\Quiz1.cshtml" />
     <Content Include="Views\Home\Quiz3.cshtml" />
+    <Content Include="Views\Home\RenewableGame.cshtml" />
+    <Content Include="Views\Dashboards\Create.cshtml" />
+    <Content Include="Views\Dashboards\Delete.cshtml" />
+    <Content Include="Views\Dashboards\Details.cshtml" />
+    <Content Include="Views\Dashboards\Edit.cshtml" />
+    <Content Include="Views\Dashboards\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -656,6 +722,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -691,7 +758,10 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
   </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

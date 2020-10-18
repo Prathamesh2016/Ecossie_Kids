@@ -1,0 +1,64 @@
+﻿@model IEnumerable<EcossieBank_IT1.Models.Dashboard>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CustomLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.total_score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quiz1_score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quiz2_score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quiz3_score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.badge)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.total_score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.quiz1_score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.quiz2_score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.quiz3_score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.badge)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -43,6 +43,12 @@ body {
     position: relative;
     -webkit-transition: background 0.3s ease-in-out;
     transition: background 0.3s ease-in-out;
+    /* font-family: Helvetica !important;*/
+}
+
+myText {
+    font-family: helvectia;
+    color: black
 }
 
     .menu-item:nth-child(1) > a::before {

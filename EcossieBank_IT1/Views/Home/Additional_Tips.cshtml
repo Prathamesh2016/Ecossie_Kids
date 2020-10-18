@@ -26,6 +26,25 @@
             font-size: 100%;
             font-weight: normal;
         }
+        .wizard-content {
+            margin: 20px;
+            box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+            -o-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+            -ms-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+            -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+            -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            -o-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            position: relative;
+            display: flex;
+            display: -webkit-flex;
+        }
 
         ul, li {
             list-style: none;
@@ -44,6 +63,8 @@
                 height: 20em;
                 width: 20em;
                 padding: 1em;
+                padding-bottom: 10px;
+                margin-bottom: 40px;
                 -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);
                 -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
                 box-shadow: 5px 5px 7px rgba(33,33,33,.7);
@@ -137,14 +158,14 @@
 
 <div class="ftco-blocks-cover-1">
 
-    <div class="site-section-cover overlay tips-banner" data-stellar-background-ratio="0.5">
+    <div class="site-section-cover overlay facts-banner" data-stellar-background-ratio="0.5">
 
         <div class="container">
             <div class="row align-items-center ">
                 <div class="col-md-5 mt-5 pt-5">
-                    <span class="text-cursive h5 text-mine">Additional Tips</span>
+                    <span class="text-cursive h5 text-mine">Fun Facts</span>
                     <h1 class="mb-3 font-weight-bold text-teal">More Tips</h1>
-                    <p><a href="@Url.Action("Index", "Home")" class="text-white">Home</a> <span class="mx-3">/</span> <strong>Additional Tips</strong></p>
+                    <p><a href="@Url.Action("Index", "Home")" class="text-white">Home</a> <span class="mx-3">/</span> <strong>Fun Facts</strong></p>
                 </div>
 
             </div>
@@ -154,127 +175,206 @@
 
 </div>
 
-<div class="site-section stats-content" id="contact-section">
-    <div class="container ">
-        <div style="margin:auto; padding-top:20px;">
-            <ul>
-                <li style="width:50%;">
-                    <alpha href="#">
-                        <h6>Electricity Fact</h6>
-                        <para>1. A water heater when run continously for 3 hrs will cost you 36$ per month </para>
-                        <para>2. Ask your parents to switch to solar water heater, less bill and no global warming effect.  </para>
-                    </alpha>
-                </li>
 
-                <li>
-                    <alpha href="#">
-                        <a href="~/images/Checklist/SummerChecklist.pdf" target="_blank">
-                            <h6>Here is your Checklist</h6>
-                            <para>
-                                <para>Most electric consumption happens in summer</para><br />
-                                Here is a checklist that will help you to reduce some electricity consumption in summer.
-                            </para>
-                            <p style="color:#0094ff; font-size:13px;">Click here</p>
-
-                        </a>
-                    </alpha>
-                </li>
-            </ul>
-            <ul>
-                <li style="width:30.33%">
-                    <alpha href="#">
-                        <h6>Tip #1</h6>
-                        <para>In the summer you can open your windows during the evening to cool your bedroom. </para>
-                    </alpha>
-                </li>
-
-                <li style="width:30.33%">
-                    <alpha href="#">
-                        <h6>Tip #2</h6>
-                        <para>During the winter, you can turn down your thermostat. Simple, right? Plus, you can go for hemp sheets that are a natural thermo-controller.</para>
-                    </alpha>
-                </li>
-
-                <li style="width:30.33%">
-                    <alpha href="#">
-                        <h6>Tip #3</h6>
-                        <para>
-                            Promote airflow through your home and block the afternoon sun. You could save you up to $10 (2 fans) or $45 (1 window unit AC) during the summer.
-                        </para>
-                    </alpha>
-                </li>
-
-            </ul>
-
-            <ul>
-                <li style="width:30.33%">
-                    <alpha href="#">
-                        <h6>Tip #1</h6>
-                        <para>By switching from hot to cold water for an average of three loads per week, you could save up to $22 per year on your energy bill.</para>
-
-                    </alpha>
-                </li>
-
-                <li style="width:30.33%">
-                    <alpha href="#">
-                        <h6>Tip #2</h6>
-                        <para>A dry towel added to your dryer load can significantly reduce drying times. If you're doing seven loads a week this could save you $27 a year.</para>
-                    </alpha>
-                </li>
+<div class=" container-fluid page-content">
+    <div class="container wizard-v6-content">
+        <div class="wizard-form">
+            <form class="form-register Tips-bg" id="form-register" action="#" method="post">
+                <div id="form-total">
+                  
+                    <div class="inner" style="color:#03c2fc">
+                        <h3 style="color:#000000;font-family:sans-serif"><strong>Useful Facts</strong></h3>
 
 
-                <li style="width:30.33%">
-                    <alpha href="#">
-                        <h6>Tip #3</h6>
-                        <para>Avoid using the oven in summer – try salads, smoothies or barbecue. You'll reduce the heat in your home and save on your home cooling costs.</para>
-                    </alpha>
-                </li>
+                        <div style="margin:auto; padding-top:20px;">
+                            <ul>
+                                <li style="width:30.33%;">
+                                    <alpha href="#">
+                                        <head_sticky>
+                                            What are LED light bulbs?
+                                        </head_sticky>
+                                    <para>Are you still using regular light bulbs at home? </para><br />
+                                    <para>
+                                        Try to convince your parents to replace them with LED light bulbs!<br />
+                                        Eco-friendly LED light bulbs use far less energy to produce the same light output.
+                                    </para>
+                                </alpha>
+                                </li>
+
+                                <li style="width:30.33%">
+                                    <alpha href="#">
+                                        <head_sticky>Does Unplugging really make a Difference?</head_sticky>
+                                        <para>
+                                            <br />
+                                            Even though you may not be able to notice the impact of unplugging your electronic appliances immediately
+                                            the energy costs of plugged-in appliances can really add up over time!<br />
+                                            It is a relatively simple way to help your parents to save 5% to 10% on their electric bill!
+
+                                        </para>
+                                    </alpha>
+                                </li>
+
+
+                                <li style="width:30.33%">
+                                    <alpha href="#">
+                                        <head_sticky>What to do Before Touching appliances?</head_sticky>
+                                        <para>
+                                            <br />
+                                            Before switching off/unplugging your electric appliances, you should always remember to dry your hands first.<br />
+                                            This is to prevent any chances of electrical shock due to touching them with wet hands.<br />
+                                            Even though getting shocked by small appliances in home is rarely serious.
 
 
 
-            </ul>
+                                        </para>
+                                    </alpha>
+                                </li>
 
-            <ul>
+                                <li style="width:30.33%">
+                                    <alpha href="#">
+                                        <head_sticky>When should I Open/Close the Windows?</head_sticky>
+                                        <para>
+                                            <br />
+                                            The timing to open the windows in your home  depends on the weather outside.<br />
+                                            If there is cool wind outside, you should close all your fans or air conditioner and
+                                            open the windows to let the fresh air come in. On the other hand, if you have to switch on
+                                            as it is too hot, you should close all the windows.
 
+                                        </para>
+                                    </alpha>
+                                </li>
 
-                <li style="width:30.33%">
-                    <alpha href="#">
-                        <head_sticky>Tip #1</head_sticky>
-                        <para>
-                            <br />An insulated ceiling can make a big difference to your energy bills.
-                            Effective ceiling insulation can save you up to 20 per cent on your cooling and heating costs.
-                        </para>
-                    </alpha>
-                </li>
-                <li style="width:30.33%">
-                    <alpha href="#">
-                        <a href="~/images/Checklist/WinterChecklist.pdf" target="_blank">
-                            <h6>Tip #2</h6>
-                            <para>
-                                Great Job Kid!! you have Learned a lot heres another checklist for the Winter season.
-                            </para>
-                            <p style="color:#0094ff; font-size:13px;">Click here</p>
-
-                        </a>
-                    </alpha>
-                </li>
-
-                <li style="width:30.33%">
-                    <alpha href="#">
-                        <head_sticky>Solar Fact</head_sticky>
-                        <para>
-                            <br />The sun is an excellent form of energy, just look at the renewable electricity we generate from it.
-                            Keeping your curtains open during the day can help bring warmth and light into your home,
-                            reducing your need for energy required to heat or light your house.
-                        </para>
-                    </alpha>
-                </li>
+                                <li style="width:30.33%">
+                                    <alpha href="#">
+                                        <head_sticky>Microwave vs Oven vs Stove</head_sticky>
+                                        <para>
+                                            <br />
+                                            If you just want to reheat your food, a microwave is a lot more efficient than the others.<br /> Microwave uses about 50% less energy than using an oven.
+                                            Besides, you should use appropriate size for the pan to cook with a stove,
+                                            as smaller pans and more energy efficient to heat up.
 
 
+                                        </para>
+                                    </alpha>
+                                </li>
 
 
-            </ul>
+                                <li style="width:30.33%">
+                                    <alpha href="#">
+                                        <head_sticky>Renewable Energy Hack</head_sticky>
+                                        <para>
+                                            <br />
+                                            1. A LED bulb do not emits any polluting radiation, hence switch to them. <br />
+                                            2. Instead of using traditional wood heater, Be smart ask for an electric blanket<br />
+                                            3. Unplug all devices from wall when not in use.
+                                        </para>
+                                    </alpha>
+                                </li>
 
+                            </ul>
+                        </div>
+
+                        <h3 style="color:#000000;font-family:sans-serif"><strong>Myths about Global Warming</strong></h3>
+
+
+                        <div style="margin:auto; padding-top:20px;">
+                            <ul>
+                                <li style="width:30.33%">
+                                    <alpha href="#">
+                                        <head_sticky>
+                                            Is Global Warming not REAL?
+                                        </head_sticky><br />
+                                            <para>
+                                                There are people who believe that it doesn’t exist, or will have no impact on Earth.<br />
+                                                This is NOT true because the Earth’s average surface temperature has increased.
+
+                                            </para>
+</alpha>
+                                </li>
+
+                                <li style="width:30.33%">
+                                    <alpha href="#">
+                                        <head_sticky>
+                                            Did HUMANS cause Global Warming?
+                                        </head_sticky><br />
+                                       
+                                        <para>
+                                            There are people who believe that humans are not responsible for global warming.<br />
+                                            This is NOT true because most scientists agree that today’s global warming is mainly caused by humans putting too much carbon into the atmosphere.
+
+                                        </para>
+                                    </alpha>
+                                </li>
+
+                                <li style="width:30.33%">
+                                    <alpha href="#">
+                                        <head_sticky>
+                                            Is Global Warming a FUTURE problem?
+                                            </head_sticky><br />
+                                                <para>
+                                                    There are people who believe that it is not an issue that we should pay attention now.<br />
+                                                    This is NOT true because we are already experiencing the consequences of global warming.
+
+
+                                                </para>
+</alpha>
+                                </li>
+
+                                <li style="width:30.33%">
+                                    <alpha href="#">
+                                        <head_sticky>
+                                            Can cow FARTS cause Global Warming?     </head_sticky><br />
+                                                <para>
+                                                    It is a myth that cow farts cause global warming.<br />
+                                                    Even though it is supported by some research to a certain extent, humans are still the primary cause of global warming.
+
+
+                                                </para>
+
+</alpha>
+                                </li>
+
+                                <li style="width:30.33%">
+                                    <alpha href="#">
+                                        <head_sticky>
+                                            Will animals ADAPT to Global Warming?    
+                                        </head_sticky><br />
+                                                <para>
+                                                    Animals are used to adapt to new environments or move to a new living place.<br />
+                                                    However, it is becoming impossible for animals to adapt quickly enough if the speed of global warming is too fast.
+                                                </para>
+</alpha>
+                                </li>
+
+
+                                <li style="width:30.33%">
+                                    <alpha href="#">
+                                        <head_sticky>
+                                            Am I too YOUNG to contribute?
+                                            </head_sticky><br />
+                                                <para>
+                                                    You are wrong to think that only adults should address the global warming<br />
+                                                    Our children are the future leader of this planet, they can start playing their role to save electricity at home.<br />
+                                                    Encouraging the concept of “think globally, act locally” is the first step that children can do to save our planet.
+                                                </para>
+</alpha>
+                                </li>
+
+                               
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </form>
         </div>
     </div>
+    <button id="topBtn" class="topBtn" onclick="topBtn.js"><i class="fas fa-arrow-circle-up"></i></button>
+
 </div>
