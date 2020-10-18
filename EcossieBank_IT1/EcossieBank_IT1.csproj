@@ -193,6 +193,7 @@
     <Content Include="Content\css\NavBar.css" />
     <Content Include="Content\css\owl.carousel.min.css" />
     <Content Include="Content\css\owl.theme.default.min.css" />
+    <Content Include="Content\css\quiz3.css" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\css\textbox.css" />
     <Content Include="Content\css\Tips.css" />
