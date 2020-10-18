@@ -14,8 +14,8 @@
     const quiz1result3 = sessionStorage.getItem('QUIZ3RESULT');
 
 
-    document.getElementById('result-quiz1').innerHTML = quiz1result1;
-    document.getElementById('result-quiz2').innerHTML = quiz1result2;
-    document.getElementById('result-quiz3').innerHTML = quiz1result3;
+   // document.getElementById('result-quiz1').innerHTML = quiz1result1;
+ //   document.getElementById('result-quiz2').innerHTML = quiz1result2;
+   // document.getElementById('result-quiz3').innerHTML = quiz1result3;
 
 })

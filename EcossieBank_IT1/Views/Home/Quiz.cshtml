@@ -59,9 +59,9 @@
 
                 <div id="quiz-start-screen">
                     <p style="text-align:center;"><img src="https://i.imgur.com/LzPd4xq.gif" width="500" height="500" /></p>
-                   
+
                     <p><a href="/Home/Quiz1" id="quiz1-btn" class="quiz-button">Play Quiz</a></p>
-                    
+
                     <h1>
                         Score
                     </h1>
@@ -369,4 +369,30 @@
     </script>
     @Scripts.Render("~/bundles/jquery")
 
-</body>
+<script type="text/javascript">
+    window.addEventListener('load', () => {
+
+        // Via Query parameters - GET
+        /* const params = (new URL(document.location)).searchParams;
+        const name = params.get('name');
+        const surname = params.get('surname'); */
+
+        // Via local Storage
+        /* const name = localStorage.getItem('NAME');
+        const surname = localStorage.getItem('SURNAME'); */
+
+        const q1 = sessionStorage.getItem('QUIZ1RESULT');
+        const q2 = sessionStorage.getItem('QUIZ2RESULT');
+        const q3 = sessionStorage.getItem('QUIZ3RESULT');
+        ViewBag.quizResult1 = q1;
+        ViewBag.quizResult2 = q2;
+        ViewBag.quizResult3 = q3;
+        
+
+        document.getElementById('result-quiz1').innerHTML = ViewBag.quizResult1;
+        document.getElementById('result-quiz2').innerHTML = ViewBag.quizResult2;
+        document.getElementById('result-quiz3').innerHTML = ViewBag.quizResult3;
+
+    })
+</script>
+</body >

@@ -56,6 +56,10 @@ namespace EcossieBank_IT1.Controllers
         {
             ViewBag.Message = "Your quiz page.";
             ViewBag.Current = "Quiz";
+            ViewBag.quizResult1 = "";
+            ViewBag.quizResult2 = "";
+            ViewBag.quizResult2 = "";
+
             return View();
         }
         public ActionResult Quiz1()
