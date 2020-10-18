@@ -11,18 +11,14 @@ namespace EcossieBank_IT1.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
-    public partial class Dashboard
+    
+    public partial class database_firewall_rules
     {
-
-        public int ID { get; set; }
-        
+        public int id { get; set; }
         public string name { get; set; }
-        public Nullable<int> total_score { get; set; }
-        public Nullable<int> quiz1_score { get; set; }
-        public Nullable<int> quiz2_score { get; set; }
-        public Nullable<int> quiz3_score { get; set; }
-        public string badge { get; set; }
+        public string start_ip_address { get; set; }
+        public string end_ip_address { get; set; }
+        public System.DateTime create_date { get; set; }
+        public System.DateTime modify_date { get; set; }
     }
 }

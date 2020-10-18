@@ -13,10 +13,10 @@ namespace EcossieBank_IT1.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DashboardEntities : DbContext
+    public partial class EcossieKidsEntities : DbContext
     {
-        public DashboardEntities()
-            : base("name=DashboardEntities")
+        public EcossieKidsEntities()
+            : base("name=EcossieKidsEntities")
         {
         }
     
@@ -26,5 +26,6 @@ namespace EcossieBank_IT1.Models
         }
     
         public virtual DbSet<Dashboard> Dashboards { get; set; }
+        public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
     }
 }

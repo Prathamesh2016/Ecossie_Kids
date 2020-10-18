@@ -1,0 +1,57 @@
+﻿@model EcossieBank_IT1.Models.Dashboard
+
+@{
+    ViewBag.Title = "Display";
+    Layout = "~/Views/Shared/_CustomLayout.cshtml";
+}
+
+<h2>Display</h2>
+
+<div>
+    <h4>Dashboard</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.total_score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total_score)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.quiz1_score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quiz1_score)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.quiz2_score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quiz2_score)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.quiz3_score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quiz3_score)
+        </dd>
+
+
+    </dl>
+</div>
+

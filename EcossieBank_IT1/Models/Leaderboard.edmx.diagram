@@ -4,8 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="391dcf15bd164d20a8dad95df37bf7b3" Name="Diagram1">
-        <EntityTypeShape EntityType="Model.Dashboard" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="73ecb9b3bb6743ab93d5c0150e156bf9" Name="Diagram1">
+        <EntityTypeShape EntityType="EcossieKidsModel.Dashboard" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcossieKidsModel.database_firewall_rules" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

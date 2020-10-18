@@ -1,0 +1,40 @@
+﻿@model EcossieBank_IT1.Models.database_firewall_rules
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_CustomLayout.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>database_firewall_rules</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.id)
+
+        @Html.HiddenFor(model => model.name)
+
+        @Html.HiddenFor(model => model.start_ip_address)
+
+        @Html.HiddenFor(model => model.end_ip_address)
+
+        @Html.HiddenFor(model => model.create_date)
+
+        @Html.HiddenFor(model => model.modify_date)
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

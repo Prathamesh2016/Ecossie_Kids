@@ -12,7 +12,7 @@ namespace EcossieBank_IT1.Controllers
 {
     public class DashboardsController : Controller
     {
-        private DashboardEntities db = new DashboardEntities();
+        private EcossieKidsEntities db = new EcossieKidsEntities();
 
         // GET: Dashboards
         public ActionResult Index()
@@ -48,21 +48,12 @@ namespace EcossieBank_IT1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,name,total_score,quiz1_score,quiz2_score,quiz3_score,badge")] Dashboard dashboard)
         {
-            
-                    if (ModelState.IsValid)
-                    {
-                        bool isExist = db.Dashboards.ToList().Exists(p => p.name.Equals(dashboard.name, StringComparison.CurrentCultureIgnoreCase));
-                        if (isExist)
-                        {
-                            ModelState.AddModelError("name", "UserName already exists");
-                            return View(dashboard);
-                    }
+            if (ModelState.IsValid)
+            {
                 db.Dashboards.Add(dashboard);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-           
-            
 
             return View(dashboard);
         }
@@ -111,13 +102,6 @@ namespace EcossieBank_IT1.Controllers
                 return HttpNotFound();
             }
             return View(dashboard);
-        }
-        
-        public bool DoesUserNameExist(string name)
-        {
-            bool isValid = !db.Dashboards.ToList().Exists(p => p.name.Equals(name, StringComparison.CurrentCultureIgnoreCase));
-            return isValid;
-
         }
 
         // POST: Dashboards/Delete/5

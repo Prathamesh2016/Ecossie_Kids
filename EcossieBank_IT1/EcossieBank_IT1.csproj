@@ -145,23 +145,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Dashboard.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Dashboard.Context.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Dashboard.cs">
-      <DependentUpon>Dashboard.tt</DependentUpon>
+      <DependentUpon>Leaderboard.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Dashboard.Designer.cs">
+    <Compile Include="Models\database_firewall_rules.cs">
+      <DependentUpon>Leaderboard.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Leaderboard.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Dashboard.edmx</DependentUpon>
+      <DependentUpon>Leaderboard.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Dashboard1.cs">
+    <Compile Include="Models\Leaderboard.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Dashboard.tt</DependentUpon>
+      <DependentUpon>Leaderboard.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Leaderboard.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Leaderboard.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\SendEmailViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -333,6 +336,16 @@
     <Content Include="images\img_6.jpg" />
     <Content Include="images\kid_transparent.png" />
     <Content Include="images\Kitchen.jpg" />
+    <Content Include="images\Leaderboard\Badge_1.png" />
+    <Content Include="images\Leaderboard\Badge_10.png" />
+    <Content Include="images\Leaderboard\Badge_2.png" />
+    <Content Include="images\Leaderboard\Badge_3.png" />
+    <Content Include="images\Leaderboard\Badge_4.png" />
+    <Content Include="images\Leaderboard\Badge_5.png" />
+    <Content Include="images\Leaderboard\Badge_6.png" />
+    <Content Include="images\Leaderboard\Badge_7.png" />
+    <Content Include="images\Leaderboard\Badge_8.png" />
+    <Content Include="images\Leaderboard\Badge_9.png" />
     <Content Include="images\Learn_game.jpg" />
     <Content Include="images\led.jpg" />
     <Content Include="images\Living_room.jpg" />
@@ -352,6 +365,7 @@
     <Content Include="images\post_5.jpg" />
     <Content Include="images\post_6.jpg" />
     <Content Include="images\Quizsmile.jpeg" />
+    <Content Include="images\renewable_bg.png" />
     <Content Include="images\school-board-wood-teaching.jpg" />
     <Content Include="images\shower.jpg" />
     <Content Include="images\signature.svg" />
@@ -397,15 +411,15 @@
     <Content Include="images\tv.jpg" />
     <Content Include="images\Website_Logo.png" />
     <Content Include="images\white-dots.png" />
-    <Content Include="Models\Dashboard.Context.tt">
+    <Content Include="Models\Leaderboard.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Dashboard.edmx</DependentUpon>
-      <LastGenOutput>Dashboard.Context.cs</LastGenOutput>
+      <DependentUpon>Leaderboard.edmx</DependentUpon>
+      <LastGenOutput>Leaderboard.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Dashboard.tt">
+    <Content Include="Models\Leaderboard.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Dashboard.edmx</DependentUpon>
-      <LastGenOutput>Dashboard1.cs</LastGenOutput>
+      <DependentUpon>Leaderboard.edmx</DependentUpon>
+      <LastGenOutput>Leaderboard.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\aos.js" />
     <Content Include="Scripts\bookshelf.js" />
@@ -438,12 +452,12 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <EntityDeploy Include="Models\Dashboard.edmx">
+    <EntityDeploy Include="Models\Leaderboard.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Dashboard.Designer.cs</LastGenOutput>
+      <LastGenOutput>Leaderboard.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Dashboard.edmx.diagram">
-      <DependentUpon>Dashboard.edmx</DependentUpon>
+    <Content Include="Models\Leaderboard.edmx.diagram">
+      <DependentUpon>Leaderboard.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\EcossieBankIT120200831012402 - Web Deploy.pubxml" />
     <Content Include="Scripts\countdown.js" />
@@ -499,6 +513,8 @@
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
     <Content Include="Scripts\py.js" />
+    <Content Include="Scripts\q3.js" />
+    <Content Include="Scripts\quiz2.js" />
     <Content Include="Scripts\quizResult.js" />
     <Content Include="Scripts\slick.min.js" />
     <Content Include="Scripts\src\index.js" />
@@ -708,6 +724,12 @@
     <Content Include="Views\Dashboards\Details.cshtml" />
     <Content Include="Views\Dashboards\Edit.cshtml" />
     <Content Include="Views\Dashboards\Index.cshtml" />
+    <Content Include="Views\database_firewall_rules\Create.cshtml" />
+    <Content Include="Views\database_firewall_rules\Delete.cshtml" />
+    <Content Include="Views\database_firewall_rules\Details.cshtml" />
+    <Content Include="Views\database_firewall_rules\Edit.cshtml" />
+    <Content Include="Views\database_firewall_rules\Index.cshtml" />
+    <Content Include="Views\Home\Display.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

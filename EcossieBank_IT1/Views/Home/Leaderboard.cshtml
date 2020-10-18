@@ -1,5 +1,10 @@
 ﻿
 @{
+    Layout = null;
+}
+
+
+@{
     ViewBag.Title = "Leaderboard";
 }
 <head>
@@ -14,36 +19,36 @@
                 <div class="pos">
                     2
                 </div>
-                <div class="pic" style="background-image: url(&#39;https://randomuser.me/api/portraits/men/44.jpg&#39;)"></div>
+                <div class="pic" style="background-image: url('../../images/Leaderboard/Badge_2.png')"></div>
                 <div class="name">
-                    Edgar Soto
+                    @ViewBag.Name2
                 </div>
                 <div class="score">
-                    6453
+                    @ViewBag.Result2
                 </div>
             </div>
             <div class="one item">
                 <div class="pos">
                     1
                 </div>
-                <div class="pic" style="background-image: url(&#39;https://randomuser.me/api/portraits/men/31.jpg&#39;)"></div>
+                <div class="pic" style="background-image: url('../../images/Leaderboard/Badge_1.png')"></div>
                 <div class="name">
-                    Clifford James
+                    @ViewBag.Name1
                 </div>
                 <div class="score">
-                    6794
+                    @ViewBag.Result1
                 </div>
             </div>
             <div class="three item">
                 <div class="pos">
                     3
                 </div>
-                <div class="pic" style="background-image: url(&#39;https://randomuser.me/api/portraits/women/91.jpg&#39;)"></div>
+                <div class="pic" style="background-image: url('../../images/Leaderboard/Badge_3.png')"></div>
                 <div class="name">
-                    Nevaeh Silva
+                    @ViewBag.Name3
                 </div>
                 <div class="score">
-                    6034
+                    @ViewBag.Result3
                 </div>
             </div>
         </div>
@@ -52,87 +57,88 @@
                 <div class="pos">
                     4
                 </div>
-                <div class="pic" style="background-image: url(&#39;https://randomuser.me/api/portraits/men/88.jpg&#39;)"></div>
+                <div class="pic" style="background-image: url('../../images/Leaderboard/Badge_4.png')"></div>
                 <div class="name">
-                    Clayton Watson
+                    @ViewBag.Name4
                 </div>
                 <div class="score">
-                    5980
+                    @ViewBag.Result4
                 </div>
             </div>
             <div class="item">
                 <div class="pos">
                     5
                 </div>
-                <div class="pic" style="background-image: url(&#39;https://randomuser.me/api/portraits/women/29.jpg&#39;)"></div>
+                <div class="pic" style="background-image: url('../../images/Leaderboard/Badge_5.png')"></div>
                 <div class="name">
-                    Debbie Lane
+                    @ViewBag.Name5
                 </div>
                 <div class="score">
-                    5978
+                    @ViewBag.Result5
                 </div>
             </div>
             <div class="item">
                 <div class="pos">
                     6
                 </div>
-                <div class="pic" style="background-image: url(&#39;https://randomuser.me/api/portraits/women/85.jpg&#39;)"></div>
+                <div class="pic" style="background-image: url('../../images/Leaderboard/Badge_6.png')"></div>
                 <div class="name">
-                    Gabriella Steward
+                    @ViewBag.Name6
                 </div>
                 <div class="score">
-                    5845
+                    @ViewBag.Result6
                 </div>
             </div>
             <div class="item">
                 <div class="pos">
                     7
                 </div>
-                <div class="pic" style="background-image: url(&#39;https://randomuser.me/api/portraits/women/39.jpg&#39;)"></div>
+                <div class="pic" style="background-image: url('../../images/Leaderboard/Badge_7.png')"></div>
                 <div class="name">
-                    Nina Perkins
+                    @ViewBag.Name7
                 </div>
                 <div class="score">
-                    5799
+                    @ViewBag.Result7
                 </div>
             </div>
             <div class="item">
                 <div class="pos">
                     8
                 </div>
-                <div class="pic" style="background-image: url(&#39;https://randomuser.me/api/portraits/men/77.jpg&#39;)"></div>
+                <div class="pic" style="background-image: url('../../images/Leaderboard/Badge_8.png')"></div>
                 <div class="name">
-                    Dennis Henry
+                    @ViewBag.Name8
                 </div>
                 <div class="score">
-                    5756
+                    @ViewBag.Result8
                 </div>
             </div>
             <div class="item">
                 <div class="pos">
                     9
                 </div>
-                <div class="pic" style="background-image: url(&#39;https://randomuser.me/api/portraits/women/49.jpg&#39;)"></div>
+                <div class="pic" style="background-image: url('../../images/Leaderboard/Badge_9.png')"></div>
                 <div class="name">
-                    Courtney Fuller
+                    @ViewBag.Name9
                 </div>
                 <div class="score">
-                    5713
+                    @ViewBag.Result9
                 </div>
             </div>
             <div class="item">
                 <div class="pos">
                     10
                 </div>
-                <div class="pic" style="background-image: url(&#39;https://randomuser.me/api/portraits/women/30.jpg&#39;)"></div>
+                <div class="pic" style="background-image: url('../../images/Leaderboard/Badge_10.png')"></div>
                 <div class="name">
-                    Joan Wood
+                    @ViewBag.Name10
                 </div>
                 <div class="score">
-                    5674
+                    @ViewBag.Result10
                 </div>
             </div>
         </div>
+        <a href="@Url.Action("Quiz", "Home")" style="color:beige" id="quiz1-btn" class="btn btn-primary btn-custom-1 py-3 px-5 ml-auto" >Go Back</a>
     </div>
 </body>
 

@@ -2695,13 +2695,12 @@ h1, h2, h3, h4, h5,
 }
 
 
-l
+
 
 .homepage-bg {
     background-image: url('../../images/Home_Page/sky_bg.png');
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 .foot-bg {
@@ -2755,6 +2754,13 @@ l
 .renewable-banner {
     background-image: url('../../images/Banner/renewable_banner.gif');
     filter: brightness(130%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.renewable_bg {
+    background-image: url('../../images/renewable_bg.png');
+    filter: brightness(80%);
     background-repeat: no-repeat;
     background-size: cover;
 }
