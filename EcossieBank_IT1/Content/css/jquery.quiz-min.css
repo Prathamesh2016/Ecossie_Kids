@@ -6,6 +6,11 @@ body {
     font-size: 20px;
     -webkit-font-smoothing: antialiased;
 }
+#quit-btn {
+    position: relative;
+    left: 1px;
+    top: 1px;
+}
 
 .quiz-container {
     //background-image: url(https://s1.ax1x.com/2020/10/16/0qpju8.png);
@@ -75,7 +80,7 @@ body {
     /*left: 20%;
     right: 20%;
     top: 15%;*/
-    top: -727px;
+    top: -708px;
 }
 
 #quiz-response {
