@@ -12,6 +12,8 @@ namespace EcossieBank_IT1.Controllers
     public class HomeController : Controller
     {
         private EcossieKidsEntities db = new EcossieKidsEntities();
+        public static int position;
+        
 
         public ActionResult Index()
         {
@@ -35,12 +37,7 @@ namespace EcossieBank_IT1.Controllers
         //}
 
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-            ViewBag.Current = "Send_Email";
-            return View();
-        }
+       
 
         public ActionResult Stats()
         {
@@ -82,63 +79,93 @@ namespace EcossieBank_IT1.Controllers
         [HttpPost]
         public ActionResult Quiz(FormCollection form)
         {
+
+
             string name = form["name"].ToString();
             string quiz1 = form["quiz1"].ToString();
             string quiz2 = form["quiz2"].ToString();
             string quiz3 = form["quiz3"].ToString();
             int iquiz1, iquiz2, iquiz3;
+            ViewBag.Error = "";
             if (String.IsNullOrEmpty(quiz1))
-              iquiz1 = 0;
-             else
-                 iquiz1 = Convert.ToInt32(quiz1);
+                iquiz1 = 0;
+            else
+            {
+                int temp = Convert.ToInt32(quiz1);
+                if (temp > 30 )
+                    iquiz1 = 0;
+                else
+                    iquiz1 = temp;
+            }
 
             if (String.IsNullOrEmpty(quiz2))
                 iquiz2 = 0;
             else
-                iquiz2 = Convert.ToInt32(quiz2);
+            {
+                int temp = Convert.ToInt32(quiz2);
+                if (temp > 40)
+                    iquiz2 = 0;
+                else
+                    iquiz2 = temp;
+            }
 
             if (String.IsNullOrEmpty(quiz3))
                 iquiz3 = 0;
             else
-                iquiz3 = Convert.ToInt32(quiz3);
+            {
+                int temp = Convert.ToInt32(quiz3);
+                if (temp > 30)
+                    iquiz3 = 0;
+                else
+                    iquiz3 = temp;
+            }
 
-            
+
             try
             {
-                Dashboard dashboard = new Dashboard
+                Dashboard d1 = db.Dashboards.FirstOrDefault(p => p.name.Equals(name.ToLower()));
+                if (d1 == null)
                 {
-                    name = name,
-                    quiz1_score = iquiz1,
-                    quiz2_score = iquiz2,
-                    quiz3_score = iquiz3
-                };
-                dashboard.total_score = dashboard.quiz1_score + dashboard.quiz2_score + dashboard.quiz3_score;
-                dashboard.badge = "desp";
-                db.Dashboards.Add(dashboard);
-                db.SaveChanges();
+                 Dashboard dashboard = new Dashboard
+                    {
+                        name = name.ToLower(),
+                        quiz1_score = iquiz1,
+                        quiz2_score = iquiz2,
+                        quiz3_score = iquiz3
+                    };
+                   
+                    dashboard.total_score = dashboard.quiz1_score + dashboard.quiz2_score + dashboard.quiz3_score;
+                    dashboard.badge = "desp";
+                    db.Dashboards.Add(dashboard);
+                    db.SaveChanges();
 
-            }
+
+
+                    IEnumerable<Dashboard> myRank = db.Dashboards.ToList().OrderByDescending(t => t.total_score);
+                    position = myRank.ToList().IndexOf(dashboard);
+
+                   
+                }
+                else
+                {
+                    ViewBag.Error = "User with same name already exist.";
+
+                }
+
+
+
+
+                }
             catch(Exception e)
             {
 
             }
-
-            ViewBag.Message = "Your quiz page.";
-            ViewBag.Current = "Quiz";
+            
             return View();
         }
-        public ActionResult Leaderboard()
-        {
-            //var data = db.Dashboards.
 
-            //var orderByDescendingResult = from s in Dashboard
-            //                              orderby s. descending
-            //                              select s
-            //var main = db.Dashboards;
-            //var data = (from t in db.Dashboards
-                        
-            //            orderby t.total_score
-            //            select t);
+        public ActionResult Dashboard()
+        {
             IEnumerable<Dashboard> x = db.Dashboards.ToList().OrderByDescending(t => t.total_score).Take(10);
             Dashboard d1 = x.ElementAt(0);
             ViewBag.Name1 = d1.name;
@@ -180,12 +207,19 @@ namespace EcossieBank_IT1.Controllers
             ViewBag.Name10 = d10.name;
             ViewBag.Result10 = d10.total_score;
 
+            //Getting my current rank
 
+            IEnumerable<Dashboard> myRank = db.Dashboards.ToList().OrderByDescending(t => t.total_score);
+            Dashboard mine = myRank.ElementAt(position);
+            ViewBag.Mine = mine.name;
+            ViewBag.MyResult = mine.total_score;
+            ViewBag.Position = position+1;
 
             return View();
-
-
         }
+
+
+        
         
 
         public ActionResult Quiz1()

@@ -184,6 +184,8 @@
     <Content Include="Content\css\bootstrap\bootstrap-reboot.css" />
     <Content Include="Content\css\bootstrap\bootstrap.css" />
     <Content Include="Content\css\checklist.css" />
+    <Content Include="Content\css\Dashboard.css" />
+    <Content Include="Content\css\form_style.css" />
     <Content Include="Content\css\jquery-ui.css" />
     <Content Include="Content\css\jquery.fancybox.min.css" />
     <Content Include="Content\css\jquery.quiz-min.css" />
@@ -337,6 +339,7 @@
     <Content Include="images\img_6.jpg" />
     <Content Include="images\kid_transparent.png" />
     <Content Include="images\Kitchen.jpg" />
+    <Content Include="images\Leaderboard\Badge.png" />
     <Content Include="images\Leaderboard\Badge_1.png" />
     <Content Include="images\Leaderboard\Badge_10.png" />
     <Content Include="images\Leaderboard\Badge_2.png" />
@@ -373,6 +376,7 @@
     <Content Include="images\stats_banner.jpg" />
     <Content Include="images\stats_bg.gif" />
     <Content Include="images\tap.jpg" />
+    <Content Include="images\Team_logo.jpeg" />
     <Content Include="images\thermostat.jpg" />
     <Content Include="images\Tips_bg.jpg" />
     <Content Include="images\Tips_Images\Ac_off.gif" />
@@ -402,6 +406,7 @@
     <Content Include="images\Tips_Images\kitchen-microwave.gif" />
     <Content Include="images\Tips_Images\Lamp_off.gif" />
     <Content Include="images\Tips_Images\Lamp_on.gif" />
+    <Content Include="images\Tips_Images\lets_play_instruction.jpg" />
     <Content Include="images\Tips_Images\Light_Off.gif" />
     <Content Include="images\Tips_Images\Light_on.gif" />
     <Content Include="images\Tips_Images\living room - tv - flip.gif" />
@@ -599,7 +604,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_CustomLayout.cshtml" />
     <Content Include="scss\.DS_Store" />
@@ -731,6 +735,7 @@
     <Content Include="Views\database_firewall_rules\Edit.cshtml" />
     <Content Include="Views\database_firewall_rules\Index.cshtml" />
     <Content Include="Views\Home\Display.cshtml" />
+    <Content Include="Views\Home\Dashboard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

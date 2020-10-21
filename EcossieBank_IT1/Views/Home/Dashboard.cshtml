@@ -1,0 +1,231 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<style>
+</style>
+<link href="~/Content/css/Dashboard.css" rel="stylesheet" />
+<div class="l-wrapper">
+    <div class="c-header">
+
+        <a href="/Home/Index"><img src="~/images/Website_Logo.png" alt="Image" class="c-logo" draggable="false" align="left"></a>
+        <a class="c-button c-button--primary" href="@Url.Action("Quiz", "Home")">Go Back</a>
+    </div>
+    <div class="l-grid u-text--center">
+        <div class="l-grid__item l-grid__item--sticky">
+            <div class="c-card u-bg--light-gradient u-text--dark">
+                <div class="c-card__body">
+                    <div class="u-display--flex u-justify--space-between">
+                        <div class="u-text--left">
+                            <div class="u-text--small">My Rank</div>
+                            <h2>@ViewBag.Position</h2>
+                        </div>
+                        <div class="u-text--right">
+                            <div class="u-text--small">My Score</div>
+                            <h2>@ViewBag.MyResult</h2>
+                        </div>
+                    </div>
+                </div>
+                
+            <div class="c-card">
+                <div class="c-card__body">
+                    <div class="u-text--center" id="winner"></div>
+                    <div class="u-text-small u-text--medium u-mb--16"><centre>Here is your badge Kiddo!</centre></div>
+                    <img class="c-avatar c-avatar--lg" src="~/images/Leaderboard/Badge.png" />
+                    <h3 class="u-mt--16"> @ViewBag.Mine</h3>
+                    <span class="u-text--teal u-text--small"></span>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="l-grid__item">
+            <div class="c-card">
+                <div class="c-card__header">
+                    <h3>Leaderboard</h3>
+                    
+                </div>
+                <div class="c-card__body">
+                    <ul class="c-list" id="list">
+                        <li class="c-list__item">
+                            <div class="c-list__grid">
+                                <div class="u-text--left u-text--small u-text--medium">Rank</div>
+                                <div class="u-text--left u-text--small u-text--medium">Player Name</div>
+                                <div class="u-text--right u-text--small u-text--medium"># Planet Saver</div>
+                            </div>
+                        </li>
+                        <li class="c-list__item">
+                            <div class="c-list__grid">
+                                <div class="c-flag c-place u-bg--transparent">1</div>
+                                <div class="c-media">
+                                    <img class="c-avatar c-media__img" src="~/images/Leaderboard/Badge_1.png" />
+
+                                    <div class="c-media__content">
+                                        <div class="c-media__title">@ViewBag.Name1</div>
+                                    </div>
+                                </div>
+                                <div class="u-text--right c-kudos">
+                                    <div class="u-mt--8">
+                                        <strong>@ViewBag.Result1</strong> 🏆
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="c-list__item">
+                            <div class="c-list__grid">
+                                <div class="c-flag c-place u-bg--transparent">2</div>
+                                <div class="c-media">
+                                    <img class="c-avatar c-media__img" src="~/images/Leaderboard/Badge_2.png" />
+
+                                    <div class="c-media__content">
+                                        <div class="c-media__title">@ViewBag.Name2</div>
+                                    </div>
+                                </div>
+                                <div class="u-text--right c-kudos">
+                                    <div class="u-mt--8">
+                                        <strong>@ViewBag.Result2</strong> 🙌
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="c-list__item">
+                            <div class="c-list__grid">
+                                <div class="c-flag c-place u-bg--transparent">3</div>
+                                <div class="c-media">
+                                    <img class="c-avatar c-media__img" src="~/images/Leaderboard/Badge_3.png" />
+
+                                    <div class="c-media__content">
+                                        <div class="c-media__title">@ViewBag.Name3</div>
+                                    </div>
+                                </div>
+                                <div class="u-text--right c-kudos">
+                                    <div class="u-mt--8">
+                                        <strong>@ViewBag.Result3</strong> 👍
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="c-list__item">
+                            <div class="c-list__grid">
+                                <div class="c-flag c-place u-bg--transparent">4</div>
+                                <div class="c-media">
+                                    <img class="c-avatar c-media__img" src="~/images/Leaderboard/Badge_4.png" />
+
+                                    <div class="c-media__content">
+                                        <div class="c-media__title">@ViewBag.Name4</div>
+                                    </div>
+                                </div>
+                                <div class="u-text--right c-kudos">
+                                    <div class="u-mt--8">
+                                        <strong>@ViewBag.Result4</strong> 🤩
+                                    </div>
+                                </div>
+                            </div>
+                        <li class="c-list__item">
+                            <div class="c-list__grid">
+                                <div class="c-flag c-place u-bg--transparent">5</div>
+                                <div class="c-media">
+                                    <img class="c-avatar c-media__img" src="~/images/Leaderboard/Badge_1.png" />
+
+                                    <div class="c-media__content">
+                                        <div class="c-media__title">@ViewBag.Name5</div>
+                                    </div>
+                                </div>
+                                <div class="u-text--right c-kudos">
+                                    <div class="u-mt--8">
+                                        <strong>@ViewBag.Result5</strong> 🔥
+                                    </div>
+                                </div>
+                            </div>
+                        <li class="c-list__item">
+                            <div class="c-list__grid">
+                                <div class="c-flag c-place u-bg--transparent">6</div>
+                                <div class="c-media">
+                                    <img class="c-avatar c-media__img" src="~/images/Leaderboard/Badge_6.png" />
+
+                                    <div class="c-media__content">
+                                        <div class="c-media__title">@ViewBag.Name6</div>
+                                    </div>
+                                </div>
+                                <div class="u-text--right c-kudos">
+                                    <div class="u-mt--8">
+                                        <strong>@ViewBag.Result6</strong> ⭐️
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="c-list__item">
+                            <div class="c-list__grid">
+                                <div class="c-flag c-place u-bg--transparent">7</div>
+                                <div class="c-media">
+                                    <img class="c-avatar c-media__img" src="~/images/Leaderboard/Badge_7.png" />
+
+                                    <div class="c-media__content">
+                                        <div class="c-media__title">@ViewBag.Name7</div>
+                                    </div>
+                                </div>
+                                <div class="u-text--right c-kudos">
+                                    <div class="u-mt--8">
+                                        <strong>@ViewBag.Result7</strong> 🤙
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="c-list__item">
+                            <div class="c-list__grid">
+                                <div class="c-flag c-place u-bg--transparent">8</div>
+                                <div class="c-media">
+                                    <img class="c-avatar c-media__img" src="~/images/Leaderboard/Badge_8.png" />
+
+                                    <div class="c-media__content">
+                                        <div class="c-media__title">@ViewBag.Name8</div>
+                                    </div>
+                                </div>
+                                <div class="u-text--right c-kudos">
+                                    <div class="u-mt--8">
+                                        <strong>@ViewBag.Result8</strong> ✌️
+                                    </div>
+                                </div>
+                            </div>
+                        <li class="c-list__item">
+                            <div class="c-list__grid">
+                                <div class="c-flag c-place u-bg--transparent">9</div>
+                                <div class="c-media">
+                                    <img class="c-avatar c-media__img" src="~/images/Leaderboard/Badge_9.png" />
+
+                                    <div class="c-media__content">
+                                        <div class="c-media__title">@ViewBag.Name9</div>
+                                    </div>
+                                </div>
+                                <div class="u-text--right c-kudos">
+                                    <div class="u-mt--8">
+                                        <strong>@ViewBag.Result9</strong> 🏵️
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="c-list__item">
+                            <div class="c-list__grid">
+                                <div class="c-flag c-place u-bg--transparent">10</div>
+                                <div class="c-media">
+                                    <img class="c-avatar c-media__img" src="~/images/Leaderboard/Badge_10.png" />
+
+                                    <div class="c-media__content">
+                                        <div class="c-media__title">@ViewBag.Name10</div>
+                                    </div>
+                                </div>
+                                <div class="u-text--right c-kudos">
+                                    <div class="u-mt--8">
+                                        <strong>@ViewBag.Result10</strong> 🎗️
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                 
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

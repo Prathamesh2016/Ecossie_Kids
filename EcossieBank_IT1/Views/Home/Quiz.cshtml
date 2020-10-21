@@ -15,69 +15,19 @@
         padding: 1rem;
     }
 
-    input[type="text"] {
-        box-sizing: border-box;
-        width: 35%;
-        height: calc(3em + 2px);
-        margin: 0 0 1em;
-        padding: 1em;
-        border: 1px solid #ccc;
-        border-radius: 1.5em;
-        background: #fff;
-        resize: none;
-        outline: none;
+    
+
+    form {
+        display: inline-block;
     }
 
-        input[type="text"][required]:focus {
-            border-color: #00bafa;
-        }
-
-            input[type="text"][required]:focus + label[placeholder]:before {
-                color: #833471;
-            }
-
-            input[type="text"][required]:focus + label[placeholder]:before,
-            input[type="text"][required]:valid + label[placeholder]:before {
-                -webkit-transition-duration: 0.2s;
-                transition-duration: 0.2s;
-                -webkit-transform: translate(0, -1.5em) scale(0.9, 0.9);
-                transform: translate(0, -1.5em) scale(0.9, 0.9);
-            }
-
-        input[type="text"][required]:invalid + label[placeholder][alt]:before {
-            content: attr(alt);
-        }
-
-        input[type="text"][required] + label[placeholder] {
-            display: block;
-            pointer-events: none;
-            line-height: 1.25em;
-            margin-top: calc(-3em - 2px);
-            margin-bottom: calc((3em - 1em) + 2px);
-        }
-
-            input[type="text"][required] + label[placeholder]:before {
-                content: attr(placeholder);
-                display: inline-block;
-                margin: 0 calc(1em + 2px);
-                padding: 0 2px;
-                color: #898989;
-                white-space: nowrap;
-                -webkit-transition: 0.3s ease-in-out;
-                transition: 0.3s ease-in-out;
-                background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
-                background-image: linear-gradient(to bottom, #fff, #fff);
-                background-size: 100% 5px;
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-
-   
+        
 
 </style>
 
 <title>Quiz</title>
 <link rel="stylesheet" type="text/css" href="~/Content/css/jquery.quiz-min.css" />
+<link href="~/Content/css/form_style.css" rel="stylesheet" />
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <div class="site-wrap" id="home-section">
         <div class="ftco-blocks-cover-1">
@@ -85,9 +35,9 @@
                 <div class="container">
                     <div class="row align-items-center ">
                         <div class="col-md-5 mt-5 pt-5">
-                            <span class="text-cursive h5 text-mine">Quiz</span>
-                            <h1 class="mb-3 font-weight-bold text-teal">Play Quiz</h1>
-                            <p><a href="~/Views/Home/Index.cshtml" class="text-white">Home</a> <span class="mx-3">/</span> <strong>Quiz</strong></p>
+                            <span class="text-cursive h5 text-mine">Test Yourself</span>
+                            <h1 class="mb-3 font-weight-bold text-teal">Knowledge<br /> Test</h1>
+                            <p><a href="~/Views/Home/Index.cshtml" class="text-white">Home</a> <span class="mx-3">/</span> <strong>Test Yourself</strong></p>
                         </div>
 
                     </div>
@@ -108,12 +58,12 @@
                 <div class="jquery-script-clear"></div>
             </div>
         </div>
-        <div class="container quiz_container">
+        <div class="container quiz_container" >
             <h1 style="text-align:center;"></h1>
             <div id="quiz">
                 @*<div id="quiz-header">
-                <h1>Quiz 1</h1>
-            </div>*@
+            <h1>Quiz 1</h1>
+        </div>*@
                 <header>Quiz </header>
 
                 <div id="quiz-start-screen">
@@ -121,37 +71,53 @@
 
                     <p><a href="/Home/Quiz1" id="quiz1-btn" class="quiz-button">Play Quiz</a></p>
 
-                    
-                    <h2 style="display:none;"> 
-                        Quiz1: <span id="result-quiz1"   style="display:none;"/>
+
+                    <h2 style="display:none;">
+                        Quiz1: <span id="result-quiz1" style="display:none;" />
                     </h2>
                     <h2 style="display:none;">
-                        Quiz2: <span id="result-quiz2"  style="display:none;" />
+                        Quiz2: <span id="result-quiz2" style="display:none;" />
                     </h2>
                     <h2 style="display:none;">
-                        Quiz3: <span id="result-quiz3"  style="display:none;"/>
+                        Quiz3: <span id="result-quiz3" style="display:none;" />
                     </h2>
                 </div>
+
+
+                <div class="form-style-3">
+                    <center>
+                        <form method="post" style="right:39%">
+                            <fieldset>
+                                <h3>Enter your name here after completing quiz.</h3>
+                                <br />
+                                <label for="name">
+                                    <span>Name <span class="required">*</span></span>
+                                    <input required='' class="input-field" type='text' name="name"><br />
+                                    @ViewBag.Error
+                                </label>
+
+
+
+
+                                <input required='' type='text' name="quiz1" id="quiz-1-result" style="display:none;" readonly>
+
+
+                                <input required='' type='text' name="quiz2" id="quiz-2-result" style="display:none;" readonly>
+
+
+                                <input required='' type='text' name="quiz3" id="quiz-3-result" style="display:none;" readonly>
+                                <br />
+
+                                <label><span> </span><input type="submit" value="Submit" /></label>
+                                <br />
+                                <a href="@Url.Action("Dashboard", "Home")" class="button">View Leaderboard</a>
+                            </fieldset>
+                        </form>
+                    </center>
+                </div>
             </div>
-            <form method="post">
-                <h3>Enter your name to be seen in LeaderBoard.</h3>
-                <input required='' type='text' name="name">
-                <label alt='Name' placeholder='Enter Name'></label>
-                <row>
-                    <input required='' type='text' name="quiz1" id="quiz-1-result" style="display:none;" readonly>
-                    
-
-                    <input required='' type='text' name="quiz2" id="quiz-2-result" style="display:none;" readonly>
-                 
-
-                    <input required='' type='text' name="quiz3" id="quiz-3-result" style="display:none;" readonly>
-                    
-                </row>
 
 
-                <input type="submit" class="quiz-button">
-                <p><a href="/Home/Leaderboard" id="quiz1-btn" class="quiz-button">View Leaderboard</a></p>
-            </form>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
@@ -425,3 +391,14 @@
 
     
 </body>
+<div class="site-section py-5 bg-warning">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 d-flex">
+                <h2 class="text-white m-0" align="centre">Play our interesting Renewable Energy Catch Game.</h2>
+
+                <a href="@Url.Action("RenewableGame", "Home")" class="btn btn-primary btn-custom-1 py-3 px-5 ml-auto">Get Started</a>
+            </div>
+        </div>
+    </div>
+</div>
