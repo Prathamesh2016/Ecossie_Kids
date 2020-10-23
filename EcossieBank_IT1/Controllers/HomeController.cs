@@ -135,11 +135,18 @@ namespace EcossieBank_IT1.Controllers
                     };
                    
                     dashboard.total_score = dashboard.quiz1_score + dashboard.quiz2_score + dashboard.quiz3_score;
-                    dashboard.badge = "desp";
-                    db.Dashboards.Add(dashboard);
-                    ViewBag.UserAdded = dashboard.name + " successfully added";
-                    db.SaveChanges();
-                    ViewBag.Sucess = "User " + dashboard.name + " successfully added.";
+                    if (dashboard.total_score != 0)
+                    {
+                        dashboard.badge = "desp";
+                        db.Dashboards.Add(dashboard);
+                        ViewBag.UserAdded = dashboard.name + " successfully added";
+                        db.SaveChanges();
+                        ViewBag.Sucess = "User " + dashboard.name + " successfully added.";
+                    }
+                    else
+                    {
+                        ViewBag.Error = "Please play Quiz and then enter the name.";
+                    }
 
 
                     IEnumerable<Dashboard> myRank = db.Dashboards.ToList().OrderByDescending(t => t.total_score);
@@ -211,10 +218,26 @@ namespace EcossieBank_IT1.Controllers
             //Getting my current rank
 
             IEnumerable<Dashboard> myRank = db.Dashboards.ToList().OrderByDescending(t => t.total_score);
-            Dashboard mine = myRank.ElementAt(position);
-            ViewBag.Mine = mine.name;
-            ViewBag.MyResult = mine.total_score;
-            ViewBag.Position = position+1;
+            
+            if (position > 0 )
+            {
+                Dashboard mine = myRank.ElementAt(position);
+                ViewBag.Mine = mine.name;
+                ViewBag.MyResult = mine.total_score;
+                ViewBag.Position = position + 1;
+                ViewBag.Result = "My Rank";
+                ViewBag.TopScore = "My Score";
+            }
+            else
+            {
+                Dashboard top = myRank.ElementAt(0);
+                ViewBag.Mine = top.name;
+                ViewBag.MyResult = top.total_score;
+                ViewBag.Position =  "1";
+                ViewBag.Result = "Highest Rank";
+                ViewBag.TopScore = "Highest Score";
+            }
+     
 
             return View();
         }
