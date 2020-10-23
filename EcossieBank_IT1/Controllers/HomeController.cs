@@ -123,12 +123,12 @@ namespace EcossieBank_IT1.Controllers
 
             try
             {
-                Dashboard d1 = db.Dashboards.FirstOrDefault(p => p.name.Equals(name.ToLower()));
+                Dashboard d1 = db.Dashboards.FirstOrDefault(p => p.name.Equals(name.ToUpper()));
                 if (d1 == null)
                 {
                  Dashboard dashboard = new Dashboard
                     {
-                        name = name.ToLower(),
+                        name = name.ToUpper(),
                         quiz1_score = iquiz1,
                         quiz2_score = iquiz2,
                         quiz3_score = iquiz3
@@ -137,8 +137,9 @@ namespace EcossieBank_IT1.Controllers
                     dashboard.total_score = dashboard.quiz1_score + dashboard.quiz2_score + dashboard.quiz3_score;
                     dashboard.badge = "desp";
                     db.Dashboards.Add(dashboard);
+                    ViewBag.UserAdded = dashboard.name + " successfully added";
                     db.SaveChanges();
-
+                    ViewBag.Sucess = "User " + dashboard.name + " successfully added.";
 
 
                     IEnumerable<Dashboard> myRank = db.Dashboards.ToList().OrderByDescending(t => t.total_score);

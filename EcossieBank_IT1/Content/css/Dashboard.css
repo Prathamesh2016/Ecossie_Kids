@@ -405,6 +405,10 @@ button, select {
     /*color: var(--darkest) !important;*/
 }
 
+.u-dark {
+    color: #2980b9;
+}
+
 .u-bg--transparent {
     background: transparent !important;
 }
