@@ -1,4 +1,4 @@
-## Table of Contents
+## EcossieKids
 
 - [Background](#background)
 - [Install](#install)
@@ -23,7 +23,7 @@ PM> Uninstall-package Microsoft.Net.Compilers
 
 ## Maintainers
 
-[@Parthamesh Ayare](https://github.com/paya0001).
+[@Prathamesh Ayare](https://github.com/paya0001).
 [@Lihui Lin](https://github.com/againstllh).
 
 
@@ -32,6 +32,8 @@ PM> Uninstall-package Microsoft.Net.Compilers
 
 @Weiyen Lim 
 @Yi Hsiao
-
+@Munisah Muneer
+@Peng Liu
+@Mei Wei
 
 
