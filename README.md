@@ -41,6 +41,6 @@ If you have any problems, please contact us by ecossiekids@gmail.com
 
 
 ## Thanks
-@Munisah Muneer,  @Peng Liu,  @Mei Wei, significantly helped with the development of your project. 
+@Munisah Muneer,  @Peng Liu,  @Mei Wei, significantly helped with the development of the project. 
 
 
