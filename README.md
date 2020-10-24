@@ -13,27 +13,27 @@ It is a fact that 75% of Australian electricity comes from coal in the past 30 y
 ## Install
 
 This project uses [asp.net Framework](https://dotnet.microsoft.com/apps/aspnet) and [Visual Studio](https://visualstudio.microsoft.com/).
-Go check them out if you don't have them locally installed.
+Go check them out if you don't have them locally installed.  
 
-Solved Could not find a part of the ‘path bin\roslyn\csc.exe’
-Remove Nuget packages, use the following commands from Nuget Package Console
-PM> Uninstall-package Microsoft.CodeDom.Providers.DotNetCompilerPlatform
-PM> Uninstall-package Microsoft.Net.Compilers
+Solved Could not find a part of the ‘path bin\roslyn\csc.exe’  
+Remove Nuget packages, use the following commands from Nuget Package Console  
+PM> Uninstall-package Microsoft.CodeDom.Providers.DotNetCompilerPlatform  
+PM> Uninstall-package Microsoft.Net.Compilers  
 
 
 ## Maintainers
 
-[@Prathamesh Ayare](https://github.com/paya0001).
-[@Lihui Lin](https://github.com/againstllh).
+[@Prathamesh Ayare](https://github.com/paya0001).  
+[@Lihui Lin](https://github.com/againstllh).  
 
 
 
 ## Contributors
 
-@Weiyen Lim 
-@Yi Hsiao
-@Munisah Muneer
-@Peng Liu
-@Mei Wei
+@Weiyen Lim   
+@Yi Hsiao  
+@Munisah Muneer  
+@Peng Liu  
+@Mei Wei  
 
 
