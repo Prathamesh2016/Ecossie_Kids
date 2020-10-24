@@ -13,7 +13,9 @@ It is a fact that 75% of Australian electricity comes from coal in the past 30 y
 
 ## Install
 This project is available at https://ecossiekids.me/.  
-![Image text](https://s1.ax1x.com/2020/10/25/BemERI.md.png)
+  
+![Image text](https://s1.ax1x.com/2020/10/25/BemERI.md.png)  
+  
 This project uses [asp.net Framework](https://dotnet.microsoft.com/apps/aspnet) and [Visual Studio](https://visualstudio.microsoft.com/).
 Go check them out if you don't have them locally installed.  
 
