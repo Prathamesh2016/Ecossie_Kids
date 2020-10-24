@@ -4,7 +4,7 @@
 - [Install](#install)
 - [Maintainers](#maintainers)
 - [Contributors](#contributors)
-- [License](#license)
+
 
 ## Background
 
@@ -21,7 +21,6 @@ PM> Uninstall-package Microsoft.CodeDom.Providers.DotNetCompilerPlatform
 PM> Uninstall-package Microsoft.Net.Compilers
 
 
-
 ## Maintainers
 
 [@Parthamesh Ayare](https://github.com/paya0001).
@@ -31,8 +30,8 @@ PM> Uninstall-package Microsoft.Net.Compilers
 
 ## Contributors
 
-This project exists thanks to all the people who contribute. 
-<a href="graphs/contributors"><img src="https://mahara.infotech.monash.edu.au/mahara/artefact/file/download.php?file=272510&view=50426" /></a>
+@Weiyen Lim 
+@Yi Hsiao
 
 
 
