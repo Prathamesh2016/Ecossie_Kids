@@ -1,10 +1,38 @@
-# EcossieKids
+## Table of Contents
 
-With global warming and expensive electricity bills, Victorian households are hit with a huge blow these days. Due to the problems mentioned, Eco Pathseekers is motivated to develop an informative website named Ecossies bank for young children aged 9-10 living in Victoria households. 
+- [Background](#background)
+- [Install](#install)
+- [Maintainers](#maintainers)
+- [Contributors](#contributors)
+- [License](#license)
 
-Iteration 1
-The iteration 1 gives user a general layout of the webpages and it contains a general tips as well as a contact form
+## Background
 
-Iteration 2
-Iteration 2 is a modified version where we changed the user interfacewas chang making it more kid friendly,
-The tip image was changed with a cartoonish games, a quiz game was added along with some comic books
+It is a fact that 75% of Australian electricity comes from coal in the past 30 years while renewable energy accounts for just 5% of energy consumption. There is no doubt that this has contributed to the extreme weather and bushfires in Australia. Besides, the wholesale electricity prices of Australia have increased exponentially for the last decade, with Victoria having the highest increase among other states. With global warming and expensive electricity bills, Victorian households are hit with a huge blow these days. Due to the problems mentioned, Eco Pathseekers is motivated to develop an informative website named Ecossies bank for young children aged 9-10 living in Victoria households. 
+
+## Install
+
+This project uses [asp.net Framework](https://dotnet.microsoft.com/apps/aspnet) and [Visual Studio](https://visualstudio.microsoft.com/).
+Go check them out if you don't have them locally installed.
+
+Solved Could not find a part of the ‘path bin\roslyn\csc.exe’
+Remove Nuget packages, use the following commands from Nuget Package Console
+PM> Uninstall-package Microsoft.CodeDom.Providers.DotNetCompilerPlatform
+PM> Uninstall-package Microsoft.Net.Compilers
+
+
+
+## Maintainers
+
+[@Parthamesh Ayare](https://github.com/paya0001).
+[@Lihui Lin](https://github.com/againstllh).
+
+
+
+## Contributors
+
+This project exists thanks to all the people who contribute. 
+<a href="graphs/contributors"><img src="https://mahara.infotech.monash.edu.au/mahara/artefact/file/download.php?file=272510&view=50426" /></a>
+
+
+
