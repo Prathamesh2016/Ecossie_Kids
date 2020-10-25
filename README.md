@@ -2,10 +2,12 @@
 
 - [Background](#background)
 - [Install](#install)
+- [Directory Tree](#diretiry)
+- [Roadmap](#roadmap)
 - [Maintainers](#maintainers)
 - [Contributors](#contributors)
 - [Thanks](#thanks)
-
+- [License](#license)
 
 ## Background
 
@@ -24,6 +26,90 @@ Remove Nuget packages, use the following commands from Nuget Package Console
 PM> Uninstall-package Microsoft.CodeDom.Providers.DotNetCompilerPlatform  
 PM> Uninstall-package Microsoft.Net.Compilers  
 
+## Directory Tree
+ └─EcossieKids  
+    ├─EcossieBank_IT1  
+    │  ├─App_Start  
+    │  ├─bin  
+    │  ├─Content  
+    │  │  ├─css  
+    │  │  │  └─bootstrap  
+    │  │  ├─dist  
+    │  │  └─images  
+    │  │      ├─Additional Tips  
+    │  │      ├─Additional_Tips  
+    │  │      ├─Bathroom Facts  
+    │  │      ├─Bedroom  
+    │  │      ├─Book Images  
+    │  │      ├─Checklist  
+    │  │      ├─Kitchen  
+    │  │      └─Living Room  
+    │  ├─Controllers  
+    │  ├─fonts  
+    │  │  ├─flaticon  
+    │  │  │  ├─font  
+    │  │  │  └─license  
+    │  │  └─icomoon  
+    │  │      ├─demo-files  
+    │  │      └─fonts  
+    │  ├─images  
+    │  │  ├─Banner  
+    │  │  ├─Checklist  
+    │  │  ├─flaticon  
+    │  │  │  ├─license  
+    │  │  │  └─svg  
+    │  │  ├─Home_Page  
+    │  │  ├─Leaderboard  
+    │  │  └─Tips_Images  
+    │  ├─Models  
+    │  ├─obj  
+    │  │  └─Debug  
+    │  │      ├─edmxResourcesToEmbed  
+    │  │      │  └─Models  
+    │  │      └─TempPE  
+    │  ├─Properties  
+    │  │  └─PublishProfiles  
+    │  ├─Scripts  
+    │  │  ├─esm  
+    │  │  ├─src  
+    │  │  │  ├─methods  
+    │  │  │  ├─modifiers  
+    │  │  │  └─utils  
+    │  │  └─umd  
+    │  ├─scss  
+    │  │  └─bootstrap  
+    │  │      ├─mixins  
+    │  │      ├─utilities  
+    │  │      └─vendor  
+    │  └─Views  
+    │      ├─Dashboards  
+    │      ├─database_firewall_rules  
+    │      ├─Home  
+    │      └─Shared  
+    └─packages  
+        ├─Antlr.3.5.0.2  
+        ├─bootstrap.4.5.2  
+        ├─EntityFramework.6.4.4         
+        ├─jQuery.3.3.1  
+        ├─jquery.mobile.1.1.0  
+        ├─jQuery.Validation.1.17.0  
+        ├─Microsoft.AspNet.Mvc.5.2.4  
+        ├─Microsoft.AspNet.Razor.3.2.4  
+        ├─Microsoft.AspNet.Web.Optimization.1.1.3  
+        ├─Microsoft.AspNet.WebPages.3.2.4  
+        ├─Microsoft.jQuery.Unobtrusive.Validation.3.2.4  
+        ├─Microsoft.Web.Infrastructure.1.0.0.0  
+        ├─Modernizr.2.8.3  
+        ├─Newtonsoft.Json.11.0.1  
+        ├─popper.js.1.16.1  
+        ├─SendGrid.9.21.0  
+        ├─starkbank-ecdsa.1.2.0  
+        └─WebGrease.1.6.0  
+
+## Roadmap 
+  Iteration 1 is released on 01/09/2020
+  Iteration 2 is released on 18/09/2020
+  Iteration 3 is released on 05/10/2020
 
 ## Maintainers
 
@@ -43,4 +129,5 @@ If you have any problems, please contact us by ecossiekids@gmail.com
 ## Thanks
 @Munisah Muneer,  @Peng Liu,  @Mei Wei, significantly helped with the development of the project. 
 
-
+## License
+Monash License  
