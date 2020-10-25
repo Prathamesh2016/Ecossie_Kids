@@ -107,9 +107,9 @@ PM> Uninstall-package Microsoft.Net.Compilers
         └─WebGrease.1.6.0  
 
 ## Roadmap 
-  Iteration 1 is released on 01/09/2020
-  Iteration 2 is released on 18/09/2020
-  Iteration 3 is released on 05/10/2020
+  Iteration 1 is released on 01/09/2020  
+  Iteration 2 is released on 18/09/2020  
+  Iteration 3 is released on 05/10/2020  
 
 ## Maintainers
 
