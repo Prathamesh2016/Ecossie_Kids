@@ -727,6 +727,249 @@ img {
     left: 20%;
 }
 
+/*---- MOBILE----*/
+@media only screen and (max-width: 450px) {
+    .slider-wrapper {
+        border-radius: 0;
+    }
+
+    .bushfire_loss iframe {
+        display: none;
+    }
+
+    .desktop_img {
+        display: none;
+    }
+
+    .mobile_img {
+        display: block;
+    }
+
+    .mobile_pet {
+        display: block;
+    }
+
+    .sv-panel .sv-question__title {
+        font-size: 12px;
+    }
+
+    .checklistdiv p {
+        font-size: 20px;
+    }
+
+    .sv-question__content {
+        font-size: 12px;
+        width: 65%;
+    }
+
+    .sv-title {
+        font-weight: 100;
+        font-size: 12px;
+    }
+
+    .sv-row > .sv-row__panel, .sv-row__question {
+        vertical-align: top;
+        white-space: normal;
+        min-width: 210px;
+    }
+
+    .sv-root-modern .sv-footer__prev-btn {
+        margin-bottom: 13px;
+    }
+
+    .sv-completedpage {
+        font-size: 12px;
+        height: 300px;
+        height: fit-content;
+    }
+
+
+
+
+    .form-register .steps {
+        padding: 15px 8px 0px;
+    }
+
+    .actions ul li a {
+        font-size: 12px;
+    }
+
+    .finish {
+        color: #fff;
+        padding: 8px 40px;
+        font-size: 12px;
+    }
+
+    .marker2 {
+        top: 30%;
+        left: 77%;
+    }
+
+    .marker4 {
+        top: 7%;
+        left: 15%;
+    }
+
+    .marker8 {
+        top: 58%;
+        left: 20%;
+    }
+
+    .marker5 {
+        top: 59%;
+        left: 50%;
+    }
+
+    .marker13 {
+        top: 94%;
+        left: 16%;
+    }
+
+    .marker12 {
+        top: 66%;
+        left: 6%;
+    }
+
+    .marker6 {
+        top: 34%;
+        left: 9%;
+    }
+
+    .marker15 {
+        top: 89%;
+        left: 83%;
+    }
+
+    .slider-wrapper .info {
+        opacity: 0;
+    }
+
+    .form-register .steps li a .title .step-icon {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    .form-heading_p {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .top5action {
+        font-size: 20px;
+    }
+
+    .img-fluid1 {
+        max-width: 35%;
+    }
+
+    .actions ul li {
+        height: 35px;
+        width: 120px;
+    }
+
+    .ftco-navbar-light.scrolled .navbar-brand {
+        font-size: 20px;
+    }
+
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .img-fluid {
+        width: 100%;
+    }
+
+    .service-card {
+        margin-bottom: 15px;
+        border: none;
+        border-bottom: 1px solid #dcd9d9;
+    }
+
+    .blacksummer {
+        text-align: justify;
+    }
+
+    .emberattack {
+        text-align: justify;
+    }
+
+        .emberattack h2 {
+            font-size: 20px;
+            text-align: center;
+            color: #000;
+        }
+
+        .emberattack p {
+            font-size: 15px;
+            text-align: justify;
+            padding: 20px;
+        }
+
+
+    .blacksummer .col-lg-7 {
+        margin-bottom: 10px;
+    }
+
+        .blacksummer .col-lg-7 img {
+            width: 100%;
+        }
+
+    .blacksummer h2 {
+        font-size: 20px;
+        text-align: center;
+        color: #000;
+    }
+
+    .blacksummer p {
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    .carousel-dots {
+        visibility: hidden;
+    }
+
+    ul.slides {
+        height: 950px;
+    }
+
+
+    .btn-custom {
+        visibility: hidden;
+    }
+
+    .services-wrap .services-list {
+        padding: 14px;
+    }
+
+    .marker {
+        width: 22px;
+        height: 22px;
+        font-size: 12px;
+        line-height: 1;
+    }
+
+    #slideshow {
+        visibility: hidden;
+    }
+
+    .map img {
+        width: 100%;
+    }
+
+    .block-30.block-30-sm .heading {
+        font-size: 24px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .img-advice {
+        width: 25%;
+    }
+}
+
 @media only screen and (min-width:48em) {
     .map-item {
         position: absolute;
@@ -863,4 +1106,48 @@ img {
                 border-width: 16px 0 16px 16px;
                 border-color: transparent transparent transparent #fff;
             }
+}
+
+@media only screen and (max-width: 850px) and (min-width: 450px) {
+    .slider-wrapper {
+        border-radius: 0;
+    }
+
+    .form-register .steps li a .title .step-icon {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .py-class {
+        width: 90%;
+    }
+
+    .form-register .steps li a .title {
+        flex-direction: column;
+        -o-flex-direction: column;
+        -ms-flex-direction: column;
+        -moz-flex-direction: column;
+        -webkit-flex-direction: column;
+        align-items: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -moz-align-items: center;
+        -webkit-align-items: center;
+    }
+
+        .form-register .steps li a .title .step-icon {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+    .form-register .steps li a .step-text {
+        padding-bottom: 20px;
+        padding-left: 0;
+    }
+
+    .inner .form-row.form-row-date .form-holder select,
+    .inner .form-row.form-row-date .form-holder select#year {
+        width: 25%;
+    }
 }

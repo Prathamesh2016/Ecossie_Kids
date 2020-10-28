@@ -14,13 +14,14 @@ namespace EcossieBank_IT1.Controllers
         private EcossieKidsEntities db = new EcossieKidsEntities();
         public static int position;
         
-
+        [HandleError]
         public ActionResult Index()
         {
             ViewBag.Current = "Index";
             return View();
         }
 
+        [HandleError]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -37,8 +38,8 @@ namespace EcossieBank_IT1.Controllers
         //}
 
 
-       
 
+        [HandleError]
         public ActionResult Stats()
         {
             ViewBag.Message = "Your contact page.";
@@ -46,6 +47,7 @@ namespace EcossieBank_IT1.Controllers
             return View();
         }
 
+        [HandleError]
         public ActionResult RenewableStats()
         {
             ViewBag.Message = "Your contact page.";
@@ -53,6 +55,7 @@ namespace EcossieBank_IT1.Controllers
             return View();
         }
 
+        [HandleError]
         public ActionResult RenewableGame()
         {
             ViewBag.Message = "Your contact page.";
@@ -60,12 +63,15 @@ namespace EcossieBank_IT1.Controllers
             return View();
         }
 
+        [HandleError]
         public ActionResult Tips()
         {
             ViewBag.Message = "Your contact page.";
             ViewBag.Current = "Tips";
             return View();
         }
+
+        [HandleError]
         public ActionResult Quiz()
         {
             ViewBag.Message = "Your quiz page.";
@@ -141,7 +147,12 @@ namespace EcossieBank_IT1.Controllers
                         db.Dashboards.Add(dashboard);
                         ViewBag.UserAdded = dashboard.name + " successfully added";
                         db.SaveChanges();
+
                         ViewBag.Sucess = "User " + dashboard.name + " successfully added.";
+                        IEnumerable<Dashboard> myRank = db.Dashboards.ToList().OrderByDescending(t => t.total_score);
+                        position = myRank.ToList().IndexOf(dashboard);
+
+                        return RedirectToAction("Dashboard","Home");
                     }
                     else
                     {
@@ -149,15 +160,17 @@ namespace EcossieBank_IT1.Controllers
                     }
 
 
-                    IEnumerable<Dashboard> myRank = db.Dashboards.ToList().OrderByDescending(t => t.total_score);
-                    position = myRank.ToList().IndexOf(dashboard);
+                    //IEnumerable<Dashboard> myRank = db.Dashboards.ToList().OrderByDescending(t => t.total_score);
+                    //position = myRank.ToList().IndexOf(dashboard);
 
                    
                 }
                 else
                 {
-                    ViewBag.Error = "User with same name already exist.";
 
+                 
+                    ViewBag.Error = "User with same name already exist.";
+                    return View();
                 }
 
 
@@ -168,10 +181,10 @@ namespace EcossieBank_IT1.Controllers
             {
 
             }
-            
             return View();
         }
 
+        [HandleError]
         public ActionResult Dashboard()
         {
             IEnumerable<Dashboard> x = db.Dashboards.ToList().OrderByDescending(t => t.total_score).Take(10);
@@ -243,9 +256,9 @@ namespace EcossieBank_IT1.Controllers
         }
 
 
-        
-        
 
+
+        [HandleError]
         public ActionResult Quiz1()
         {
             ViewBag.Message = "Your quiz page.";
@@ -253,6 +266,7 @@ namespace EcossieBank_IT1.Controllers
             return View();
         }
 
+        [HandleError]
         public ActionResult Quiz2()
         {
             ViewBag.Message = "Your quiz2 page.";
@@ -260,6 +274,7 @@ namespace EcossieBank_IT1.Controllers
             return View();
         }
 
+        [HandleError]
         public ActionResult Quiz3()
         {
             ViewBag.Message = "Your quiz3 page.";
@@ -267,6 +282,7 @@ namespace EcossieBank_IT1.Controllers
             return View();
         }
 
+        [HandleError]
         public ActionResult Image_Game()
         {
             ViewBag.Message = "Your game page.";
@@ -274,6 +290,7 @@ namespace EcossieBank_IT1.Controllers
             return View();
         }
 
+        [HandleError]
         public ActionResult Book_Shelf()
         {
             ViewBag.Message = "Book_shelf";
@@ -281,13 +298,14 @@ namespace EcossieBank_IT1.Controllers
             return View();
         }
 
+        [HandleError]
         public ActionResult Additional_Tips()
         {
             ViewBag.Current = "Additional_Tips";
             return View();
         }
 
-
+        [HandleError]
         public ActionResult Send_Email()
         {
             ViewBag.Current = "Send_Email";
@@ -297,6 +315,7 @@ namespace EcossieBank_IT1.Controllers
         
 
         [HttpPost]
+        [HandleError]
         public ActionResult Send_Email(SendEmailViewModel model)
         {
             if (ModelState.IsValid)

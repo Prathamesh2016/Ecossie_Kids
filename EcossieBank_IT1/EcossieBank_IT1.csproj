@@ -141,6 +141,7 @@
     <Compile Include="Controllers\DashboardsController.cs" />
     <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\EmailSender.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -373,6 +374,7 @@
     <Content Include="images\school-board-wood-teaching.jpg" />
     <Content Include="images\shower.jpg" />
     <Content Include="images\signature.svg" />
+    <Content Include="images\spot_mistake_rules.png" />
     <Content Include="images\stats_banner.jpg" />
     <Content Include="images\stats_bg.gif" />
     <Content Include="images\tap.jpg" />
@@ -592,7 +594,9 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -736,9 +740,12 @@
     <Content Include="Views\database_firewall_rules\Index.cshtml" />
     <Content Include="Views\Home\Display.cshtml" />
     <Content Include="Views\Home\Dashboard.cshtml" />
+    <Content Include="Views\Shared\Custom_Error.cshtml" />
+    <Content Include="Views\Shared\NotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Error\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
